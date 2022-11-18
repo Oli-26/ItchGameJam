@@ -11,6 +11,8 @@ public partial class NavigationBehaviour : Behaviour
 	[Export] public float WalkSpeed { get; set; } = 2f;
     [Export] public float ChaseSpeed { get; set; } = 7f;
 
+	private static readonly float _turnFactor = 0.9999f;
+
 	private AnimationPlayer _animationPlayer;
 	private NavigationAgent3D _navigationAgent3D;
 
@@ -43,7 +45,6 @@ public partial class NavigationBehaviour : Behaviour
 
 		if (_navigationAgent3D == null)
 		{
-			GD.PrintErr("no navigation agent");
 			return;
 		}
 		_navigationAgent3D.SetTargetLocation(MobController.Intent.Position);
@@ -67,6 +68,9 @@ public partial class NavigationBehaviour : Behaviour
 			_animationPlayer?.Play(AnimationNames.WalkForward, customSpeed: 0.3f);
 		}
 		Mob.Velocity = moveDirection * speed;
-		Mob.LookAt(Mob.Position + moveDirection);
-	}
+
+		var targetRotation = Mob.Transform.LookingAt(Mob.Position + moveDirection, Vector3.Up).basis.GetRotationQuaternion();
+		var turnAmount = (float)0.01;
+		Mob.Quaternion = turnAmount * targetRotation + (1 - turnAmount) * Mob.Quaternion;
+    }
 }
