@@ -39,7 +39,7 @@ public partial class NavigationBehaviour : Behaviour
 		if (MobController.Intent == null)
 		{
 			Mob.Velocity = Vector3.Zero;
-            _animationPlayer.Play(AnimationNames.Idle);
+            _animationPlayer?.Play(AnimationNames.Idle);
 			return;
 		}
 

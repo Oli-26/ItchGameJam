@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c2k1hgej8mhy6"]
+[gd_scene load_steps=12 format=3 uid="uid://tayag2st1luc"]
 
 [ext_resource type="Script" path="res://Source/Mobs/Mob.cs" id="1_tmdn5"]
 [ext_resource type="Script" path="res://Source/Behaviour/OmniCharacterPerceptionBehaviour.cs" id="4_dl4g8"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Source/Behaviour/DisengagementBehaviour.cs" id="6_nxk1l"]
 [ext_resource type="AudioStream" uid="uid://c57yv04f87rnn" path="res://Sounds/175944__litruv__ghost-whispers.wav" id="7_0se7k"]
 [ext_resource type="Script" path="res://Source/Behaviour/NavigationBehaviour.cs" id="7_4mnad"]
+[ext_resource type="Script" path="res://Source/Behaviour/ShadeGrowthBehaviour.cs" id="7_hhp6k"]
 [ext_resource type="Script" path="res://Source/AudioLooper.cs" id="8_tjv1m"]
 [ext_resource type="PackedScene" uid="uid://c27rq7gwj8g48" path="res://Scenes/Mobs/VisionManager.tscn" id="8_w7pjv"]
 
@@ -50,6 +51,9 @@ script = ExtResource("6_nxk1l")
 script = ExtResource("7_4mnad")
 WalkSpeed = 1.0
 ChaseSpeed = 1.0
+
+[node name="ShadeGrowthBehaviour" type="Node" parent="."]
+script = ExtResource("7_hhp6k")
 
 [node name="FogVolume" type="FogVolume" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65575, 0)
