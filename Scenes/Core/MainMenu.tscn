@@ -1,0 +1,106 @@
+[gd_scene load_steps=10 format=3 uid="uid://cjb0djpjjw3ua"]
+
+[ext_resource type="Theme" uid="uid://dk66skm3gyc7t" path="res://UI/menu.tres" id="1_4ny67"]
+[ext_resource type="PackedScene" uid="uid://catsnedejtp38" path="res://Scenes/Sections/Phase1/Intro.tscn" id="1_h458q"]
+[ext_resource type="PackedScene" uid="uid://1mlyya5uwi76" path="res://Scenes/Sections/Phase1/Corridor2.tscn" id="1_mxjs5"]
+[ext_resource type="PackedScene" uid="uid://bp5lu2b0l5nlq" path="res://Scenes/Mobs/Minotaur.tscn" id="3_l5jd0"]
+[ext_resource type="Script" path="res://Source/UI/NewGameButton.cs" id="5_atra1"]
+[ext_resource type="Script" path="res://Source/UI/ExitButton.cs" id="5_dn4dq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ontdm"]
+
+[sub_resource type="Sky" id="Sky_ivwug"]
+sky_material = SubResource("ProceduralSkyMaterial_ontdm")
+
+[sub_resource type="Environment" id="Environment_ewgwi"]
+background_mode = 2
+background_color = Color(0.2139, 0.570975, 0.69, 1)
+sky = SubResource("Sky_ivwug")
+ambient_light_sky_contribution = 0.03
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.02
+volumetric_fog_temporal_reprojection_amount = 0.99
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Corridor2" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_mxjs5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, 8.13947, 1.65995, 14.0767)
+
+[node name="Intro" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_h458q")]
+
+[node name="Corridor3" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_mxjs5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 0)
+
+[node name="Corridor4" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_mxjs5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 0)
+
+[node name="Corridor5" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_mxjs5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 95, 0, 23)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport"]
+environment = SubResource("Environment_ewgwi")
+
+[node name="Minotaur" parent="SubViewportContainer/SubViewport" instance=ExtResource("3_l5jd0")]
+transform = Transform3D(-0.131115, 0, 0.991367, 0, 1, 0, -0.991367, 0, -0.131115, 47.7624, -1, 13.9228)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 175.0
+offset_top = -292.0
+offset_right = 543.0
+offset_bottom = -156.0
+grow_vertical = 0
+
+[node name="ContinueButton" type="Button" parent="VBoxContainer"]
+offset_right = 368.0
+offset_bottom = 50.0
+theme = ExtResource("1_4ny67")
+disabled = true
+text = "Resume"
+
+[node name="NewGameButton" type="Button" parent="VBoxContainer"]
+offset_top = 54.0
+offset_right = 368.0
+offset_bottom = 104.0
+theme = ExtResource("1_4ny67")
+text = "New game"
+script = ExtResource("5_atra1")
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer"]
+offset_top = 108.0
+offset_right = 368.0
+offset_bottom = 158.0
+theme = ExtResource("1_4ny67")
+disabled = true
+text = "Settings"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+offset_top = 162.0
+offset_right = 368.0
+offset_bottom = 212.0
+theme = ExtResource("1_4ny67")
+text = "Exit"
+script = ExtResource("5_dn4dq")
