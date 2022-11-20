@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://7gv6q50fuutj"]
+[gd_scene load_steps=6 format=3 uid="uid://dayo5j2yyndlg"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_1w47b"]
 [ext_resource type="PackedScene" uid="uid://dbduds4bsaaby" path="res://Scenes/Bullet/Bullet.tscn" id="2_je25s"]
-[ext_resource type="PackedScene" uid="uid://dkxpb0hqlqr3v" path="res://Scenes/Player/Lantern.tscn" id="4_yssdt"]
+[ext_resource type="ArrayMesh" uid="uid://5ic0mw457wtx" path="res://Models/lantern.obj" id="3_30u0b"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_emkox"]
 
@@ -41,10 +41,18 @@ angular_limit/softness = 2.0
 [node name="lanternHolder" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.298013, 0.724544, -1.18827)
 
-[node name="lantern2" parent="." instance=ExtResource("4_yssdt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25656, 0.140408, -1.1952)
-
-[node name="OmniLight3d" type="OmniLight3D" parent="lantern2"]
+[node name="lantern2@OmniLight3d" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.863257, 0.478325, -1.97783)
 light_color = Color(1, 1, 0.301961, 1)
 light_energy = 0.5
+
+[node name="lantern2" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.224153, 0.4121, -1.18827)
+
+[node name="Lantern" type="MeshInstance3D" parent="lantern2"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.138229, -0.724544, -0.134186)
+mesh = ExtResource("3_30u0b")
+skeleton = NodePath("../..")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="lantern2/Lantern"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.717211, 2.34266, -0.669502)
