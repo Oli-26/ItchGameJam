@@ -51,5 +51,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2942, 2.05929, 21.2802)
 Sound = ExtResource("10_8bqb0")
 
 [node name="Stairs" parent="." instance=ExtResource("9_opfem")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.578, -1, 35.4287)
+transform = Transform3D(-0.863008, 0, 0.50519, 0, 1, 0, -0.50519, 0, -0.863008, 30.578, -0.399295, 35.4287)
 NextLevelPath = "res://Scenes/Stages/Phase1/Stage1.tscn"

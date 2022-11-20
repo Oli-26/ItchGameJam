@@ -58,7 +58,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_jcy2a")
 shape = SubResource("ConcavePolygonShape3D_mt7fa")
 
 [node name="NextLevelArea" type="Area3D" parent="." index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.344742, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.54512, 0)
 script = ExtResource("4_6u4d5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NextLevelArea" index="0"]
