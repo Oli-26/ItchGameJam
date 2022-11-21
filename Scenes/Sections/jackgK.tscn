@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwldf1gxpeyv"]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource type="PackedScene" path="res://Scenes/Floor/Level/GridMap.tscn" id="1_cydnl"]
+[ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
-[ext_resource type="Texture2D" uid="uid://cebc5m1swy3jj" path="res://hermes.png" id="3_qlf5a"]
+[ext_resource type="Texture2D" uid="uid://dctlnd3ne2l8o" path="res://Images/hades2.png" id="3_qlf5a"]
+
 
 [node name="Floor1Entrance" type="Node3D"]
 script = ExtResource("1_gdq7v")
