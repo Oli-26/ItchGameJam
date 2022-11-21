@@ -12,6 +12,6 @@ public partial class Launch : Node3D
 	{
 		var levelManager = GetTree().Root
 			.GetNode<LevelManager>("./LevelManager");
-		levelManager.SetActiveScene(Levels.MainMenu);
+		levelManager.SetActiveScene(Levels.Phase1Level2);
 	}
 }
