@@ -109,7 +109,11 @@ func fillGridFromBy(filledGrid, x, y, roomSize, doorsGrid):
 	for xOffset in range(roomSize.X):
 		for yOffset in range(roomSize.Y):
 			filledGrid[y + yOffset][x + xOffset] = 1;
-			spawnDoors(x + xOffset, y + yOffset, doorsGrid[y + yOffset][x + xOffset]);
+			if should_spawn_doors(x, y):
+				spawnDoors(x + xOffset, y + yOffset, doorsGrid[y + yOffset][x + xOffset]);
+
+func should_spawn_doors(x, y):
+	return !(x == 0 and y == 0)
 
 func spawnDoors(x, y, doorsDict):
 	var doorsInst = doors.instantiate()
