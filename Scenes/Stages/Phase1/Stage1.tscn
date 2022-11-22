@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://g1fpeb8ag3qe"]
+[gd_scene load_steps=17 format=3 uid="uid://g1fpeb8ag3qe"]
 
 [ext_resource type="PackedScene" uid="uid://dayo5j2yyndlg" path="res://Scenes/Player/player.tscn" id="1_eisjc"]
 [ext_resource type="PackedScene" uid="uid://cgsys6xef3jrr" path="res://Scenes/Sections/Phase1/Start.tscn" id="3_53qc0"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bp5lu2b0l5nlq" path="res://Scenes/Mobs/Minotaur.tscn" id="5_vdmbx"]
 [ext_resource type="PackedScene" uid="uid://b18vxykh2plp2" path="res://Scenes/Sections/Phase1/Stealth1.tscn" id="7_huqwp"]
 [ext_resource type="PackedScene" uid="uid://bahiym17rfq1y" path="res://Scenes/Level/AudioTriggerArea.tscn" id="8_5jhni"]
+[ext_resource type="PackedScene" uid="uid://cas8h37r18eup" path="res://Scenes/Sections/Phase1/End.tscn" id="8_a80qj"]
 [ext_resource type="PackedScene" uid="uid://bjv6vksm670lk" path="res://Scenes/Level/Stairs.tscn" id="9_opfem"]
 [ext_resource type="AudioStream" uid="uid://bb7fc72abpqbu" path="res://Sounds/398908__quadraslayer__monster-roar-2.wav" id="10_8bqb0"]
 [ext_resource type="PackedScene" uid="uid://dupc2dxoefygh" path="res://Scenes/Level/Waypoint.tscn" id="10_j5mov"]
@@ -38,10 +39,10 @@ agent_radius = 0.6
 environment = SubResource("Environment_l5pxq")
 
 [node name="Player" parent="." instance=ExtResource("1_eisjc")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 78.0683, 0.639674, 4.50198)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 234.458, 0.639674, 18.0462)
 
 [node name="Minotaur" parent="." instance=ExtResource("5_vdmbx")]
-transform = Transform3D(-0.0488668, 0, 0.998805, 0, 1, 0, -0.998805, 0, -0.0488668, 257.2, -0.819398, 20.4679)
+transform = Transform3D(-0.0488668, 0, 0.998805, 0, 1, 0, -0.998805, 0, -0.0488668, 257.2, -0.819398, 24.543)
 
 [node name="WaypointPathBehaviour" type="Node" parent="Minotaur" node_paths=PackedStringArray("WaypointA", "WaypointB", "WaypointC", "WaypointD")]
 script = ExtResource("3_vie62")
@@ -69,6 +70,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 1)
 [node name="Stealth" parent="NavigationRegion3D/Sections" instance=ExtResource("7_huqwp")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 288.982, -1.13836, 8.83986)
 
+[node name="End" parent="NavigationRegion3D/Sections" instance=ExtResource("8_a80qj")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 325.968, -0.163322, 18.8823)
+
 [node name="AudioTriggerArea2" parent="." instance=ExtResource("8_5jhni")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2942, 2.05929, 12.71)
 Sound = ExtResource("10_8bqb0")
@@ -78,13 +82,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.578, -1, 35.4287)
 NextLevelPath = "res://Scenes/Stages/Phase1/Stage0.tscn"
 
 [node name="WaypointA" parent="." instance=ExtResource("10_j5mov")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 258.358, -0.325432, 11.1468)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 254.544, -0.325432, 14.1991)
 
 [node name="WaypointB" parent="." instance=ExtResource("10_j5mov")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 256.717, -0.325432, 19.8495)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 250.024, -0.325432, 37.0931)
 
 [node name="WaypointC" parent="." instance=ExtResource("10_j5mov")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 271.253, -0.325432, 22.9604)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 282.281, -0.325432, 21.6508)
 
 [node name="WaypointD" parent="." instance=ExtResource("10_j5mov")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 260.637, -0.325432, 11.8754)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 276.749, -0.325432, 8.68305)
+
+[node name="Stairs2" parent="." instance=ExtResource("9_opfem")]
+transform = Transform3D(-0.863008, 0, 0.50519, 0, 1, 0, -0.50519, 0, -0.863008, 315.415, -0.399295, 6.29763)
+NextLevelPath = "res://Scenes/Stages/Phase1/Stage2.tscn"
