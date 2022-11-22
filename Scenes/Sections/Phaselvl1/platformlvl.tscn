@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c1j2kyuxj3xi0"]
+[gd_scene load_steps=20 format=3 uid="uid://c1j2kyuxj3xi0"]
 
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_oup3v"]
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="2_51ar1"]
@@ -21,6 +21,24 @@ uv1_scale = Vector3(5, 5, 5)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wk27p"]
 albedo_texture = ExtResource("8_paijt")
 uv1_scale = Vector3(40, 40, 40)
+
+[sub_resource type="FogMaterial" id="FogMaterial_eb6kr"]
+density = 5.8
+emission = Color(0.160784, 0.160784, 0.160784, 1)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w15go"]
+
+[sub_resource type="Sky" id="Sky_jhr6c"]
+sky_material = SubResource("ProceduralSkyMaterial_w15go")
+
+[sub_resource type="Environment" id="Environment_xqnws"]
+background_mode = 2
+background_color = Color(0.2139, 0.570975, 0.69, 1)
+sky = SubResource("Sky_jhr6c")
+ambient_light_sky_contribution = 0.03
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.02
+volumetric_fog_temporal_reprojection_amount = 0.99
 
 [node name="Start" type="Node3D"]
 transform = Transform3D(0.993167, 0, -0.116705, 0, 1, 0, 0.116705, 0, 0.993167, 0, 0, 0)
@@ -576,3 +594,11 @@ transform = Transform3D(-0.0464276, 0, 0.798652, 0, 0.8, 0, -0.798652, 0, -0.046
 [node name="Lever" parent="." node_paths=PackedStringArray("Target") instance=ExtResource("13_03eot")]
 transform = Transform3D(-0.00346748, -0.00989552, 0.199725, 0.199754, 0.00912018, 0.00391983, -0.00930159, 0.199547, 0.0097252, 22.1129, 2.1598, 4.13997)
 Target = NodePath("../Gateway")
+
+[node name="FogVolume" type="FogVolume" parent="."]
+transform = Transform3D(0.999999, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 0.999999, 137.112, -19.2552, 8.30489)
+extents = Vector3(100, 3, 100)
+material = SubResource("FogMaterial_eb6kr")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="FogVolume"]
+environment = SubResource("Environment_xqnws")
