@@ -41,11 +41,6 @@ angular_limit/softness = 2.0
 [node name="lanternHolder" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.298013, 0.724544, -1.18827)
 
-[node name="lantern2@OmniLight3d" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.863257, 0.478325, -1.97783)
-light_color = Color(1, 1, 0.301961, 1)
-light_energy = 0.5
-
 [node name="lantern2" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.224153, 0.4121, -1.18827)
 
