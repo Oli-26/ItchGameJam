@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=3 uid="uid://d0bqkpu8ksdx5"]
+[gd_scene load_steps=97 format=3 uid="uid://d0bqkpu8ksdx5"]
 
 [ext_resource type="Texture2D" uid="uid://bn41wuyh4q2cd" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_02-512x512.png" id="1_tw21s"]
 [ext_resource type="Texture2D" uid="uid://ctk8ytu4yvoko" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_03-512x512.png" id="3_jkbui"]
@@ -40,6 +40,8 @@
 [ext_resource type="Texture2D" uid="uid://b28hqxiihpawm" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Brick/Brick_17-512x512.png" id="25_awvv2"]
 [ext_resource type="Texture2D" uid="uid://dwbu5atluq301" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Brick/Brick_09-512x512.png" id="25_metla"]
 [ext_resource type="Texture2D" uid="uid://dnggvde87elj0" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Brick/Brick_05-512x512.png" id="25_tafw3"]
+[ext_resource type="ArrayMesh" uid="uid://bg4qptif4lvb8" path="res://Models/Level/Wedge1.obj" id="41_inv2o"]
+[ext_resource type="ArrayMesh" uid="uid://b27fw00xxp7ca" path="res://Models/Level/Wedge2.obj" id="42_lm57e"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_iqcoe"]
 size = Vector3(2, 2, 2)
@@ -240,6 +242,34 @@ shadow_mesh = SubResource("ArrayMesh_hmyvi")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_w3rqo"]
 points = PackedVector3Array(-1, -1, 0, -0.924041, -1, 0.382537, -0.801292, 9, 0, -0.924041, -1, -0.382733, -0.707126, -1, 0.70693, -0.740407, 9, 0.306578, -0.740407, 9, -0.306774, -0.707126, -1, -0.707126, -0.382733, -1, 0.923845, -0.306774, 9, 0.740211, -0.566562, 9, 0.566366, -0.566562, 9, -0.566562, -0.306774, 9, -0.740407, -0.382733, -1, -0.924041, -0.000195742, -1, 1, -0.000195742, 9, 0.801096, 0, 9, -0.801292, 0, -1, -1, 0.382537, -1, 0.923845, 0.306578, 9, 0.740211, 0.306578, 9, -0.740407, 0.382537, -1, -0.924041, 0.70693, -1, 0.70693, 0.566366, 9, 0.566366, 0.566366, 9, -0.566562, 0.70693, -1, -0.707126, 0.923845, -1, 0.382537, 0.740211, 9, 0.306578, 0.740211, 9, -0.306774, 0.923845, -1, -0.382733, 1, -1, 0, 0.801096, 9, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ah7v4"]
+albedo_texture = ExtResource("7_eiumo")
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rbb2o"]
+data = PackedVector3Array(-1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, 1, 1, 1, -1, -1, -1, 1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, -1, -1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oyqp5"]
+albedo_texture = ExtResource("6_00fbm")
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_om464"]
+data = PackedVector3Array(-1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, 1, 1, 1, -1, -1, -1, 1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, -1, -1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obun5"]
+albedo_texture = ExtResource("7_eiumo")
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7bv1o"]
+data = PackedVector3Array(-3, -1, -1, -3, -1, 1, 3, -1, -1, 3, -1, -1, -3, -1, 1, 3, -1, 1, 3, 1, -1, 3, -1, -1, 3, 1, 1, 3, 1, 1, 3, -1, -1, 3, -1, 1, -3, -1, 1, -3, -1, -1, 3, 1, 1, 3, 1, 1, -3, -1, -1, 3, 1, -1, -3, -1, -1, 3, -1, -1, 3, 1, -1, 3, 1, 1, 3, -1, 1, -3, -1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7gfh"]
+albedo_texture = ExtResource("6_00fbm")
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vt1ob"]
+data = PackedVector3Array(-3, -1, -1, -3, -1, 1, 3, -1, -1, 3, -1, -1, -3, -1, 1, 3, -1, 1, 3, 1, -1, 3, -1, -1, 3, 1, 1, 3, 1, 1, 3, -1, -1, 3, -1, 1, -3, -1, 1, -3, -1, -1, 3, 1, 1, 3, 1, 1, -3, -1, -1, 3, 1, -1, -3, -1, -1, 3, -1, -1, 3, 1, -1, 3, 1, 1, 3, -1, 1, -3, -1, 1)
 
 [node name="LevelElements" type="Node3D"]
 
@@ -652,3 +682,47 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Column/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_w3rqo")
+
+[node name="Wedge1A" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = ExtResource("41_inv2o")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_ah7v4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wedge1A"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wedge1A/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rbb2o")
+
+[node name="Wedge1B" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = ExtResource("41_inv2o")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_oyqp5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wedge1B"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wedge1B/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_om464")
+
+[node name="Wedge2A" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0)
+mesh = ExtResource("42_lm57e")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_obun5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wedge2A"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wedge2A/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7bv1o")
+
+[node name="Wedge2B" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0)
+mesh = ExtResource("42_lm57e")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_t7gfh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wedge2B"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wedge2B/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt1ob")
