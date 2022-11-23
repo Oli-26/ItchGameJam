@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://b0xnag4qp4w7t" path="res://Scenes/Level/Floor.tscn" id="2_2aqun"]
 [ext_resource type="PackedScene" uid="uid://dqepst65jsloy" path="res://Scenes/SceneProps/low_table.tscn" id="4_ygicm"]
 [ext_resource type="PackedScene" uid="uid://cyh50clspyn8h" path="res://Scenes/SceneProps/SmallCandle1.tscn" id="5_bysth"]
-[ext_resource type="Texture2D" uid="uid://cehp6ajrg2vmf" path="res://AssetPacks/Stains And Damage/Stains And Damage 4.png" id="9_idwm4"]
+[ext_resource type="Texture2D" uid="uid://tvq6lw0v7jfm" path="res://AssetPacks/Stains And Damage/Stains And Damage 4.png" id="9_idwm4"]
 [ext_resource type="PackedScene" uid="uid://yfv4vqs0qyom" path="res://Scenes/Level/GatewayBroken.tscn" id="9_lh2ol"]
-[ext_resource type="Texture2D" uid="uid://baq04cl8ybs13" path="res://AssetPacks/Stains And Damage/Stains And Damage 6.png" id="10_idwfa"]
-[ext_resource type="Texture2D" uid="uid://bf54w413ryw0s" path="res://Images/labrinth.png" id="10_o1frb"]
+[ext_resource type="Texture2D" uid="uid://4qaxqjkvcgyn" path="res://AssetPacks/Stains And Damage/Stains And Damage 6.png" id="10_idwfa"]
+[ext_resource type="Texture2D" uid="uid://lmmtx1m5yapy" path="res://Images/labrinth.png" id="10_o1frb"]
 
 [node name="Start" type="Node3D"]
 script = ExtResource("1_gdq7v")

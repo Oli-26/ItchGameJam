@@ -70,7 +70,7 @@ public partial class NavigationBehaviour : Behaviour
 		Mob.Velocity = moveDirection * speed;
 
 		var targetRotation = Mob.Transform.LookingAt(Mob.Position + moveDirection, Vector3.Up).basis.GetRotationQuaternion();
-		var turnAmount = (float)0.01;
+		var turnAmount = (float)0.05;
 		Mob.Quaternion = turnAmount * targetRotation + (1 - turnAmount) * Mob.Quaternion;
     }
 }

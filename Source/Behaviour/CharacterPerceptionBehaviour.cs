@@ -9,7 +9,7 @@ public partial class CharacterPerceptionBehaviour : Behaviour
 {
 	private VisionManager _visionManager;
 
-	[Export] public float ViewRange { get; set; } = 20f;
+	[Export] public float ViewRange { get; set; } = 10f;
 
 	public override void _Ready()
 	{
