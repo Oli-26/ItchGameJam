@@ -44,7 +44,6 @@ config/features=PackedStringArray("4.0", "C#", "Forward Plus")
 
 [autoload]
 
-Settings="*res://Global/Settings.gd"
 LevelManager="*res://Source/LevelManager.cs"
 
 [display]

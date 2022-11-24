@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://cvr3jhled55hv"]
+
+[ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
+[ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
+[ext_resource type="PackedScene" uid="uid://b0xnag4qp4w7t" path="res://Scenes/Level/Floor.tscn" id="2_2aqun"]
+[ext_resource type="Texture2D" uid="uid://xn0vscpreae4" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_11-512x512.png" id="3_d07on"]
+[ext_resource type="Texture2D" uid="uid://b86lbg6eoy001" path="res://AssetPacks/Stains And Damage/Stains And Damage 3.png" id="9_116ww"]
+[ext_resource type="Texture2D" uid="uid://tvq6lw0v7jfm" path="res://AssetPacks/Stains And Damage/Stains And Damage 4.png" id="10_kdomg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ky6f1"]
+albedo_texture = ExtResource("3_d07on")
+uv1_scale = Vector3(12, 12, 12)
+
+[node name="Corridor3" type="Node3D"]
+script = ExtResource("1_gdq7v")
+Y = 2
+
+[node name="Floor" parent="." instance=ExtResource("2_2aqun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -1.5, 12)
+
+[node name="Ceiling" parent="." instance=ExtResource("2_2aqun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 5.5, 12)
+surface_material_override/0 = SubResource("StandardMaterial3D_ky6f1")
+
+[node name="GridMap" parent="." instance=ExtResource("1_cydnl")]
+cell_center_x = false
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(3, 8, 27, 8, 8, 27, 9, 8, 27, 9, 3, 27, 8, 3, 27, 65539, 8, 27, 65545, 8, 27, 65545, 3, 27, 65544, 3, 27, 131075, 8, 27, 131081, 8, 27, 131080, 3, 27, 131081, 3, 27, 131079, 3, 27, 131078, 3, 27, 131077, 3, 27, 131075, 3, 27, 65544, 8, 27, 131080, 8, 27, 10, 8, 27, 11, 8, 27, 65546, 8, 27, 65547, 8, 27, 131082, 8, 27, 131083, 8, 27, 11, 3, 27, 10, 3, 27, 65546, 3, 27, 65547, 3, 27, 131083, 3, 27, 131082, 3, 27, 131076, 3, 27, 65539, 3, 27, 65540, 3, 27, 65541, 3, 27, 65543, 3, 27, 65542, 3, 27, 7, 3, 27, 6, 3, 27, 5, 3, 27, 4, 3, 27, 3, 3, 27, 131075, 9, 27, 131075, 11, 27, 131075, 10, 27, 65539, 9, 27, 65539, 10, 27, 65539, 11, 27, 3, 9, 27, 3, 10, 27, 3, 11, 27, 8, 9, 27, 8, 10, 27, 8, 11, 27, 65544, 9, 27, 65544, 10, 27, 65544, 11, 27, 131080, 9, 27, 131080, 10, 27, 131080, 11, 27, 131075, 7, 27, 131075, 6, 27, 131075, 5, 27, 131075, 4, 27, 65539, 4, 27, 65539, 5, 27, 65539, 6, 27, 65539, 7, 27, 3, 7, 27, 3, 6, 27, 3, 5, 27, 3, 4, 27)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="Props" type="Node3D" parent="."]
+
+[node name="DirtDecal" type="Decal" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1473, -1.00484, 13.2224)
+extents = Vector3(5, 1, 5)
+texture_albedo = ExtResource("9_116ww")
+emission_energy = 5.59
+upper_fade = 17.9142
+lower_fade = 27.1529
+distance_fade_begin = 0.0
+distance_fade_length = 20.0
+
+[node name="DirtDecal2" type="Decal" parent="Props"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0872011, -2.24041, 11.0401)
+extents = Vector3(6, 2, 6)
+texture_albedo = ExtResource("10_kdomg")
+emission_energy = 5.59
+distance_fade_begin = 0.0
+distance_fade_length = 20.0
+
+[node name="DirtDecal3" type="Decal" parent="Props"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.5056, -1.30432, 10.5807)
+extents = Vector3(6, 2, 6)
+texture_albedo = ExtResource("10_kdomg")
+emission_energy = 5.59
+distance_fade_begin = 0.0
+distance_fade_length = 20.0

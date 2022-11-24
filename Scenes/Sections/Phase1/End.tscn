@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
 [ext_resource type="PackedScene" uid="uid://b0xnag4qp4w7t" path="res://Scenes/Level/Floor.tscn" id="2_2aqun"]
-[ext_resource type="Texture2D" uid="uid://b63gsilv5g1e3" path="res://Images/hades3.png" id="4_2t6ec"]
-[ext_resource type="Texture2D" uid="uid://cehp6ajrg2vmf" path="res://AssetPacks/Stains And Damage/Stains And Damage 4.png" id="9_idwm4"]
-[ext_resource type="Texture2D" uid="uid://baq04cl8ybs13" path="res://AssetPacks/Stains And Damage/Stains And Damage 6.png" id="10_idwfa"]
+[ext_resource type="Texture2D" uid="uid://b75ajodm5gtep" path="res://Images/hades3.png" id="4_2t6ec"]
+[ext_resource type="Texture2D" uid="uid://tvq6lw0v7jfm" path="res://AssetPacks/Stains And Damage/Stains And Damage 4.png" id="9_idwm4"]
+[ext_resource type="Texture2D" uid="uid://4qaxqjkvcgyn" path="res://AssetPacks/Stains And Damage/Stains And Damage 6.png" id="10_idwfa"]
 
 [node name="End" type="Node3D"]
 script = ExtResource("1_gdq7v")

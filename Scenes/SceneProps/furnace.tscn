@@ -4,18 +4,22 @@
 resource_name = "Metal_Rusty"
 cull_mode = 2
 vertex_color_use_as_albedo = true
+albedo_color = Color(0.494118, 0.505882, 0.494118, 1)
 metallic = 1.0
+metallic_specular = 0.69
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_82456"]
 resource_name = "Stone_Wall"
 cull_mode = 2
 vertex_color_use_as_albedo = true
+albedo_color = Color(0.74902, 0.694118, 0.768627, 1)
 metallic = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xax5h"]
 resource_name = "Wood_Basic"
 cull_mode = 2
 vertex_color_use_as_albedo = true
+albedo_color = Color(1, 0.737255, 0.6, 1)
 metallic = 1.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_kp4us"]
@@ -105,3 +109,7 @@ skeleton = NodePath("")
 [node name="CollisionShape3d" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10106, 2.11305, 0.592722)
 shape = SubResource("BoxShape3D_hl5lu")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0991942, 0.494916, 0.697758)
+light_color = Color(1, 0.533333, 0.396078, 1)

@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
 [ext_resource type="PackedScene" uid="uid://b0xnag4qp4w7t" path="res://Scenes/Level/Floor.tscn" id="2_2aqun"]
 [ext_resource type="Texture2D" uid="uid://xn0vscpreae4" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_11-512x512.png" id="3_d07on"]
-[ext_resource type="Texture2D" uid="uid://b3e2o2g0bys3c" path="res://AssetPacks/Stains And Damage/Stains And Damage 3.png" id="9_116ww"]
-[ext_resource type="Texture2D" uid="uid://cehp6ajrg2vmf" path="res://AssetPacks/Stains And Damage/Stains And Damage 4.png" id="10_kdomg"]
+[ext_resource type="Texture2D" uid="uid://b86lbg6eoy001" path="res://AssetPacks/Stains And Damage/Stains And Damage 3.png" id="9_116ww"]
+[ext_resource type="Texture2D" uid="uid://tvq6lw0v7jfm" path="res://AssetPacks/Stains And Damage/Stains And Damage 4.png" id="10_kdomg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ky6f1"]
 albedo_texture = ExtResource("3_d07on")
@@ -30,9 +30,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ky6f1")
 cell_center_x = false
 cell_center_y = false
 data = {
-"cells": PackedInt32Array(0, 8, 27, 1, 8, 27, 2, 8, 27, 3, 8, 27, 4, 8, 27, 5, 8, 27, 6, 8, 27, 8, 8, 27, 9, 8, 27, 0, 4, 27, 1, 4, 27, 2, 4, 27, 3, 4, 27, 4, 4, 27, 5, 4, 27, 9, 3, 27, 8, 3, 27, 65536, 8, 27, 65537, 8, 27, 65538, 8, 27, 65539, 8, 27, 65540, 8, 27, 65541, 8, 27, 65542, 8, 27, 65543, 8, 27, 65545, 8, 27, 65545, 3, 27, 65544, 3, 27, 131072, 8, 27, 131073, 8, 27, 131074, 8, 27, 131075, 8, 27, 131076, 8, 27, 131077, 8, 27, 131078, 8, 27, 131079, 8, 27, 131081, 8, 27, 131080, 3, 27, 131081, 3, 27, 131079, 3, 27, 131078, 3, 27, 131077, 3, 27, 131075, 3, 27, 131074, 3, 27, 131076, 4, 27, 131075, 4, 27, 131074, 4, 27, 131080, 4, 27, 7, 8, 27, 65544, 8, 27, 131080, 8, 27, 6, 4, 27, 7, 4, 27, 8, 4, 27, 9, 4, 27, 65538, 4, 27, 65539, 4, 27, 65540, 4, 27, 65541, 4, 27, 65542, 4, 27, 65543, 4, 27, 65544, 4, 27, 65545, 4, 27, 65536, 4, 27, 65537, 4, 27, 131073, 4, 27, 131072, 4, 27, 131079, 4, 27, 131077, 4, 27, 131078, 4, 27, 131081, 4, 27, 131082, 4, 27, 131083, 4, 27, 65546, 4, 27, 65547, 4, 27, 10, 4, 27, 11, 4, 27, 10, 8, 27, 11, 8, 27, 65546, 8, 27, 65547, 8, 27, 131082, 8, 27, 131083, 8, 27)
+"cells": PackedInt32Array(0, 8, 27, 1, 8, 27, 2, 8, 27, 3, 8, 27, 4, 8, 27, 5, 8, 27, 6, 8, 27, 8, 8, 27, 9, 8, 27, 9, 3, 27, 8, 3, 27, 65536, 8, 27, 65537, 8, 27, 65538, 8, 27, 65539, 8, 27, 65540, 8, 27, 65541, 8, 27, 65542, 8, 27, 65543, 8, 27, 65545, 8, 27, 65545, 3, 27, 65544, 3, 27, 131072, 8, 27, 131073, 8, 27, 131074, 8, 27, 131075, 8, 27, 131076, 8, 27, 131077, 8, 27, 131078, 8, 27, 131079, 8, 27, 131081, 8, 27, 131080, 3, 27, 131081, 3, 27, 131079, 3, 27, 131078, 3, 27, 131077, 3, 27, 131075, 3, 27, 131074, 3, 27, 7, 8, 27, 65544, 8, 27, 131080, 8, 27, 10, 8, 27, 11, 8, 27, 65546, 8, 27, 65547, 8, 27, 131082, 8, 27, 131083, 8, 27, 11, 3, 27, 10, 3, 27, 7, 3, 27, 6, 3, 27, 5, 3, 27, 4, 3, 27, 3, 3, 27, 2, 3, 27, 1, 3, 27, 0, 3, 27, 65547, 3, 27, 65546, 3, 27, 65543, 3, 27, 65542, 3, 27, 65541, 3, 27, 65540, 3, 27, 65539, 3, 27, 65538, 3, 27, 65537, 3, 27, 65536, 3, 27, 131083, 3, 27, 131082, 3, 27, 131076, 3, 27, 131072, 3, 27, 131073, 3, 27)
 }
-metadata/_editor_floor_ = Vector3(0, 2, 0)
+metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="Props" type="Node3D" parent="."]
 visible = false

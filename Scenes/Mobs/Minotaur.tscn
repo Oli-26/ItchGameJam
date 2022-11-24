@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Source/Mobs/Mob.cs" id="1_qpub3"]
 [ext_resource type="AnimationLibrary" uid="uid://bessp12qoayxa" path="res://Animations/Movement.res" id="2_22kxy"]
-[ext_resource type="PackedScene" uid="uid://ceddt6h38l1j2" path="res://Scenes/Mobs/MinotaurModel.tscn" id="3_cchuk"]
+[ext_resource type="PackedScene" uid="uid://bai37hm8i7ss7" path="res://Scenes/Mobs/MinotaurModel.tscn" id="3_cchuk"]
 [ext_resource type="Script" path="res://Source/Behaviour/CharacterPerceptionBehaviour.cs" id="4_4nlm1"]
 [ext_resource type="Script" path="res://Source/Mobs/MobController.cs" id="4_jmmc3"]
 [ext_resource type="Script" path="res://Source/Behaviour/DisengagementBehaviour.cs" id="6_nxk1l"]
@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://c27rq7gwj8g48" path="res://Scenes/Mobs/VisionManager.tscn" id="8_w7pjv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7i3pq"]
-radius = 1.123
-height = 5.0
+radius = 0.6
+height = 3.0
 
 [node name="Minotaur" type="CharacterBody3D"]
 script = ExtResource("1_qpub3")
@@ -24,12 +24,12 @@ libraries = {
 [node name="RootNode" type="Node3D" parent="."]
 
 [node name="Enemy" type="Node3D" parent="."]
-transform = Transform3D(-0.4, 0, -6.03983e-08, 0, 0.4, 0, 6.03983e-08, 0, -0.4, 0, 0, 0)
+transform = Transform3D(-0.25, 0, -3.7749e-08, 0, 0.25, 0, 3.7749e-08, 0, -0.25, 0, 0, 0)
 
 [node name="Armature" parent="Enemy" instance=ExtResource("3_cchuk")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.52003, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60929, 0)
 shape = SubResource("CapsuleShape3D_7i3pq")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
