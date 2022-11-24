@@ -21,7 +21,7 @@ static func getUnitDifference(to, from):
 			return Vector2(-1,-1);
 			
 static func isCloseTo(to, from, within):
-	if abs(to.x - from.x) < within && abs(to.y - from.y) < within:
+	if abs(to.x - from.x) <= within && abs(to.y - from.y) <= within:
 		return true;
 	return false;	
 	
@@ -81,7 +81,6 @@ static func createMultiCheckpointMaze(height, width, directionBias, randomness, 
 	for p in range(0, extraTargetPoints):
 		allPoints.append(Vector2(randomInt(0, width-1), randomInt(0, height-1)))
 	allPoints.append(Vector2(width-1, height-1))
-	
 	var i = 0;
 	var currentPoint = 1;
 
@@ -95,17 +94,18 @@ static func createMultiCheckpointMaze(height, width, directionBias, randomness, 
 			print("Max loop count hit")
 			return;
 		
-		if(isCloseTo(currentPosition, allPoints[currentPoint], 2)):
+		if( currentPoint != numberOfPoints-1 && isCloseTo(currentPosition, allPoints[currentPoint], 2)):
 			currentPoint += 1;
 			if(currentPoint == numberOfPoints):
 				return {'grid':grid, 'startPosition':allPoints[0]}
+
+				
 		var towardsMultiplier = getUnitDifference(allPoints[currentPoint], currentPosition)
 		
 		var xBias = directionBias/width * abs(currentPosition.x - allPoints[currentPoint].x) - abs(currentPosition.y - allPoints[currentPoint].y);
 		
 		movement = randomMovement(randomInt(minLengthRun, maxLengthRun), towardsMultiplier, xBias, randomness);
 		nextPosition = currentPosition + movement;
-		
 		if(isWithinBounds(nextPosition, width, height)):
 			fillLine(grid, currentPosition, nextPosition);
 			currentPosition = nextPosition;			
