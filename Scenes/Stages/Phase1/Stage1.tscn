@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://g1fpeb8ag3qe"]
+[gd_scene load_steps=17 format=3 uid="uid://g1fpeb8ag3qe"]
 
 [ext_resource type="PackedScene" uid="uid://dayo5j2yyndlg" path="res://Scenes/Player/player.tscn" id="1_eisjc"]
 [ext_resource type="PackedScene" uid="uid://cgsys6xef3jrr" path="res://Scenes/Sections/Phase1/Start.tscn" id="3_53qc0"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://bjv6vksm670lk" path="res://Scenes/Level/Stairs.tscn" id="9_opfem"]
 [ext_resource type="AudioStream" uid="uid://bb7fc72abpqbu" path="res://Sounds/398908__quadraslayer__monster-roar-2.wav" id="10_8bqb0"]
 [ext_resource type="PackedScene" uid="uid://dupc2dxoefygh" path="res://Scenes/Level/Waypoint.tscn" id="10_j5mov"]
-[ext_resource type="PackedScene" uid="uid://21tg0g4utq7b" path="res://Scenes/Core/Music.tscn" id="13_p5fty"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6g5uc"]
 
@@ -97,5 +96,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 276.749, -0.325432, 8.68305)
 [node name="Stairs2" parent="." instance=ExtResource("9_opfem")]
 transform = Transform3D(-0.863008, 0, 0.50519, 0, 1, 0, -0.50519, 0, -0.863008, 315.415, -0.568259, 6.29763)
 NextLevelPath = "res://Scenes/Stages/Phase1/Stage2.tscn"
-
-[node name="Music" parent="." instance=ExtResource("13_p5fty")]

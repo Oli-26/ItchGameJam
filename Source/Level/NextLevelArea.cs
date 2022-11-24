@@ -15,7 +15,8 @@ public partial class NextLevelArea : Area3D
 
 	private void OnEntered(Node3D body)
     {
-		if (body.Name.ToString().StartsWith("player", StringComparison.InvariantCultureIgnoreCase))
+		if (!string.IsNullOrEmpty(NextLevelPath)
+            && body.Name.ToString().StartsWith("player", StringComparison.InvariantCultureIgnoreCase))
         {
             _levelManager.SetActiveScene(NextLevelPath);
         }

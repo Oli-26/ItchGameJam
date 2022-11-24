@@ -1,10 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://bj16llsldmtpv"]
+[gd_scene load_steps=11 format=3 uid="uid://bj16llsldmtpv"]
 
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_8755y"]
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="2_dd3di"]
 [ext_resource type="PackedScene" uid="uid://b0xnag4qp4w7t" path="res://Scenes/Level/Floor.tscn" id="3_xvw4m"]
 [ext_resource type="Texture2D" uid="uid://cp8c08no2n42a" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_09-512x512.png" id="4_jp2t6"]
 [ext_resource type="PackedScene" uid="uid://cd5g7ncjh2703" path="res://Scenes/Level/Lava.tscn" id="5_5n5wt"]
+[ext_resource type="Texture2D" uid="uid://c7hr8svcd0qbw" path="res://Images/hell1.png" id="6_76waj"]
+[ext_resource type="Texture2D" uid="uid://t7epdhocre7j" path="res://Images/hell2.png" id="7_m5qkg"]
+[ext_resource type="Texture2D" uid="uid://dc7am1nfdni2x" path="res://Images/hell3.png" id="8_46opf"]
+[ext_resource type="Texture2D" uid="uid://v1bvf5pxt8cu" path="res://Images/hell4.png" id="9_ifrnd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lc7b5"]
 albedo_texture = ExtResource("4_jp2t6")
@@ -36,3 +40,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -0.669741, 13)
 light_color = Color(1, 0.298039, 0, 1)
 light_energy = 4.0
 omni_range = 21.0
+
+[node name="Decal" type="Decal" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.8266, 2.54671, 2.00484)
+extents = Vector3(12, 0.1, 4)
+texture_albedo = ExtResource("6_76waj")
+
+[node name="Decal2" type="Decal" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10.8266, 2.54671, 22.0043)
+extents = Vector3(12, 0.1, 4)
+texture_albedo = ExtResource("7_m5qkg")
+
+[node name="Decal3" type="Decal" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 22.0037, 2.54671, 12.0046)
+extents = Vector3(12, 0.1, 4)
+texture_albedo = ExtResource("8_46opf")
+
+[node name="Decal4" type="Decal" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 1.99553, 2.54671, 12.0046)
+extents = Vector3(12, 0.1, 4)
+texture_albedo = ExtResource("9_ifrnd")

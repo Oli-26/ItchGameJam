@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://bjv6vksm670lk"]
 
-[ext_resource type="PackedScene" uid="uid://behjlvxiu7i13" path="res://Models/Level/Stairs.blend" id="1_hwl0v"]
+[ext_resource type="PackedScene" uid="uid://ciub8e4cod6bk" path="res://Models/Level/Stairs.blend" id="1_hwl0v"]
 [ext_resource type="Texture2D" uid="uid://snmdaf4s6n26" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_12-512x512.png" id="2_dndpb"]
 [ext_resource type="Script" path="res://Source/Level/Stairs.cs" id="2_saswi"]
 [ext_resource type="Texture2D" uid="uid://dc4nek1088eja" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_15-512x512.png" id="3_sxocw"]

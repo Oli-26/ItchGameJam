@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://boyo7thqee33a"]
 
-[ext_resource type="PackedScene" uid="uid://7gv6q50fuutj" path="res://Scenes/Player/player.tscn" id="1_eisjc"]
+[ext_resource type="PackedScene" uid="uid://dayo5j2yyndlg" path="res://Scenes/Player/player.tscn" id="1_eisjc"]
 [ext_resource type="Script" path="res://Source/LevelGeneration/JustGroundGenerator.cs" id="2_et6pa"]
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="5_7d8gr"]
 [ext_resource type="PackedScene" uid="uid://bp5lu2b0l5nlq" path="res://Scenes/Mobs/Minotaur.tscn" id="5_vdmbx"]
 [ext_resource type="Script" path="res://Source/LevelGeneration/GridMapBootstrapper.cs" id="6_ter02"]
-[ext_resource type="Texture2D" uid="uid://cbxicq4e7yrac" path="res://Images/minotaur_caveart.png" id="8_l3m55"]
+[ext_resource type="Texture2D" uid="uid://d40y2n5m103s" path="res://Images/minotaur_caveart.png" id="8_l3m55"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6g5uc"]
 

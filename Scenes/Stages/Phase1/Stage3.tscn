@@ -1,0 +1,81 @@
+[gd_scene load_steps=15 format=3 uid="uid://dwwfe0pufdtdg"]
+
+[ext_resource type="PackedScene" uid="uid://dayo5j2yyndlg" path="res://Scenes/Player/player.tscn" id="1_1pamn"]
+[ext_resource type="PackedScene" uid="uid://bp5lu2b0l5nlq" path="res://Scenes/Mobs/Minotaur.tscn" id="2_ehm15"]
+[ext_resource type="Script" path="res://Source/Behaviour/WaypointPathBehaviour.cs" id="3_gt06w"]
+[ext_resource type="PackedScene" uid="uid://cgsys6xef3jrr" path="res://Scenes/Sections/Phase1/Start.tscn" id="4_ulcmt"]
+[ext_resource type="PackedScene" uid="uid://pjjdsdjs2pnf" path="res://Scenes/Sections/Phase1/Finale.tscn" id="7_3vky0"]
+[ext_resource type="PackedScene" uid="uid://cas8h37r18eup" path="res://Scenes/Sections/Phase1/End.tscn" id="8_exrdr"]
+[ext_resource type="PackedScene" uid="uid://bahiym17rfq1y" path="res://Scenes/Level/AudioTriggerArea.tscn" id="9_t4wte"]
+[ext_resource type="AudioStream" uid="uid://bb7fc72abpqbu" path="res://Sounds/398908__quadraslayer__monster-roar-2.wav" id="10_aq2k1"]
+[ext_resource type="PackedScene" uid="uid://bjv6vksm670lk" path="res://Scenes/Level/Stairs.tscn" id="11_5xuel"]
+[ext_resource type="PackedScene" uid="uid://dupc2dxoefygh" path="res://Scenes/Level/Waypoint.tscn" id="12_5fwk6"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6g5uc"]
+
+[sub_resource type="Sky" id="Sky_jhr6c"]
+sky_material = SubResource("ProceduralSkyMaterial_6g5uc")
+
+[sub_resource type="Environment" id="Environment_l5pxq"]
+background_mode = 2
+background_color = Color(0.2139, 0.570975, 0.69, 1)
+sky = SubResource("Sky_jhr6c")
+ambient_light_sky_contribution = 0.03
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.02
+volumetric_fog_temporal_reprojection_amount = 0.99
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_b8pia"]
+agent_height = 3.0
+agent_radius = 0.6
+
+[node name="Level" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_l5pxq")
+
+[node name="Player" parent="." instance=ExtResource("1_1pamn")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 222.8, -8.72435, 55.1776)
+
+[node name="Minotaur" parent="." instance=ExtResource("2_ehm15")]
+transform = Transform3D(-0.0488668, 0, 0.998805, 0, 1, 0, -0.998805, 0, -0.0488668, 257.2, -0.819398, 24.543)
+
+[node name="WaypointPathBehaviour" type="Node" parent="Minotaur" node_paths=PackedStringArray("WaypointA", "WaypointB", "WaypointC", "WaypointD")]
+script = ExtResource("3_gt06w")
+WaypointA = NodePath("../../WaypointA")
+WaypointB = NodePath("../../WaypointB")
+WaypointC = NodePath("../../WaypointC")
+WaypointD = NodePath("../../WaypointD")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navmesh = SubResource("NavigationMesh_b8pia")
+
+[node name="Sections" type="Node3D" parent="NavigationRegion3D"]
+
+[node name="Start" parent="NavigationRegion3D/Sections" instance=ExtResource("4_ulcmt")]
+
+[node name="End" parent="NavigationRegion3D/Sections" instance=ExtResource("8_exrdr")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 208.57, -11.1633, 122.828)
+
+[node name="Stairs" parent="NavigationRegion3D/Sections" instance=ExtResource("11_5xuel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.8197, -1, 173.374)
+NextLevelPath = "res://Scenes/Stages/Phase1/Stage0.tscn"
+
+[node name="Finale" parent="NavigationRegion3D/Sections" instance=ExtResource("7_3vky0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 203.161, 3.06694, 10.3778)
+
+[node name="AudioTriggerArea2" parent="." instance=ExtResource("9_t4wte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2942, 2.05929, 12.71)
+Sound = ExtResource("10_aq2k1")
+
+[node name="WaypointA" parent="." instance=ExtResource("12_5fwk6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 254.544, -0.325432, 14.1991)
+
+[node name="WaypointB" parent="." instance=ExtResource("12_5fwk6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 250.024, -0.325432, 37.0931)
+
+[node name="WaypointC" parent="." instance=ExtResource("12_5fwk6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 282.281, -0.325432, 21.6508)
+
+[node name="WaypointD" parent="." instance=ExtResource("12_5fwk6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 276.749, -0.325432, 8.68305)

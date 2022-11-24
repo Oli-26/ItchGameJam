@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c73jrnap28g20"]
+[gd_scene load_steps=20 format=3 uid="uid://c73jrnap28g20"]
 
 [ext_resource type="PackedScene" uid="uid://dayo5j2yyndlg" path="res://Scenes/Player/player.tscn" id="1_eisjc"]
 [ext_resource type="PackedScene" uid="uid://cgsys6xef3jrr" path="res://Scenes/Sections/Phase1/Start.tscn" id="3_53qc0"]
@@ -8,8 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://cvr3jhled55hv" path="res://Scenes/Sections/Phase1/Corridor3.tscn" id="7_ffm1x"]
 [ext_resource type="PackedScene" uid="uid://bahiym17rfq1y" path="res://Scenes/Level/AudioTriggerArea.tscn" id="8_5jhni"]
 [ext_resource type="PackedScene" path="res://Scenes/Sections/Phase1/Corridor4.tscn" id="8_haug8"]
+[ext_resource type="Script" path="res://Source/MazeGenerator/MazeGenerator.gd" id="8_rs16u"]
+[ext_resource type="PackedScene" uid="uid://dhksdk7d6ptob" path="res://Scenes/Sections/Olis1x1-1.tscn" id="9_b4uc1"]
 [ext_resource type="AudioStream" uid="uid://bb7fc72abpqbu" path="res://Sounds/398908__quadraslayer__monster-roar-2.wav" id="10_8bqb0"]
 [ext_resource type="PackedScene" uid="uid://dupc2dxoefygh" path="res://Scenes/Level/Waypoint.tscn" id="10_j5mov"]
+[ext_resource type="PackedScene" uid="uid://bj16llsldmtpv" path="res://Scenes/Sections/LavaA1-1.tscn" id="11_1qjh4"]
+[ext_resource type="PackedScene" uid="uid://beihc7jxmm01c" path="res://Scenes/Sections/LavaB1-1.tscn" id="15_4k0ej"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6g5uc"]
 
@@ -21,7 +25,6 @@ background_mode = 2
 background_color = Color(0.2139, 0.570975, 0.69, 1)
 sky = SubResource("Sky_jhr6c")
 ambient_light_sky_contribution = 0.03
-volumetric_fog_enabled = true
 volumetric_fog_density = 0.02
 volumetric_fog_temporal_reprojection_amount = 0.99
 
@@ -31,13 +34,15 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Arr
 agent_height = 3.0
 agent_radius = 0.6
 
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_rxsbj"]
+
 [node name="Level" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_l5pxq")
 
 [node name="Player" parent="." instance=ExtResource("1_eisjc")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.84909, 0.639674, 4.50198)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 42.8491, 2.04056, 59.2361)
 
 [node name="Minotaur" parent="." instance=ExtResource("5_vdmbx")]
 transform = Transform3D(-0.0488668, 0, 0.998805, 0, 1, 0, -0.998805, 0, -0.0488668, 54.6934, -0.693603, -43.2651)
@@ -94,6 +99,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0376, 0, 41.009)
 
 [node name="Corridor10" parent="NavigationRegion3D/Sections" instance=ExtResource("8_haug8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 31, 0, 64.0004)
+
+[node name="MazeGen" type="Node3D" parent="NavigationRegion3D/Sections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9947, -1.0206, 64.9877)
+script = ExtResource("8_rs16u")
+scenes = [ExtResource("9_b4uc1"), ExtResource("15_4k0ej"), ExtResource("11_1qjh4")]
+directionBias = 5.0
+randomness = 0.0
+minLengthRun = 1
+maxLengthRun = 1
+numberOfExtraPoints = 0
+mazeSize = 6
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Sections/MazeGen"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
+shape = SubResource("WorldBoundaryShape3D_rxsbj")
 
 [node name="AudioTriggerArea2" parent="." instance=ExtResource("8_5jhni")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2942, 2.05929, 12.71)
