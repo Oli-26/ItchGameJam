@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Source/Behaviour/WaypointPathBehaviour.cs" id="3_gt06w"]
 [ext_resource type="PackedScene" uid="uid://cgsys6xef3jrr" path="res://Scenes/Sections/Phase1/Start.tscn" id="4_ulcmt"]
 [ext_resource type="PackedScene" uid="uid://pjjdsdjs2pnf" path="res://Scenes/Sections/Phase1/Finale.tscn" id="7_3vky0"]
-[ext_resource type="PackedScene" uid="uid://cas8h37r18eup" path="res://Scenes/Sections/Phase1/End.tscn" id="8_exrdr"]
+[ext_resource type="PackedScene" uid="uid://cdgsr1p7bm5rf" path="res://Scenes/Sections/Phase1/FinalEnd.tscn" id="7_083v0"]
 [ext_resource type="PackedScene" uid="uid://bahiym17rfq1y" path="res://Scenes/Level/AudioTriggerArea.tscn" id="9_t4wte"]
 [ext_resource type="AudioStream" uid="uid://bb7fc72abpqbu" path="res://Sounds/398908__quadraslayer__monster-roar-2.wav" id="10_aq2k1"]
 [ext_resource type="PackedScene" uid="uid://bjv6vksm670lk" path="res://Scenes/Level/Stairs.tscn" id="11_5xuel"]
@@ -13,13 +13,13 @@
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6g5uc"]
 
-[sub_resource type="Sky" id="Sky_jhr6c"]
+[sub_resource type="Sky" id="Sky_5k5ms"]
 sky_material = SubResource("ProceduralSkyMaterial_6g5uc")
 
 [sub_resource type="Environment" id="Environment_l5pxq"]
 background_mode = 2
 background_color = Color(0.2139, 0.570975, 0.69, 1)
-sky = SubResource("Sky_jhr6c")
+sky = SubResource("Sky_5k5ms")
 ambient_light_sky_contribution = 0.03
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.02
@@ -54,15 +54,15 @@ navmesh = SubResource("NavigationMesh_b8pia")
 
 [node name="Start" parent="NavigationRegion3D/Sections" instance=ExtResource("4_ulcmt")]
 
-[node name="End" parent="NavigationRegion3D/Sections" instance=ExtResource("8_exrdr")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 208.57, -11.1633, 122.828)
-
 [node name="Stairs" parent="NavigationRegion3D/Sections" instance=ExtResource("11_5xuel")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.8197, -1, 173.374)
 NextLevelPath = "res://Scenes/Stages/Phase1/Stage0.tscn"
 
 [node name="Finale" parent="NavigationRegion3D/Sections" instance=ExtResource("7_3vky0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 203.161, 3.06694, 10.3778)
+
+[node name="End2" parent="NavigationRegion3D/Sections" instance=ExtResource("7_083v0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 208.553, -11.1775, 123.494)
 
 [node name="AudioTriggerArea2" parent="." instance=ExtResource("9_t4wte")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2942, 2.05929, 12.71)

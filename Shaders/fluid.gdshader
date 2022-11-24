@@ -9,10 +9,10 @@ void vertex() {
 	vec3 n_out3p0 = VERTEX;
 
 	vec2 samplePosition = UV * 0.5 
-	+ vec2(time * 0.1, 0) * 0.5;
+	+ vec2(time * 0.05, 0) * 0.5;
 
 	vec2 samplePosition2 = UV * 0.5 
-	+ vec2(-time * 0.038, 0) * 0.3;
+	+ vec2(-time * 0.088, 0) * 0.3;
 	
 	float height = (
 		texture(tex_vtx_2, samplePosition).r
