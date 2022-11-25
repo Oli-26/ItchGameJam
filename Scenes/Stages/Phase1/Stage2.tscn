@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c73jrnap28g20"]
+[gd_scene load_steps=22 format=3 uid="uid://c73jrnap28g20"]
 
 [ext_resource type="PackedScene" uid="uid://dayo5j2yyndlg" path="res://Scenes/Player/player.tscn" id="1_eisjc"]
 [ext_resource type="PackedScene" uid="uid://cgsys6xef3jrr" path="res://Scenes/Sections/Phase1/Start.tscn" id="3_53qc0"]
@@ -13,7 +13,9 @@
 [ext_resource type="AudioStream" uid="uid://bb7fc72abpqbu" path="res://Sounds/398908__quadraslayer__monster-roar-2.wav" id="10_8bqb0"]
 [ext_resource type="PackedScene" uid="uid://dupc2dxoefygh" path="res://Scenes/Level/Waypoint.tscn" id="10_j5mov"]
 [ext_resource type="PackedScene" uid="uid://bj16llsldmtpv" path="res://Scenes/Sections/LavaA1-1.tscn" id="11_1qjh4"]
+[ext_resource type="PackedScene" uid="uid://cas8h37r18eup" path="res://Scenes/Sections/Phase1/End.tscn" id="12_06ouv"]
 [ext_resource type="PackedScene" uid="uid://beihc7jxmm01c" path="res://Scenes/Sections/LavaB1-1.tscn" id="15_4k0ej"]
+[ext_resource type="PackedScene" uid="uid://bjv6vksm670lk" path="res://Scenes/Level/Stairs.tscn" id="16_1eckj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6g5uc"]
 
@@ -111,9 +113,16 @@ maxLengthRun = 1
 numberOfExtraPoints = 0
 mazeSize = 6
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Sections/MazeGen"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
+[node name="EnterancePlaceholder" type="CollisionShape3D" parent="NavigationRegion3D/Sections/MazeGen"]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 12, 0, 12)
 shape = SubResource("WorldBoundaryShape3D_rxsbj")
+
+[node name="ExitPlaceholder" type="CollisionShape3D" parent="NavigationRegion3D/Sections/MazeGen"]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 132, 0, 132)
+shape = SubResource("WorldBoundaryShape3D_rxsbj")
+
+[node name="End" parent="NavigationRegion3D/Sections" instance=ExtResource("12_06ouv")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 198, -0.114595, 211)
 
 [node name="AudioTriggerArea2" parent="." instance=ExtResource("8_5jhni")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2942, 2.05929, 12.71)
@@ -135,3 +144,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.9975, -0.325432, 11.8754)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.6506, 2.1553, 52.9995)
+
+[node name="Stairs" parent="." instance=ExtResource("16_1eckj")]
+transform = Transform3D(-0.869011, 0, -0.494792, 0, 1, 0, 0.494792, 0, -0.869011, 188.415, -0.568259, 198.298)
+NextLevelPath = "res://Scenes/Stages/Phase1/Stage3.tscn"
