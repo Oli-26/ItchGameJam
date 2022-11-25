@@ -40,12 +40,8 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 222.8,
 [node name="Minotaur" parent="." instance=ExtResource("2_ehm15")]
 transform = Transform3D(-0.0488668, 0, 0.998805, 0, 1, 0, -0.998805, 0, -0.0488668, 257.2, -0.819398, 24.543)
 
-[node name="WaypointPathBehaviour" type="Node" parent="Minotaur" node_paths=PackedStringArray("WaypointA", "WaypointB", "WaypointC", "WaypointD")]
+[node name="WaypointPathBehaviour" type="Node" parent="Minotaur"]
 script = ExtResource("3_gt06w")
-WaypointA = NodePath("../../WaypointA")
-WaypointB = NodePath("../../WaypointB")
-WaypointC = NodePath("../../WaypointC")
-WaypointD = NodePath("../../WaypointD")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navmesh = SubResource("NavigationMesh_b8pia")
