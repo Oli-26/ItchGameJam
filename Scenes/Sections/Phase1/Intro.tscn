@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://catsnedejtp38"]
+[gd_scene load_steps=18 format=3 uid="uid://catsnedejtp38"]
 
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
@@ -13,6 +13,22 @@
 [ext_resource type="Texture2D" uid="uid://lmmtx1m5yapy" path="res://Images/labrinth.png" id="10_o1frb"]
 [ext_resource type="PackedScene" uid="uid://cbobc00ao7dg7" path="res://Scenes/Level/Gateway.tscn" id="11_7l0bh"]
 [ext_resource type="PackedScene" uid="uid://v1jlk2amc23f" path="res://Scenes/Level/Lever.tscn" id="11_tt4f5"]
+[ext_resource type="Texture2D" uid="uid://cts8ysmr4r5hr" path="res://Images/dust.png" id="14_o43ae"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8sopa"]
+emission_shape = 1
+emission_sphere_radius = 3.0
+gravity = Vector3(0, -1, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pmcda"]
+transparency = 1
+albedo_texture = ExtResource("14_o43ae")
+billboard_mode = 1
+billboard_keep_scale = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_vb4us"]
+material = SubResource("StandardMaterial3D_pmcda")
+size = Vector2(0.3, 0.3)
 
 [node name="Intro" type="Node3D"]
 script = ExtResource("1_gdq7v")
@@ -120,3 +136,11 @@ transform = Transform3D(-1.81402e-08, 0, 0.415, 0, 0.415, 0, -0.415, 0, -1.81402
 [node name="Lever" parent="." node_paths=PackedStringArray("Target") instance=ExtResource("11_tt4f5")]
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 20.7951, 1.24671, 3.08994)
 Target = NodePath("../Gateway")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2368, 6.85746, 15.3716)
+amount = 10
+lifetime = 10.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_8sopa")
+draw_pass_1 = SubResource("QuadMesh_vb4us")
