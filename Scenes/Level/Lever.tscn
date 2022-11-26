@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://v1jlk2amc23f"]
+[gd_scene load_steps=12 format=3 uid="uid://v1jlk2amc23f"]
 
 [ext_resource type="PackedScene" uid="uid://d4ci6ifjx7jk3" path="res://Models/Level/Lever.blend" id="1_vgxi7"]
 [ext_resource type="Script" path="res://Source/Level/Lever.cs" id="2_sqgar"]
@@ -9,7 +9,10 @@
 albedo_texture = ExtResource("2_tc4b8")
 uv1_scale = Vector3(5, 5, 5)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8jlo4"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_puluy"]
+next_pass = SubResource("ShaderMaterial_8jlo4")
 albedo_texture = ExtResource("3_ndqiw")
 
 [sub_resource type="Animation" id="Animation_1jjph"]

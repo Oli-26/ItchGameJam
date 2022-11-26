@@ -27,6 +27,7 @@ background_mode = 2
 background_color = Color(0.2139, 0.570975, 0.69, 1)
 sky = SubResource("Sky_jhr6c")
 ambient_light_sky_contribution = 0.03
+volumetric_fog_enabled = true
 volumetric_fog_density = 0.02
 volumetric_fog_temporal_reprojection_amount = 0.99
 
@@ -44,7 +45,7 @@ agent_radius = 0.6
 environment = SubResource("Environment_l5pxq")
 
 [node name="Player" parent="." instance=ExtResource("1_eisjc")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 42.8491, 2.04056, 59.2361)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.41714, 0.44457, 5.35923)
 
 [node name="Minotaur" parent="." instance=ExtResource("5_vdmbx")]
 transform = Transform3D(-0.0488668, 0, 0.998805, 0, 1, 0, -0.998805, 0, -0.0488668, 54.6934, -0.693603, -43.2651)

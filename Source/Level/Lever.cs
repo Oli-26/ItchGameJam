@@ -1,19 +1,63 @@
 using Godot;
 using System;
+using System.Linq;
 
 public partial class Lever : Node3D, IActivatable
 {
 	private AnimationPlayer _animationPlayer;
+	private MeshInstance3D _leverMesh;
+	private Material _leverMaterial;
+	private Shader _shader;
 	private CharacterBody3D _lastInvoker;
+
 	private bool _active = false;
 
 	[Export] public Node Target { get; set; }
 	[Export] public bool Active { get => _active; set => UpdateActive(value); }
 
+	private bool _showInteractive = true;
+	public bool ShowInteractive { 
+		get => _showInteractive; 
+		private set
+		{
+			GD.Print(_showInteractive);
+			if (_showInteractive == value)
+			{
+				return;
+			}
+			_showInteractive = value;
+
+			GD.Print("Show Interactive: " + _showInteractive);
+			ToggleShader();
+        }
+	}
+
+	private void ToggleShader()
+    {
+		var material = _showInteractive
+			? new ShaderMaterial()
+			{
+				Shader = _shader,
+				NextPass = _leverMaterial
+			}
+			: _leverMaterial;
+		_leverMesh.SetSurfaceOverrideMaterial(0, material);
+    }
+
 	public override void _Ready()
 	{
 		_animationPlayer = GetNode<AnimationPlayer>("./AnimationPlayer");
-		PlayAnimation();
+        _leverMesh = GetNode<MeshInstance3D>("./Lever");
+		_leverMaterial = _leverMesh.GetSurfaceOverrideMaterial(0);
+		_shader = ResourceLoader.Load<Shader>("res://Shaders/outline.gdshader");
+
+        ToggleShader();
+        PlayAnimation();
+    }
+
+    public override void _Process(double delta)
+    {
+		ShowInteractive = this.GetNearbyPlayers(2f).Any();
     }
 
 	public void UpdateActive(bool active)

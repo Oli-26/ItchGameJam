@@ -44,7 +44,6 @@ public partial class Footsteps : Node3D
 
     private void TakeNextStep()
     {
-        GD.Print("TakeNextStep");
         var delay = DelayWalk;
         switch (WalkState)
         {
@@ -74,7 +73,6 @@ public partial class Footsteps : Node3D
         {
             audioStreamPlayer3D.QueueFree();
         });
-        GD.Print(GetChildCount());
 
     }
 }

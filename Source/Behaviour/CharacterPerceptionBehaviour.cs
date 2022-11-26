@@ -27,25 +27,12 @@ public partial class CharacterPerceptionBehaviour : Behaviour
 		{
 			return;
 		}
-
-		var root = GetTree().Root.GetNode("Level");
-		var players = root.GetChildren()
-			.Where(x => ((string)x.Name).StartsWith("Player", StringComparison.InvariantCultureIgnoreCase))
-			.Cast<Node3D>();
-		foreach (var player in players)
+		foreach (var player in Mob.GetNearbyPlayers(ViewRange))
         {
-            if (PlayerIsWithinRange(player)
-				&& _visionManager.CanDetect(player))
+            if (_visionManager.CanDetect(player))
 			{
 				MobController.OfferIntent(new ChasePlayerIntent(player));
             }
 		}
 	}
-
-	private bool PlayerIsWithinRange(Node3D player)
-	{
-
-        var distanceToTarget = (player.GlobalPosition - Mob.GlobalPosition).Length();
-		return distanceToTarget <= ViewRange;
-    }
 }

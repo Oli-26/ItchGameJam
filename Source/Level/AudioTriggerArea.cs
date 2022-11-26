@@ -9,7 +9,6 @@ public partial class AudioTriggerArea : Area3D
 
 	private bool _triggered = false;
 
-	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		_audioStreamPlayer3D = GetNode<AudioStreamPlayer3D>("./AudioStreamPlayer3D");

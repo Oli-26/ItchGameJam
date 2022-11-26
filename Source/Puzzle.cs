@@ -25,6 +25,7 @@ public partial class Puzzle : Node3D, IActivatable
     [Export] public Node3D TargetF { get; set; }
     [Export] public Node3D TargetG { get; set; }
     [Export] public Node3D TargetH { get; set; }
+    [Export] public Node3D TargetI { get; set; }
 
 
     private bool _passed = false;
@@ -79,6 +80,7 @@ public partial class Puzzle : Node3D, IActivatable
             (TargetF as IActivatable)?.Activate(true, this, null);
             (TargetG as IActivatable)?.Activate(true, this, null);
             (TargetH as IActivatable)?.Activate(true, this, null);
+            (TargetI as IActivatable)?.Activate(true, this, null);
         }
         else
         {
