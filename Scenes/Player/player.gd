@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 @onready var gunRay = $Head/Camera3d/RayCast3d as RayCast3D
 @onready var Cam = $Head/Camera3d as Camera3D
+@onready var playerHealth = $PlayerHealth
 @export var _bullet_scene : PackedScene
 
 var gravityToggle = true;
@@ -24,6 +25,9 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 func _physics_process(delta):
+	if playerHealth.Health == 0:
+		return
+	
 	var spritingMultiplier = 1;
 	# Add the gravity.
 	if gravityToggle and not is_on_floor():

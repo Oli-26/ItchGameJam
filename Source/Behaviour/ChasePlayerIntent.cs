@@ -11,6 +11,7 @@ public class ChasePlayerIntent : IIntent
 	public int Priority => 10;
 
     public Vector3 Position => _node.Position;
+	public PlayerHealth Health => _node.GetNode<PlayerHealth>("./PlayerHealth");
 
 
 	public ChasePlayerIntent(Node3D node)

@@ -133,8 +133,9 @@ omni_range = 20.0
 [node name="Gateway" parent="." instance=ExtResource("11_7l0bh")]
 transform = Transform3D(-1.81402e-08, 0, 0.415, 0, 0.415, 0, -0.415, 0, -1.81402e-08, 19.8456, -0.685766, 14.1587)
 
-[node name="Lever" parent="." instance=ExtResource("11_tt4f5")]
+[node name="Lever" parent="." node_paths=PackedStringArray("Target") instance=ExtResource("11_tt4f5")]
 transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 20.7951, 1.24671, 3.08994)
+Target = NodePath("../Gateway")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2368, 6.85746, 15.3716)

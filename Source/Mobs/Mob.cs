@@ -11,11 +11,10 @@ public partial class Mob : CharacterBody3D
 		_mobController = GetNode<MobController>("./MobController");
 	}
 
-	public override void _Process(double delta)
-	{
-
-		if (MoveAndSlide())
-		{
-		}
-	}
+	public override void _PhysicsProcess(double delta)
+    {
+        if (MoveAndSlide())
+        {
+        }
+    }
 }

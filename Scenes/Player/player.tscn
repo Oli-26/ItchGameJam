@@ -1,12 +1,51 @@
-[gd_scene load_steps=6 format=3 uid="uid://dayo5j2yyndlg"]
+[gd_scene load_steps=11 format=3 uid="uid://dayo5j2yyndlg"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_1w47b"]
 [ext_resource type="PackedScene" uid="uid://dbduds4bsaaby" path="res://Scenes/Bullet/Bullet.tscn" id="2_je25s"]
 [ext_resource type="ArrayMesh" uid="uid://5ic0mw457wtx" path="res://Models/lantern.obj" id="3_30u0b"]
+[ext_resource type="Script" path="res://Source/Player/PlayerHealth.cs" id="4_lmp8o"]
+[ext_resource type="Script" path="res://Source/Player/DeathHandler.cs" id="5_p7eg0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_emkox"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6b3ky"]
+
+[sub_resource type="Animation" id="Animation_d6580"]
+resource_name = "DeathFade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_chb4j"]
+resource_name = "Default"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_epf0i"]
+_data = {
+"DeathFade": SubResource("Animation_d6580"),
+"Default": SubResource("Animation_chb4j")
+}
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_1w47b")
@@ -27,6 +66,22 @@ near = 0.001
 [node name="RayCast3d" type="RayCast3D" parent="Head/Camera3d"]
 transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, 0, -0.00588068, 0.463024)
 target_position = Vector3(60, 0, 0)
+
+[node name="FadeOverlay" type="CanvasLayer" parent="Head/Camera3d"]
+
+[node name="ColorRect" type="ColorRect" parent="Head/Camera3d/FadeOverlay"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Head/Camera3d/FadeOverlay"]
+autoplay = "Default"
+libraries = {
+"": SubResource("AnimationLibrary_epf0i")
+}
 
 [node name="HingeJoint3d" type="HingeJoint3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.300697, 0.645826, -1.13493)
@@ -51,3 +106,9 @@ skeleton = NodePath("../..")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="lantern2/Lantern"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.717211, 2.34266, -0.669502)
+
+[node name="PlayerHealth" type="Node" parent="."]
+script = ExtResource("4_lmp8o")
+
+[node name="DeathHandler" type="Node" parent="."]
+script = ExtResource("5_p7eg0")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bp5lu2b0l5nlq"]
+[gd_scene load_steps=11 format=3 uid="uid://bp5lu2b0l5nlq"]
 
 [ext_resource type="Script" path="res://Source/Mobs/Mob.cs" id="1_qpub3"]
 [ext_resource type="AnimationLibrary" uid="uid://bessp12qoayxa" path="res://Animations/Movement.res" id="2_22kxy"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Source/Behaviour/DisengagementBehaviour.cs" id="6_nxk1l"]
 [ext_resource type="Script" path="res://Source/Behaviour/NavigationBehaviour.cs" id="7_4mnad"]
 [ext_resource type="PackedScene" uid="uid://c27rq7gwj8g48" path="res://Scenes/Mobs/VisionManager.tscn" id="8_w7pjv"]
+[ext_resource type="Script" path="res://Source/Behaviour/AttackBehaviour.cs" id="9_gy2iy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7i3pq"]
 radius = 0.6
@@ -53,3 +54,6 @@ script = ExtResource("6_nxk1l")
 
 [node name="NavigationBehaviour" type="Node" parent="."]
 script = ExtResource("7_4mnad")
+
+[node name="AttackBehaviour" type="Node" parent="."]
+script = ExtResource("9_gy2iy")

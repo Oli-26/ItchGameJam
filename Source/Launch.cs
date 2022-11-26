@@ -8,10 +8,10 @@ public partial class Launch : Node3D
 		CallDeferred("Start");
 	}
 
-	private void Start()
+	public void Start()
 	{
 		var levelManager = GetTree().Root
 			.GetNode<LevelManager>("./LevelManager");
-		levelManager.SetActiveScene(Levels.Phase1Level2);
+		levelManager.SetActiveScene(Levels.Phase1Level1);
 	}
 }
