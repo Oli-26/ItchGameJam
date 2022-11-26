@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dwwfe0pufdtdg"]
+[gd_scene load_steps=16 format=3 uid="uid://dwwfe0pufdtdg"]
 
 [ext_resource type="PackedScene" uid="uid://dayo5j2yyndlg" path="res://Scenes/Player/player.tscn" id="1_1pamn"]
 [ext_resource type="PackedScene" uid="uid://bp5lu2b0l5nlq" path="res://Scenes/Mobs/Minotaur.tscn" id="2_ehm15"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cgsys6xef3jrr" path="res://Scenes/Sections/Phase1/Start.tscn" id="4_ulcmt"]
 [ext_resource type="PackedScene" uid="uid://pjjdsdjs2pnf" path="res://Scenes/Sections/Phase1/Finale.tscn" id="7_3vky0"]
 [ext_resource type="PackedScene" uid="uid://cdgsr1p7bm5rf" path="res://Scenes/Sections/Phase1/FinalEnd.tscn" id="7_083v0"]
+[ext_resource type="PackedScene" uid="uid://bj16llsldmtpv" path="res://Scenes/Sections/LavaA1-1.tscn" id="8_iuwhi"]
 [ext_resource type="PackedScene" uid="uid://bahiym17rfq1y" path="res://Scenes/Level/AudioTriggerArea.tscn" id="9_t4wte"]
 [ext_resource type="AudioStream" uid="uid://bb7fc72abpqbu" path="res://Sounds/398908__quadraslayer__monster-roar-2.wav" id="10_aq2k1"]
 [ext_resource type="PackedScene" uid="uid://bjv6vksm670lk" path="res://Scenes/Level/Stairs.tscn" id="11_5xuel"]
@@ -35,7 +36,7 @@ agent_radius = 0.6
 environment = SubResource("Environment_l5pxq")
 
 [node name="Player" parent="." instance=ExtResource("1_1pamn")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 222.8, -8.72435, 55.1776)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.83879, 0, 9.70097)
 
 [node name="Minotaur" parent="." instance=ExtResource("2_ehm15")]
 transform = Transform3D(-0.0488668, 0, 0.998805, 0, 1, 0, -0.998805, 0, -0.0488668, 257.2, -0.819398, 24.543)
@@ -59,6 +60,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 203.161, 3.06694, 10.3778)
 
 [node name="End2" parent="NavigationRegion3D/Sections" instance=ExtResource("7_083v0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 208.553, -11.1775, 123.494)
+
+[node name="LavaA1-1" parent="NavigationRegion3D/Sections" instance=ExtResource("8_iuwhi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, -1.90852, 2.44051)
 
 [node name="AudioTriggerArea2" parent="." instance=ExtResource("9_t4wte")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2942, 2.05929, 12.71)

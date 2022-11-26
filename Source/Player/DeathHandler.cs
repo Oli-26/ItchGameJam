@@ -13,7 +13,7 @@ public partial class DeathHandler : Node
     public void Die()
     {
         _animationPlayer.Play("DeathFade");
-        Task.Delay(1500)
+        Task.Delay(3000)
             .ContinueWith(t =>
             {
                 var levelManager = GetTree().Root

@@ -10,7 +10,7 @@ public class ChasePlayerIntent : IIntent
 	private readonly Node3D _node;
 	public int Priority => 10;
 
-    public Vector3 Position => _node.Position;
+    public Vector3 Position => _node.GlobalPosition;
     public PlayerHealth Health => _node.GetNode<PlayerHealth>("./PlayerHealth");
     public CharacterBody3D CharacterBody => _node as CharacterBody3D;
 

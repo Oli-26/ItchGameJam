@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dayo5j2yyndlg"]
+[gd_scene load_steps=16 format=3 uid="uid://dayo5j2yyndlg"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_1w47b"]
 [ext_resource type="PackedScene" uid="uid://dbduds4bsaaby" path="res://Scenes/Bullet/Bullet.tscn" id="2_je25s"]
-[ext_resource type="ArrayMesh" uid="uid://5ic0mw457wtx" path="res://Models/lantern.obj" id="3_30u0b"]
+[ext_resource type="Texture2D" uid="uid://jkj5y3jxnxek" path="res://Images/debris2 Blood Overlay V2.png" id="3_c42do"]
+[ext_resource type="PackedScene" uid="uid://b40mlbjf7fy8b" path="res://Scenes/Player/LaternModel.tscn" id="4_edkmw"]
 [ext_resource type="Script" path="res://Source/Player/PlayerHealth.cs" id="4_lmp8o"]
 [ext_resource type="Script" path="res://Source/Player/DeathHandler.cs" id="5_p7eg0"]
 
@@ -47,6 +48,58 @@ _data = {
 "Default": SubResource("Animation_chb4j")
 }
 
+[sub_resource type="Animation" id="Animation_1un88"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3bqlb"]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_k4xme"]
+resource_name = "Default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u674w"]
+_data = {
+"Default": SubResource("Animation_k4xme"),
+"FadeIn": SubResource("Animation_1un88"),
+"FadeOut": SubResource("Animation_3bqlb")
+}
+
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_1w47b")
 _bullet_scene = ExtResource("2_je25s")
@@ -75,12 +128,29 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0)
+color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Head/Camera3d/FadeOverlay"]
 autoplay = "Default"
 libraries = {
 "": SubResource("AnimationLibrary_epf0i")
+}
+
+[node name="DamageOverlay" type="CanvasLayer" parent="Head/Camera3d"]
+
+[node name="TextureRect" type="TextureRect" parent="Head/Camera3d/DamageOverlay"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_c42do")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Head/Camera3d/DamageOverlay"]
+autoplay = "Default"
+libraries = {
+"": SubResource("AnimationLibrary_u674w")
 }
 
 [node name="HingeJoint3d" type="HingeJoint3D" parent="."]
@@ -99,13 +169,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.298013, 0.724544, -1.18827)
 [node name="lantern2" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.224153, 0.4121, -1.18827)
 
-[node name="Lantern" type="MeshInstance3D" parent="lantern2"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.138229, -0.724544, -0.134186)
-mesh = ExtResource("3_30u0b")
-skeleton = NodePath("../..")
+[node name="OmniLight3D" type="OmniLight3D" parent="lantern2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.225801, -0.256012, 1.26088)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="lantern2/Lantern"]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.717211, 2.34266, -0.669502)
+[node name="LanternModel" parent="lantern2" instance=ExtResource("4_edkmw")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.274101, -0.162087, -0.260068)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="lantern2/LanternModel"]
+light_color = Color(1, 0.964706, 0, 1)
+light_energy = 4.2
+omni_range = 0.245
 
 [node name="PlayerHealth" type="Node" parent="."]
 script = ExtResource("4_lmp8o")

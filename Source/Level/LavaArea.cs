@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class InstantDeathArea : Area3D
+public partial class LavaArea : Area3D
 {
     public override void _Ready()
     {
@@ -13,7 +13,8 @@ public partial class InstantDeathArea : Area3D
         if (body.Name.ToString().StartsWith("player", StringComparison.InvariantCultureIgnoreCase))
         {
             body.GetNode<PlayerHealth>("./PlayerHealth")
-                .Damage(100);
+                .Damage(50);
+            ((CharacterBody3D)body).Velocity = Vector3.Up * 10;
         }
     }
 }

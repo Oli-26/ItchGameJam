@@ -1,11 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhka45h152stw"]
+[gd_scene load_steps=3 format=3 uid="uid://eebkr8hjk8of"]
 
-[ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_036wu"]
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
+[ext_resource type="Script" path="res://Scenes/Sections/Room1-2.gd" id="1_l11b8"]
 
 [node name="Floor1Entrance" type="Node3D"]
-script = ExtResource("1_036wu")
-X = 2
+script = ExtResource("1_l11b8")
 
 [node name="GridMap" parent="." instance=ExtResource("1_cydnl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.16, 0, 0)

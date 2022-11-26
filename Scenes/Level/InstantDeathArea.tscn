@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://vtmoyt2t5t6u"]
+
+[ext_resource type="Script" path="res://Source/Level/InstantDeathArea.cs" id="1_w5tpt"]
+
+[node name="InstantDeathArea" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.8305, -12.5382, 23.4098)
+script = ExtResource("1_w5tpt")

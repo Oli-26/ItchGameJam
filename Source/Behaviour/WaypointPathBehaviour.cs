@@ -71,6 +71,10 @@ public partial class WaypointPathBehaviour : Behaviour
 
     private void SeekNextWaypoint()
     {
+        if (_waypoints.Count == 0)
+        {
+            return;
+        }
         _currentTarget = (_currentTarget + 1) % _waypoints.Count;
         var target = _waypoints[_currentTarget];
         MobController.OfferIntent(new SeekWaypointIntent((target as Node3D).GlobalPosition));

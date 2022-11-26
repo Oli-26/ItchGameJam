@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bp5lu2b0l5nlq"]
+[gd_scene load_steps=21 format=3 uid="uid://bp5lu2b0l5nlq"]
 
 [ext_resource type="Script" path="res://Source/Mobs/Mob.cs" id="1_qpub3"]
 [ext_resource type="AnimationLibrary" uid="uid://bessp12qoayxa" path="res://Animations/Movement.res" id="2_22kxy"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c27rq7gwj8g48" path="res://Scenes/Mobs/VisionManager.tscn" id="8_w7pjv"]
 [ext_resource type="Script" path="res://Source/Behaviour/AttackBehaviour.cs" id="9_gy2iy"]
 [ext_resource type="Script" path="res://Source/Mobs/Footsteps.cs" id="10_vnaft"]
+[ext_resource type="Script" path="res://Source/Behaviour/GravityBehaviour.cs" id="10_w8xt2"]
 [ext_resource type="AudioStream" uid="uid://drbmmlyk7y2o8" path="res://Sounds/SFX/Minotaur/Minotaur Steps/Walk/Minotaur Footsteps Walk_1.mp3" id="11_v1ucn"]
 [ext_resource type="AudioStream" uid="uid://dm2cquy70lxmo" path="res://Sounds/SFX/Minotaur/Minotaur Steps/Walk/Minotaur Footsteps Walk_2.mp3" id="12_ybvn6"]
 [ext_resource type="AudioStream" uid="uid://b4ga7qtqm4nlf" path="res://Sounds/SFX/Minotaur/Minotaur Steps/Walk/Minotaur Footsteps Walk_3.mp3" id="13_am463"]
@@ -66,6 +67,9 @@ script = ExtResource("7_4mnad")
 
 [node name="AttackBehaviour" type="Node" parent="."]
 script = ExtResource("9_gy2iy")
+
+[node name="GravityBehaviour" type="Node" parent="."]
+script = ExtResource("10_w8xt2")
 
 [node name="Footsteps" type="Node3D" parent="."]
 script = ExtResource("10_vnaft")

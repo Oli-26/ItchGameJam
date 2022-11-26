@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
-[ext_resource type="Texture2D" uid="uid://bexcgvb80i65j" path="res://Images/spartans.png" id="3_igqf8"]
-[ext_resource type="Texture2D" uid="uid://cpuivqnhitfsa" path="res://Images/pegasus.png" id="4_r2q8f"]
+[ext_resource type="Texture2D" uid="uid://c7d785cyp5piv" path="res://Images/spartans.png" id="3_igqf8"]
+[ext_resource type="Texture2D" uid="uid://q5tnx7kcgjh7" path="res://Images/pegasus.png" id="4_r2q8f"]
 
 [node name="Floor1Entrance" type="Node3D"]
 script = ExtResource("1_gdq7v")

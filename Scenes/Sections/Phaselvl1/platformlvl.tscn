@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c1j2kyuxj3xi0"]
+[gd_scene load_steps=24 format=3 uid="uid://c1j2kyuxj3xi0"]
 
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_oup3v"]
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="2_51ar1"]
@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://v1jlk2amc23f" path="res://Scenes/Level/Lever.tscn" id="13_03eot"]
 [ext_resource type="Texture2D" uid="uid://b86lbg6eoy001" path="res://AssetPacks/Stains And Damage/Stains And Damage 3.png" id="14_t1k51"]
 [ext_resource type="PackedScene" uid="uid://cln7jgafqlbwh" path="res://Scenes/Level/Rubble.tscn" id="15_6wpr6"]
-[ext_resource type="Script" path="res://Source/Level/InstantDeathArea.cs" id="16_xpcgm"]
+[ext_resource type="PackedScene" uid="uid://vtmoyt2t5t6u" path="res://Scenes/Level/InstantDeathArea.tscn" id="16_lb210"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cg45f"]
 albedo_texture = ExtResource("5_4yqui")
@@ -42,6 +42,9 @@ ambient_light_sky_contribution = 0.03
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.02
 volumetric_fog_temporal_reprojection_amount = 0.99
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ei4ju"]
+size = Vector3(100, 4, 50)
 
 [node name="Start" type="Node3D"]
 transform = Transform3D(1, 0, -0.000104256, 0, 1, 0, 0.000104256, 0, 1, 0, 1.01133, 0)
@@ -672,6 +675,8 @@ light_color = Color(0.572549, 0.694118, 0.662745, 1)
 light_energy = 4.325
 omni_range = 44.53
 
-[node name="InstantDeathArea" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.0005, 0, 4.33686)
-script = ExtResource("16_xpcgm")
+[node name="InstantDeathArea" parent="." instance=ExtResource("16_lb210")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InstantDeathArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.09874, 0)
+shape = SubResource("BoxShape3D_ei4ju")

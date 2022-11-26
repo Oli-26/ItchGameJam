@@ -70,6 +70,8 @@ func groupGridNumbers(grid):
 func getValidRoomShapes():
 	for room in scenes:
 		var roomInst = room.instantiate();
+		print(roomInst)
+		print(str(roomInst.X) + ", " + str(roomInst.Y))
 		validRoomShapes.append({"X": roomInst.X, "Y": roomInst.Y})
 		roomInst.queue_free();
 	validRommShapesOrdered = validRoomShapes.duplicate()
@@ -139,6 +141,8 @@ func _ready():
 		for y in range(height):
 			if(maze.grid[y][x] == 1 && filledGrid[y][x] == 0):
 				spawnFloorSection(x, y, groupedGrid[y][x], filledGrid, doorGrid);
+	
+	get_tree().root.get_node("./Level/NavigationRegion3D").bake_navigation_mesh()
 
 
 

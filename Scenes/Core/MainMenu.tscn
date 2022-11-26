@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cjb0djpjjw3ua"]
+[gd_scene load_steps=13 format=3 uid="uid://cjb0djpjjw3ua"]
 
 [ext_resource type="Theme" uid="uid://dk66skm3gyc7t" path="res://UI/menu.tres" id="1_4ny67"]
 [ext_resource type="PackedScene" uid="uid://catsnedejtp38" path="res://Scenes/Sections/Phase1/Intro.tscn" id="1_h458q"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bp5lu2b0l5nlq" path="res://Scenes/Mobs/Minotaur.tscn" id="3_l5jd0"]
 [ext_resource type="Script" path="res://Source/UI/NewGameButton.cs" id="5_atra1"]
 [ext_resource type="Script" path="res://Source/UI/ExitButton.cs" id="5_dn4dq"]
+[ext_resource type="Script" path="res://Source/UI/Stage1Button.cs" id="7_3s8yi"]
+[ext_resource type="Script" path="res://Source/UI/Stage2Button.cs" id="8_nqsf3"]
+[ext_resource type="Script" path="res://Source/UI/Stage3Button.cs" id="9_8mx8d"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ontdm"]
 
@@ -74,33 +77,49 @@ offset_right = 543.0
 offset_bottom = -156.0
 grow_vertical = 0
 
-[node name="ContinueButton" type="Button" parent="VBoxContainer"]
+[node name="NewGameButton" type="Button" parent="VBoxContainer"]
 offset_right = 368.0
 offset_bottom = 50.0
-theme = ExtResource("1_4ny67")
-disabled = true
-text = "Resume"
-
-[node name="NewGameButton" type="Button" parent="VBoxContainer"]
-offset_top = 54.0
-offset_right = 368.0
-offset_bottom = 104.0
 theme = ExtResource("1_4ny67")
 text = "New game"
 script = ExtResource("5_atra1")
 
 [node name="SettingsButton" type="Button" parent="VBoxContainer"]
-offset_top = 108.0
+offset_top = 54.0
 offset_right = 368.0
-offset_bottom = 158.0
+offset_bottom = 104.0
 theme = ExtResource("1_4ny67")
 disabled = true
 text = "Settings"
 
 [node name="ExitButton" type="Button" parent="VBoxContainer"]
+offset_top = 108.0
+offset_right = 368.0
+offset_bottom = 158.0
+theme = ExtResource("1_4ny67")
+text = "Exit"
+script = ExtResource("5_dn4dq")
+
+[node name="Stage1" type="Button" parent="VBoxContainer"]
 offset_top = 162.0
 offset_right = 368.0
 offset_bottom = 212.0
 theme = ExtResource("1_4ny67")
-text = "Exit"
-script = ExtResource("5_dn4dq")
+text = "Stage 1"
+script = ExtResource("7_3s8yi")
+
+[node name="Stage2" type="Button" parent="VBoxContainer"]
+offset_top = 216.0
+offset_right = 368.0
+offset_bottom = 266.0
+theme = ExtResource("1_4ny67")
+text = "Stage 2"
+script = ExtResource("8_nqsf3")
+
+[node name="Stage3" type="Button" parent="VBoxContainer"]
+offset_top = 270.0
+offset_right = 368.0
+offset_bottom = 320.0
+theme = ExtResource("1_4ny67")
+text = "Stage 3"
+script = ExtResource("9_8mx8d")

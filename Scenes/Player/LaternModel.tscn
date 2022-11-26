@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b40mlbjf7fy8b"]
+
+[ext_resource type="PackedScene" uid="uid://bq7uel8p5urec" path="res://Models/Latern.blend" id="1_5o5a6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vp7ai"]
+transparency = 1
+albedo_color = Color(1, 0.701961, 0.54902, 0.423529)
+
+[node name="Latern" instance=ExtResource("1_5o5a6")]
+
+[node name="Frame" parent="." index="0"]
+surface_material_override/1 = SubResource("StandardMaterial3D_vp7ai")

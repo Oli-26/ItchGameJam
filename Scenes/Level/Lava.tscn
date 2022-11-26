@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cd5g7ncjh2703"]
+[gd_scene load_steps=9 format=3 uid="uid://cd5g7ncjh2703"]
 
 [ext_resource type="Shader" path="res://Shaders/fluid.gdshader" id="1_udtwd"]
 [ext_resource type="Texture2D" uid="uid://c7xrkj1xxwgxy" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Elements/Elements_01-512x512.png" id="2_pt3bj"]
 [ext_resource type="Texture2D" uid="uid://yp30pbepu35h" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Elements/Elements_05-512x512.png" id="3_wh1ol"]
 [ext_resource type="Script" path="res://Source/Level/Fluid.cs" id="4_8wcb1"]
+[ext_resource type="Script" path="res://Source/Level/LavaArea.cs" id="5_8lkk2"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_5mmxs"]
 size = Vector2(20, 20)
@@ -17,8 +18,18 @@ shader_parameter/tex_lava = ExtResource("2_pt3bj")
 shader_parameter/tex_vtx_2 = ExtResource("3_wh1ol")
 shader_parameter/time = null
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ekg4a"]
+size = Vector3(20, 1, 20)
+
 [node name="Lava" type="MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -1.50928, 12)
 mesh = SubResource("PlaneMesh_5mmxs")
 surface_material_override/0 = SubResource("ShaderMaterial_aotch")
 script = ExtResource("4_8wcb1")
+
+[node name="LavaArea" type="Area3D" parent="."]
+script = ExtResource("5_8lkk2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LavaArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.236641, 0)
+shape = SubResource("BoxShape3D_ekg4a")

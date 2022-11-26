@@ -8,10 +8,12 @@ using System.Threading.Tasks;
 
 public partial class NavigationBehaviour : Behaviour
 {
+	private static Random Random = new Random();
+
 	[Export] public float WalkSpeed { get; set; } = 2f;
     [Export] public float ChaseSpeed { get; set; } = 7f;
 
-	private static readonly float _turnFactor = 0.05f;
+	private static readonly float _turnFactor = 0.1f;
 
 	private AnimationPlayer _animationPlayer;
 	private NavigationAgent3D _navigationAgent3D;
@@ -53,7 +55,8 @@ public partial class NavigationBehaviour : Behaviour
 		{
 			return;
 		}
-		_navigationAgent3D.SetTargetLocation(MobController.Intent.Position);
+
+        _navigationAgent3D.SetTargetLocation(MobController.Intent.Position);
 		var nextLocation = _navigationAgent3D.GetNextLocation();
 
 		var targetDirection = (nextLocation - Mob.Position);

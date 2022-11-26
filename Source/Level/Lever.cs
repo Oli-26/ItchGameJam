@@ -20,14 +20,12 @@ public partial class Lever : Node3D, IActivatable
 		get => _showInteractive; 
 		private set
 		{
-			GD.Print(_showInteractive);
 			if (_showInteractive == value)
 			{
 				return;
 			}
 			_showInteractive = value;
 
-			GD.Print("Show Interactive: " + _showInteractive);
 			ToggleShader();
         }
 	}

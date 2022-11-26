@@ -37,9 +37,6 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	# Handle Shooting
-	if Input.is_action_just_pressed("Shoot"):
-		shoot()
-	# Handle Shooting
 	if Input.is_action_just_pressed("Use"):
 		use()
 		
@@ -76,17 +73,6 @@ func _input(event):
 		$Head/Camera3d.rotation.x = clamp($Head/Camera3d.rotation.x, deg_to_rad(-90), deg_to_rad(90) )
 		mouse_relative_x = clamp(event.relative.x, -50, 50)
 		mouse_relative_y = clamp(event.relative.y, -50, 10)
-
-func shoot():
-	if not gunRay.is_colliding():
-		return
-	var bulletInst = _bullet_scene.instantiate() as Node3D
-	bulletInst.set_as_top_level(true)
-	get_parent().add_child(bulletInst)
-	bulletInst.global_transform.origin = gunRay.get_collision_point() as Vector3
-	bulletInst.look_at((gunRay.get_collision_point()+gunRay.get_collision_normal()),Vector3.BACK)
-	print(gunRay.get_collision_point())
-	print(gunRay.get_collision_point()+gunRay.get_collision_normal())
 
 func use():
 	if not gunRay.is_colliding():
