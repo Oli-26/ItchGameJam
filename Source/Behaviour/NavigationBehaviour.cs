@@ -11,7 +11,7 @@ public partial class NavigationBehaviour : Behaviour
 	[Export] public float WalkSpeed { get; set; } = 2f;
     [Export] public float ChaseSpeed { get; set; } = 7f;
 
-	private static readonly float _turnFactor = 0.9999f;
+	private static readonly float _turnFactor = 0.05f;
 
 	private AnimationPlayer _animationPlayer;
 	private NavigationAgent3D _navigationAgent3D;
@@ -20,18 +20,18 @@ public partial class NavigationBehaviour : Behaviour
 	{
 		base._Ready();
         _navigationAgent3D = Mob.GetNode<NavigationAgent3D>("./NavigationAgent3D");
-  //      if (Mob.HasNode("./AnimationPlayer"))
-		//{
+		if (Mob.HasNode("./AnimationPlayer"))
+		{
 			_animationPlayer = Mob.GetNode<AnimationPlayer>("./AnimationPlayer");
             foreach (var animation in _animationPlayer.GetAnimationList())
             {
                 GD.Print(animation);
             }
-	  //      } else
-			//{
-			//	GD.Print("No animation player");
-			//}
-
+		}
+		else
+		{
+			GD.Print("No animation player");
+		}
 	}
 
 	public override void _Process(double delta)
@@ -52,7 +52,8 @@ public partial class NavigationBehaviour : Behaviour
 
 		var targetDirection = (nextLocation - Mob.Position);
 		targetDirection.y = 0;
-		if (targetDirection.Length() < 0.0001)
+
+        if (targetDirection.Length() < 0.0001)
 		{
 			return;
 		}
@@ -67,10 +68,12 @@ public partial class NavigationBehaviour : Behaviour
 		{
 			_animationPlayer?.Play(AnimationNames.WalkForward, customSpeed: 0.3f);
 		}
-		Mob.Velocity = moveDirection * speed;
+		var targetVelocity = moveDirection * speed;
+		Mob.Velocity = MathHelpers.Lerp(Mob.Velocity, targetVelocity, 0.01f);
 
 		var targetRotation = Mob.Transform.LookingAt(Mob.Position + moveDirection, Vector3.Up).basis.GetRotationQuaternion();
-		var turnAmount = (float)0.05;
-		Mob.Quaternion = turnAmount * targetRotation + (1 - turnAmount) * Mob.Quaternion;
-    }
+		var turnAmount = _turnFactor;
+		Mob.Quaternion = (turnAmount * targetRotation + (1 - turnAmount) * Mob.Quaternion).Normalized();
+	}
+
 }
