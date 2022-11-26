@@ -44,7 +44,7 @@ func _physics_process(delta):
 		use()
 		
 	if Input.is_action_pressed ("Sprint"):
-		spritingMultiplier = 2;
+		spritingMultiplier = 1.7;
 	
 	if Input.is_action_just_pressed("ToggleGravity"):
 		gravityToggle = !gravityToggle;
@@ -57,13 +57,16 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED * spritingMultiplier
-		velocity.z = direction.z * SPEED * spritingMultiplier
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED * spritingMultiplier)
-		velocity.z = move_toward(velocity.z, 0, SPEED * spritingMultiplier)
-
+	
+	var horizontalVelocity = Vector3(velocity.x, 0, velocity.z)
+	if horizontalVelocity.length() < SPEED * spritingMultiplier * 2:
+		if direction:
+			velocity.x = direction.x * SPEED * spritingMultiplier
+			velocity.z = direction.z * SPEED * spritingMultiplier
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED * spritingMultiplier)
+			velocity.z = move_toward(velocity.z, 0, SPEED * spritingMultiplier)
+			
 	move_and_slide()
 
 func _input(event):

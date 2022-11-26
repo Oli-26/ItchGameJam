@@ -42,8 +42,9 @@ public partial class AttackBehaviour : Behaviour
 		{
 			return;
 		}
+		intent.Health.Damage(50f);
 
-		intent.Health.Damage(100f);
-        GD.Print("attacking");
+		var yeetVelocity = Vector3.Up * 10 + -Mob.GlobalTransform.basis.z * 25f;
+        intent.CharacterBody.Velocity += yeetVelocity;
 	}
 }
