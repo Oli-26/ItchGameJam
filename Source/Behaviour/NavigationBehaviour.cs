@@ -15,12 +15,17 @@ public partial class NavigationBehaviour : Behaviour
 
 	private AnimationPlayer _animationPlayer;
 	private NavigationAgent3D _navigationAgent3D;
+	private Footsteps _footsteps;
 
 	public override void _Ready()
 	{
 		base._Ready();
         _navigationAgent3D = Mob.GetNode<NavigationAgent3D>("./NavigationAgent3D");
-		if (Mob.HasNode("./AnimationPlayer"))
+		if (Mob.HasNode("./Footsteps"))
+		{
+			_footsteps = Mob.GetNode<Footsteps>("./Footsteps");
+		}
+        if (Mob.HasNode("./AnimationPlayer"))
 		{
 			_animationPlayer = Mob.GetNode<AnimationPlayer>("./AnimationPlayer");
             foreach (var animation in _animationPlayer.GetAnimationList())
@@ -40,7 +45,8 @@ public partial class NavigationBehaviour : Behaviour
 		{
 			Mob.Velocity = Vector3.Zero;
             _animationPlayer?.Play(AnimationNames.Idle);
-			return;
+            _footsteps.WalkState = WalkState.Idle;
+            return;
 		}
 
 		if (_navigationAgent3D == null)
@@ -63,11 +69,13 @@ public partial class NavigationBehaviour : Behaviour
 		if (MobController.IsAggressive)
 		{
 			_animationPlayer?.Play(AnimationNames.RunForward, customSpeed: 0.6f);
-		}
+			_footsteps.WalkState = WalkState.Running;
+        }
 		else
 		{
 			_animationPlayer?.Play(AnimationNames.WalkForward, customSpeed: 0.3f);
-		}
+            _footsteps.WalkState = WalkState.Walking;
+        }
 		var targetVelocity = moveDirection * speed;
 		Mob.Velocity = MathHelpers.Lerp(Mob.Velocity, targetVelocity, 0.01f);
 

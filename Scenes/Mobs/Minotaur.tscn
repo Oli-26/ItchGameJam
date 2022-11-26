@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bp5lu2b0l5nlq"]
+[gd_scene load_steps=20 format=3 uid="uid://bp5lu2b0l5nlq"]
 
 [ext_resource type="Script" path="res://Source/Mobs/Mob.cs" id="1_qpub3"]
 [ext_resource type="AnimationLibrary" uid="uid://bessp12qoayxa" path="res://Animations/Movement.res" id="2_22kxy"]
@@ -9,6 +9,15 @@
 [ext_resource type="Script" path="res://Source/Behaviour/NavigationBehaviour.cs" id="7_4mnad"]
 [ext_resource type="PackedScene" uid="uid://c27rq7gwj8g48" path="res://Scenes/Mobs/VisionManager.tscn" id="8_w7pjv"]
 [ext_resource type="Script" path="res://Source/Behaviour/AttackBehaviour.cs" id="9_gy2iy"]
+[ext_resource type="Script" path="res://Source/Mobs/Footsteps.cs" id="10_vnaft"]
+[ext_resource type="AudioStream" uid="uid://drbmmlyk7y2o8" path="res://Sounds/SFX/Minotaur/Minotaur Steps/Walk/Minotaur Footsteps Walk_1.mp3" id="11_v1ucn"]
+[ext_resource type="AudioStream" uid="uid://dm2cquy70lxmo" path="res://Sounds/SFX/Minotaur/Minotaur Steps/Walk/Minotaur Footsteps Walk_2.mp3" id="12_ybvn6"]
+[ext_resource type="AudioStream" uid="uid://b4ga7qtqm4nlf" path="res://Sounds/SFX/Minotaur/Minotaur Steps/Walk/Minotaur Footsteps Walk_3.mp3" id="13_am463"]
+[ext_resource type="AudioStream" uid="uid://3okoint4lyr" path="res://Sounds/SFX/Minotaur/Minotaur Steps/Run/Minotaur Footsteps Run_1.mp3" id="14_gps7a"]
+[ext_resource type="AudioStream" uid="uid://6mo4kh3ovaa4" path="res://Sounds/SFX/Minotaur/Minotaur Steps/Run/Minotaur Footsteps Run_2.mp3" id="15_j56hn"]
+[ext_resource type="AudioStream" uid="uid://co4hfxp2ijikt" path="res://Sounds/SFX/Minotaur/Minotaur Steps/Run/Minotaur Footsteps Run_3.mp3" id="16_1oee6"]
+[ext_resource type="AudioStream" uid="uid://d118xa86nck08" path="res://Sounds/SFX/Minotaur/Minotaur Steps/Run/Minotaur Footsteps Run_4.mp3" id="17_j2ly5"]
+[ext_resource type="AudioStream" uid="uid://8ly2h63tnpof" path="res://Sounds/SFX/Minotaur/Minotaur Steps/Run/Minotaur Footsteps Run_5.mp3" id="18_132e6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7i3pq"]
 radius = 0.6
@@ -57,3 +66,8 @@ script = ExtResource("7_4mnad")
 
 [node name="AttackBehaviour" type="Node" parent="."]
 script = ExtResource("9_gy2iy")
+
+[node name="Footsteps" type="Node3D" parent="."]
+script = ExtResource("10_vnaft")
+WalkFootstepSounds = [ExtResource("11_v1ucn"), ExtResource("12_ybvn6"), ExtResource("13_am463")]
+RunFootstepSounds = [ExtResource("14_gps7a"), ExtResource("15_j56hn"), ExtResource("16_1oee6"), ExtResource("17_j2ly5"), ExtResource("18_132e6")]
