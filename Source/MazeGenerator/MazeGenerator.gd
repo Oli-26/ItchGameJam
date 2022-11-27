@@ -111,11 +111,7 @@ func fillGridFromBy(filledGrid, x, y, roomSize, doorsGrid):
 	for xOffset in range(roomSize.X):
 		for yOffset in range(roomSize.Y):
 			filledGrid[y + yOffset][x + xOffset] = 1;
-			if should_spawn_doors(x, y):
-				spawnDoors(x + xOffset, y + yOffset, doorsGrid[y + yOffset][x + xOffset]);
-
-func should_spawn_doors(x, y):
-	return !(x == 0 and y == 0) and !(x == mazeSize-1 and y == mazeSize-1)
+			spawnDoors(x + xOffset, y + yOffset, doorsGrid[y + yOffset][x + xOffset]);
 
 func spawnDoors(x, y, doorsDict):
 	var doorsInst = doors.instantiate()
@@ -123,7 +119,15 @@ func spawnDoors(x, y, doorsDict):
 	doorsInst.position.y = 0;
 	doorsInst.position.z = y*24;
 	self.add_child(doorsInst);
-	doorsInst.disableDoors(doorsDict.northDoor, doorsDict.southDoor, doorsDict.eastDoor, doorsDict.westDoor);
+	var southDoor = doorsDict.southDoor
+	var northDoor = doorsDict.northDoor
+	var eastDoor = doorsDict.eastDoor
+	var westDoor = doorsDict.westDoor
+	if x == 0 and y == 0:
+		northDoor = true
+	if x == mazeSize-1 and y == mazeSize-1:
+		southDoor = true
+	doorsInst.disableDoors(northDoor, southDoor, eastDoor, westDoor);
 	
 func _ready():
 	height = mazeSize;

@@ -47,7 +47,7 @@ agent_radius = 0.6
 environment = SubResource("Environment_l5pxq")
 
 [node name="Player" parent="." instance=ExtResource("1_1pamn")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 153.528, 0, 170.127)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 44.3463, 0, -14.8276)
 
 [node name="Minotaur" parent="." instance=ExtResource("2_ehm15")]
 transform = Transform3D(-0.0488668, 0, 0.998805, 0, 1, 0, -0.998805, 0, -0.0488668, 257.2, -0.819398, 24.543)
@@ -61,7 +61,7 @@ navmesh = SubResource("NavigationMesh_b8pia")
 [node name="Sections" type="Node3D" parent="NavigationRegion3D"]
 
 [node name="Start" parent="NavigationRegion3D/Sections" instance=ExtResource("4_ulcmt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 49.1724, 0, -22.3463)
 
 [node name="Stairs" parent="NavigationRegion3D/Sections" instance=ExtResource("11_5xuel")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -125.82, 10, 342.478)

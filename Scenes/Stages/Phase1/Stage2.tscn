@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://c73jrnap28g20"]
+[gd_scene load_steps=21 format=3 uid="uid://c73jrnap28g20"]
 
 [ext_resource type="PackedScene" uid="uid://dayo5j2yyndlg" path="res://Scenes/Player/player.tscn" id="1_eisjc"]
 [ext_resource type="PackedScene" uid="uid://cgsys6xef3jrr" path="res://Scenes/Sections/Phase1/Start.tscn" id="3_53qc0"]
@@ -9,16 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://bahiym17rfq1y" path="res://Scenes/Level/AudioTriggerArea.tscn" id="8_5jhni"]
 [ext_resource type="PackedScene" path="res://Scenes/Sections/Phase1/Corridor4.tscn" id="8_haug8"]
 [ext_resource type="Script" path="res://Source/MazeGenerator/MazeGenerator.gd" id="8_rs16u"]
-[ext_resource type="PackedScene" uid="uid://b3lamk8ln8pa7" path="res://Scenes/Sections/jackgG.tscn" id="9_enr2j"]
-[ext_resource type="PackedScene" uid="uid://bq2sbhny31bwf" path="res://Scenes/Sections/jackgH.tscn" id="9_f8iah"]
-[ext_resource type="PackedScene" uid="uid://bx28cgwahsuwq" path="res://Scenes/Sections/jackgP.tscn" id="9_rtn3j"]
-[ext_resource type="PackedScene" uid="uid://do5luiirg7gqq" path="res://Scenes/Sections/jackgE.tscn" id="9_u2w8n"]
-[ext_resource type="PackedScene" uid="uid://cejat051j7xf6" path="res://Scenes/Sections/jackgO.tscn" id="9_wgm0j"]
-[ext_resource type="PackedScene" uid="uid://chr0sl2jm282c" path="res://Scenes/Sections/jackgK.tscn" id="9_xro12"]
 [ext_resource type="AudioStream" uid="uid://bb7fc72abpqbu" path="res://Sounds/398908__quadraslayer__monster-roar-2.wav" id="10_8bqb0"]
 [ext_resource type="PackedScene" uid="uid://dupc2dxoefygh" path="res://Scenes/Level/Waypoint.tscn" id="10_j5mov"]
 [ext_resource type="PackedScene" uid="uid://cas8h37r18eup" path="res://Scenes/Sections/Phase1/End.tscn" id="12_06ouv"]
-[ext_resource type="PackedScene" uid="uid://bp6kd0vnjfd3w" path="res://Scenes/Sections/jackgB.tscn" id="12_et101"]
 [ext_resource type="PackedScene" uid="uid://dyv5ch17wsdfi" path="res://Scenes/Sections/jackgC.tscn" id="13_txnwl"]
 [ext_resource type="PackedScene" uid="uid://bbbwhoh14krqw" path="res://Scenes/Sections/jackgA.tscn" id="13_yr7m1"]
 [ext_resource type="PackedScene" uid="uid://bjv6vksm670lk" path="res://Scenes/Level/Stairs.tscn" id="16_1eckj"]
@@ -51,7 +44,7 @@ agent_radius = 0.6
 environment = SubResource("Environment_l5pxq")
 
 [node name="Player" parent="." instance=ExtResource("1_eisjc")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.5584, 0.44457, 10.4416)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 48.1439, 0.779729, 54.8086)
 
 [node name="Minotaur" parent="." instance=ExtResource("5_vdmbx")]
 transform = Transform3D(-0.0488668, 0, 0.998805, 0, 1, 0, -0.998805, 0, -0.0488668, 54.6934, -0.693603, -43.2651)
@@ -112,7 +105,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 31, 0,
 [node name="MazeGen" type="Node3D" parent="NavigationRegion3D/Sections"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9947, -1.0206, 64.9877)
 script = ExtResource("8_rs16u")
-scenes = [ExtResource("13_yr7m1"), ExtResource("12_et101"), ExtResource("13_txnwl"), ExtResource("9_u2w8n"), ExtResource("9_enr2j"), ExtResource("9_f8iah"), ExtResource("9_xro12"), ExtResource("9_wgm0j"), ExtResource("9_rtn3j")]
+scenes = [ExtResource("13_yr7m1"), ExtResource("13_txnwl")]
 directionBias = 5.0
 randomness = 0.0
 minLengthRun = 1
@@ -129,7 +122,7 @@ transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 132, 0, 132)
 shape = SubResource("WorldBoundaryShape3D_rxsbj")
 
 [node name="End" parent="NavigationRegion3D/Sections" instance=ExtResource("12_06ouv")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 198, -0.114595, 211)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 149.055, -0.114595, 231.827)
 
 [node name="AudioTriggerArea2" parent="." instance=ExtResource("8_5jhni")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2942, 2.05929, 12.71)
@@ -153,5 +146,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.9975, -0.325432, 11.8754)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.6506, 2.1553, 52.9995)
 
 [node name="Stairs" parent="." instance=ExtResource("16_1eckj")]
-transform = Transform3D(-0.869011, 0, -0.494792, 0, 1, 0, 0.494792, 0, -0.869011, 188.415, -0.568259, 198.298)
+transform = Transform3D(-0.494792, 0, 0.869011, 0, 1, 0, -0.869011, 0, -0.494792, 161.757, -0.568259, 222.242)
 NextLevelPath = "res://Scenes/Stages/Phase1/Stage3.tscn"
