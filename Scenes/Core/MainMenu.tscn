@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cjb0djpjjw3ua"]
+[gd_scene load_steps=14 format=3 uid="uid://cjb0djpjjw3ua"]
 
 [ext_resource type="Theme" uid="uid://dk66skm3gyc7t" path="res://UI/menu.tres" id="1_4ny67"]
 [ext_resource type="PackedScene" uid="uid://catsnedejtp38" path="res://Scenes/Sections/Phase1/Intro.tscn" id="1_h458q"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Source/UI/Stage1Button.cs" id="7_3s8yi"]
 [ext_resource type="Script" path="res://Source/UI/Stage2Button.cs" id="8_nqsf3"]
 [ext_resource type="Script" path="res://Source/UI/Stage3Button.cs" id="9_8mx8d"]
+[ext_resource type="Texture2D" uid="uid://j83khifc8m8f" path="res://Images/daedalus.png" id="10_vgrh6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ontdm"]
 
@@ -123,3 +124,21 @@ offset_bottom = 320.0
 theme = ExtResource("1_4ny67")
 text = "Stage 3"
 script = ExtResource("9_8mx8d")
+
+[node name="TitleContainer" type="SubViewportContainer" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -293.0
+offset_top = 96.0
+offset_right = 1237.0
+offset_bottom = 2183.0
+grow_horizontal = 2
+scale = Vector2(0.3, 0.3)
+
+[node name="TextureRect" type="TextureRect" parent="TitleContainer"]
+layout_direction = 3
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("10_vgrh6")
+stretch_mode = 4

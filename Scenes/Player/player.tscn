@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dayo5j2yyndlg"]
+[gd_scene load_steps=32 format=3 uid="uid://dayo5j2yyndlg"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_1w47b"]
 [ext_resource type="PackedScene" uid="uid://dbduds4bsaaby" path="res://Scenes/Bullet/Bullet.tscn" id="2_je25s"]
@@ -6,6 +6,26 @@
 [ext_resource type="PackedScene" uid="uid://b40mlbjf7fy8b" path="res://Scenes/Player/LaternModel.tscn" id="4_edkmw"]
 [ext_resource type="Script" path="res://Source/Player/PlayerHealth.cs" id="4_lmp8o"]
 [ext_resource type="Script" path="res://Source/Player/DeathHandler.cs" id="5_p7eg0"]
+[ext_resource type="Script" path="res://Source/Mobs/Footsteps.cs" id="7_dw777"]
+[ext_resource type="AudioStream" uid="uid://cjwam75codkuh" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_1.mp3" id="8_uhwt3"]
+[ext_resource type="AudioStream" uid="uid://1dvp1ihtvk70" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_2.mp3" id="9_co7b7"]
+[ext_resource type="AudioStream" uid="uid://de30un84sqjww" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_3.mp3" id="10_6l0xx"]
+[ext_resource type="AudioStream" uid="uid://b0cbsnmmmdphw" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_4.mp3" id="11_kpqn8"]
+[ext_resource type="AudioStream" uid="uid://dex4rtbjtevcv" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_5.mp3" id="12_njecp"]
+[ext_resource type="AudioStream" uid="uid://bjk5kvlt6b7wt" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_6.mp3" id="13_j3cxn"]
+[ext_resource type="AudioStream" uid="uid://gtvyip4ow4l3" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_7.mp3" id="14_015f0"]
+[ext_resource type="AudioStream" uid="uid://cv4yv181e6sge" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_8.mp3" id="15_rjs7i"]
+[ext_resource type="AudioStream" uid="uid://2oshqd1wlqe" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_9.mp3" id="16_c2q1c"]
+[ext_resource type="AudioStream" uid="uid://dclhj3r2tde7" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_10.mp3" id="17_xgj67"]
+[ext_resource type="AudioStream" uid="uid://cmibapy5ocw86" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_11.mp3" id="18_fosw8"]
+[ext_resource type="AudioStream" uid="uid://c13v4ovlfrxpj" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_12.mp3" id="19_pquov"]
+[ext_resource type="AudioStream" uid="uid://dhyl6otb6uyak" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_13.mp3" id="20_6ov7b"]
+[ext_resource type="AudioStream" uid="uid://baftutpu8w7as" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_14.mp3" id="21_3lecx"]
+[ext_resource type="AudioStream" uid="uid://cvfxp1ao6ia3r" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_15.mp3" id="22_ae1y3"]
+[ext_resource type="AudioStream" uid="uid://caos51a0qw01h" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_16.mp3" id="23_xj5iy"]
+[ext_resource type="AudioStream" uid="uid://ck2jypqpfkmel" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_17.mp3" id="24_20cjr"]
+[ext_resource type="AudioStream" uid="uid://vhiyk0o4amcu" path="res://Sounds/SFX/Player/Footsteps/Run/Concrete/Player Footsteps Run Concrete_1.mp3" id="25_i8yn2"]
+[ext_resource type="AudioStream" uid="uid://blbyis6af43cm" path="res://Sounds/SFX/Player/Footsteps/Run/Concrete/Player Footsteps Run Concrete_2.mp3" id="26_feyld"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_emkox"]
 
@@ -127,3 +147,10 @@ script = ExtResource("4_lmp8o")
 
 [node name="DeathHandler" type="Node" parent="."]
 script = ExtResource("5_p7eg0")
+
+[node name="Footsteps" type="Node3D" parent="."]
+script = ExtResource("7_dw777")
+WalkFootstepSounds = [ExtResource("8_uhwt3"), ExtResource("9_co7b7"), ExtResource("10_6l0xx"), ExtResource("11_kpqn8"), ExtResource("12_njecp"), ExtResource("13_j3cxn"), ExtResource("14_015f0"), ExtResource("15_rjs7i"), ExtResource("16_c2q1c"), ExtResource("17_xgj67"), ExtResource("18_fosw8"), ExtResource("19_pquov"), ExtResource("20_6ov7b"), ExtResource("21_3lecx"), ExtResource("22_ae1y3"), ExtResource("23_xj5iy"), ExtResource("24_20cjr")]
+RunFootstepSounds = [ExtResource("25_i8yn2"), ExtResource("26_feyld")]
+DelayWalk = 0.5
+DelayRun = 0.25

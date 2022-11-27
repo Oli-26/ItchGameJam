@@ -3,6 +3,7 @@ extends CharacterBody3D
 @onready var gunRay = $Head/Camera3d/RayCast3d as RayCast3D
 @onready var Cam = $Head/Camera3d as Camera3D
 @onready var playerHealth = $PlayerHealth
+@onready var footsteps = $Footsteps
 @onready var collisionShape3d = $CollisionShape3d
 @export var _bullet_scene : PackedScene
 
@@ -26,14 +27,14 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 func _physics_process(delta):
-	if playerHealth.Health == 0:
-		return
-	
+	var walkState = 0
 	var spritingMultiplier = 1;
 	# Add the gravity.
 	if gravityToggle and not is_on_floor():
 		velocity.y -= gravity * delta
 
+	if playerHealth.Health == 0:
+		return
 	# Handle Jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -41,7 +42,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Use"):
 		use()
 		
-	if Input.is_action_pressed ("Sprint"):
+	if Input.is_action_pressed ("Sprint") and not Input.is_action_pressed ("Crouch"):
 		spritingMultiplier = 1.7;
 		
 	if !Input.is_action_pressed ("Crouch"):
@@ -61,6 +62,13 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
+	if input_dir.length() > 0:
+		if spritingMultiplier > 1:
+			walkState = 2
+		else:
+			walkState = 1
+		
+	
 	var horizontalVelocity = Vector3(velocity.x, 0, velocity.z)
 	if horizontalVelocity.length() < SPEED * spritingMultiplier * 2:
 		if direction:
@@ -69,8 +77,12 @@ func _physics_process(delta):
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED * spritingMultiplier)
 			velocity.z = move_toward(velocity.z, 0, SPEED * spritingMultiplier)
-			
+	
+	if not is_on_floor():
+		walkState = 0
+	
 	move_and_slide()
+	footsteps.WalkState = walkState
 
 func _input(event):
 	if event is InputEventMouseMotion:
