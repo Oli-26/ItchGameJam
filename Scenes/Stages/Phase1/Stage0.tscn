@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://0l47ftleabm7"]
+[gd_scene load_steps=10 format=3 uid="uid://0l47ftleabm7"]
 
+[ext_resource type="PackedScene" uid="uid://d1fldsep8obki" path="res://Scenes/Level/WorldEnvironment.tscn" id="1_eab4o"]
 [ext_resource type="PackedScene" uid="uid://dayo5j2yyndlg" path="res://Scenes/Player/player.tscn" id="1_eisjc"]
 [ext_resource type="PackedScene" uid="uid://catsnedejtp38" path="res://Scenes/Sections/Phase1/Intro.tscn" id="4_0y20t"]
 [ext_resource type="PackedScene" uid="uid://bkt55i0i0fdpb" path="res://Scenes/Sections/Phase1/Corridor.tscn" id="4_7y306"]
@@ -9,21 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://bjv6vksm670lk" path="res://Scenes/Level/Stairs.tscn" id="9_opfem"]
 [ext_resource type="AudioStream" uid="uid://bb7fc72abpqbu" path="res://Sounds/398908__quadraslayer__monster-roar-2.wav" id="10_8bqb0"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6g5uc"]
-
-[sub_resource type="Sky" id="Sky_ivwug"]
-sky_material = SubResource("ProceduralSkyMaterial_6g5uc")
-
-[sub_resource type="Environment" id="Environment_l5pxq"]
-background_mode = 2
-background_color = Color(0.2139, 0.570975, 0.69, 1)
-sky = SubResource("Sky_ivwug")
-ambient_light_sky_contribution = 0.03
-
 [node name="Level" type="Node3D"]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_l5pxq")
+[node name="WorldEnvironment" parent="." instance=ExtResource("1_eab4o")]
 
 [node name="Player" parent="." instance=ExtResource("1_eisjc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.3832, 5.65669, 15.3355)
