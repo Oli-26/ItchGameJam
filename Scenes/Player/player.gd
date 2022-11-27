@@ -3,6 +3,7 @@ extends CharacterBody3D
 @onready var gunRay = $Head/Camera3d/RayCast3d as RayCast3D
 @onready var Cam = $Head/Camera3d as Camera3D
 @onready var playerHealth = $PlayerHealth
+@onready var collisionShape3d = $CollisionShape3d
 @export var _bullet_scene : PackedScene
 
 var gravityToggle = true;
@@ -42,6 +43,11 @@ func _physics_process(delta):
 		
 	if Input.is_action_pressed ("Sprint"):
 		spritingMultiplier = 1.7;
+		
+	if !Input.is_action_pressed ("Crouch"):
+		collisionShape3d.shape.height = 2.0
+	else:
+		collisionShape3d.shape.height = 1.0
 	
 	if Input.is_action_just_pressed("ToggleGravity"):
 		gravityToggle = !gravityToggle;
