@@ -11,13 +11,13 @@ eastDoor = NodePath("Gate4")
 westDoor = NodePath("Gate3")
 
 [node name="Gate" parent="." instance=ExtResource("2_q8m14")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 12.6792, -1.34372, 0.471473)
+transform = Transform3D(-1.6, 0, -1.39876e-07, 0, 1.6, 0, 1.39876e-07, 0, -1.6, 12.6792, -1.34372, 0.471473)
 
 [node name="Gate2" parent="." instance=ExtResource("2_q8m14")]
 transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 12.6792, -1.34372, 23.1028)
 
 [node name="Gate3" parent="." instance=ExtResource("2_q8m14")]
-transform = Transform3D(-6.99382e-08, 0, 1.6, 0, 1.6, 0, -1.6, 0, -6.99382e-08, 0.502623, -1.34372, 11.7618)
+transform = Transform3D(-6.99382e-08, 0, -1.6, 0, 1.6, 0, 1.6, 0, -6.99382e-08, 0.502623, -1.34372, 11.7618)
 
 [node name="Gate4" parent="." instance=ExtResource("2_q8m14")]
 transform = Transform3D(-6.99382e-08, 0, 1.6, 0, 1.6, 0, -1.6, 0, -6.99382e-08, 23.6347, -1.34372, 11.7618)
