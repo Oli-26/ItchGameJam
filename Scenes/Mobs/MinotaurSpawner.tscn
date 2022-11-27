@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://nrqv46gs0urs"]
+
+[ext_resource type="Script" path="res://Source/Mobs/MinotaurSpawner.cs" id="1_ahirk"]
+
+[node name="MinotaurSpawner" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1961, 0, 11.1654)
+script = ExtResource("1_ahirk")
+InitialSpawnChance = 0.1

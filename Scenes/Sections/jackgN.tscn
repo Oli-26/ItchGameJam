@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bntf62niwdk3q"]
+[gd_scene load_steps=5 format=3 uid="uid://bntf62niwdk3q"]
 
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
 [ext_resource type="Texture2D" uid="uid://d40y2n5m103s" path="res://Images/minotaur_caveart.png" id="3_weqqc"]
+[ext_resource type="PackedScene" uid="uid://nrqv46gs0urs" path="res://Scenes/Mobs/MinotaurSpawner.tscn" id="4_42tdv"]
 
 [node name="Floor1Entrance" type="Node3D"]
 script = ExtResource("1_gdq7v")
@@ -112,3 +113,6 @@ texture_albedo = ExtResource("3_weqqc")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5, 3, 46.3693)
 extents = Vector3(3, 1.10293, 3)
 texture_albedo = ExtResource("3_weqqc")
+
+[node name="MinotaurSpawner" parent="." instance=ExtResource("4_42tdv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8561, -19.5951, 63.451)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bp6kd0vnjfd3w"]
+[gd_scene load_steps=5 format=3 uid="uid://bp6kd0vnjfd3w"]
 
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
 [ext_resource type="PackedScene" uid="uid://bqlj6jakl7f83" path="res://Scenes/Wall/wall.tscn" id="3_75cpp"]
+[ext_resource type="PackedScene" uid="uid://nrqv46gs0urs" path="res://Scenes/Mobs/MinotaurSpawner.tscn" id="4_7tg6n"]
 
 [node name="Floor1Entrance" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
@@ -31,3 +32,6 @@ transform = Transform3D(0.74, 0, 0, 0, 0.74, 0, 0, 0, 0.74, 7, 0, 9)
 
 [node name="Wall3" parent="." instance=ExtResource("3_75cpp")]
 transform = Transform3D(0.74, 0, 0, 0, 0.74, 0, 0, 0, 0.74, 19, 0, 15)
+
+[node name="MinotaurSpawner" parent="." instance=ExtResource("4_7tg6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.42182, -39.6441, 3.87842)

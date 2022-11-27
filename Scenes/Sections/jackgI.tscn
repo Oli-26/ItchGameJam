@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://fmxg06naoayh"]
+[gd_scene load_steps=4 format=3 uid="uid://fmxg06naoayh"]
 
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Scenes/Sections/Room1-1.gd" id="1_h50dm"]
+[ext_resource type="PackedScene" uid="uid://nrqv46gs0urs" path="res://Scenes/Mobs/MinotaurSpawner.tscn" id="3_l0iqs"]
 
 [node name="Floor1Entrance" type="Node3D"]
 script = ExtResource("1_h50dm")
@@ -109,3 +110,6 @@ light_color = Color(1, 0.878431, 0.239216, 1)
 shadow_enabled = true
 omni_range = 7.937
 omni_attenuation = 1.62451
+
+[node name="MinotaurSpawner" parent="." instance=ExtResource("3_l0iqs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.7706, -2.38419e-07, 27.9736)
