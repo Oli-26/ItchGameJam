@@ -83,8 +83,6 @@ public partial class Lever : Node3D, IActivatable
 
 	public void Use(CharacterBody3D invoker)
 	{
-		GD.Print("used");
-		GD.Print(invoker.GetType().Name);
 		_lastInvoker = invoker;
         Active = !Active;
 	}

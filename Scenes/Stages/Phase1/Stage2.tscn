@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c73jrnap28g20"]
+[gd_scene load_steps=18 format=3 uid="uid://c73jrnap28g20"]
 
 [ext_resource type="PackedScene" uid="uid://dayo5j2yyndlg" path="res://Scenes/Player/player.tscn" id="1_eisjc"]
 [ext_resource type="PackedScene" uid="uid://d1fldsep8obki" path="res://Scenes/Level/WorldEnvironment.tscn" id="1_mf3vh"]
@@ -12,9 +12,8 @@
 [ext_resource type="Script" path="res://Source/MazeGenerator/MazeGenerator.gd" id="8_rs16u"]
 [ext_resource type="AudioStream" uid="uid://bb7fc72abpqbu" path="res://Sounds/398908__quadraslayer__monster-roar-2.wav" id="10_8bqb0"]
 [ext_resource type="PackedScene" uid="uid://dupc2dxoefygh" path="res://Scenes/Level/Waypoint.tscn" id="10_j5mov"]
+[ext_resource type="PackedScene" uid="uid://ch8s7x5lyb86m" path="res://Scenes/Sections/jackgJ.tscn" id="10_oyn4t"]
 [ext_resource type="PackedScene" uid="uid://cas8h37r18eup" path="res://Scenes/Sections/Phase1/End.tscn" id="12_06ouv"]
-[ext_resource type="PackedScene" uid="uid://dyv5ch17wsdfi" path="res://Scenes/Sections/jackgC.tscn" id="13_txnwl"]
-[ext_resource type="PackedScene" uid="uid://bbbwhoh14krqw" path="res://Scenes/Sections/jackgA.tscn" id="13_yr7m1"]
 [ext_resource type="PackedScene" uid="uid://bjv6vksm670lk" path="res://Scenes/Level/Stairs.tscn" id="16_1eckj"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_b8pia"]
@@ -91,7 +90,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 31, 0,
 [node name="MazeGen" type="Node3D" parent="NavigationRegion3D/Sections"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9947, -1.0206, 64.9877)
 script = ExtResource("8_rs16u")
-scenes = [ExtResource("13_yr7m1"), ExtResource("13_txnwl")]
+scenes = [ExtResource("10_oyn4t")]
 directionBias = 5.0
 randomness = 0.0
 minLengthRun = 1

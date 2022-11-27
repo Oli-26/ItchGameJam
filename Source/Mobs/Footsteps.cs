@@ -73,6 +73,5 @@ public partial class Footsteps : Node3D
         {
             audioStreamPlayer3D.QueueFree();
         });
-
     }
 }

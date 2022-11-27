@@ -30,10 +30,6 @@ public partial class NavigationBehaviour : Behaviour
         if (Mob.HasNode("./AnimationPlayer"))
 		{
 			_animationPlayer = Mob.GetNode<AnimationPlayer>("./AnimationPlayer");
-            foreach (var animation in _animationPlayer.GetAnimationList())
-            {
-                GD.Print(animation);
-            }
 		}
 		else
 		{

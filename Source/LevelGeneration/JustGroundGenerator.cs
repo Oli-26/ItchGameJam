@@ -11,7 +11,6 @@ public partial class JustGroundGenerator : Node, IGenerator
 
     public void Generate(IGeneratorOutput generatorOutput)
     {
-        GD.Print("Generating ground");
         for (var x = 0; x < WorldBounds.x; x++)
         {
             for (var z = 0; z < WorldBounds.z; z++)

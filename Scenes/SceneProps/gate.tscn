@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://pglkdingi3fq"]
+[gd_scene load_steps=13 format=3 uid="uid://pglkdingi3fq"]
 
 [ext_resource type="Texture2D" uid="uid://dmv8faqwcwtma" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Metal/Metal_12-512x512.png" id="2_rs4nb"]
 [ext_resource type="Texture2D" uid="uid://clrthsv6arfa4" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Metal/Metal_19-512x512.png" id="2_y84tx"]
@@ -86,6 +86,9 @@ metallic_specular = 0.0
 material = SubResource("StandardMaterial3D_d0erc")
 size = Vector2(5, 6)
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2e6f3"]
+data = PackedVector3Array(2.5, 0, 3, -2.5, 0, 3, 2.5, 0, -3, -2.5, 0, 3, -2.5, 0, -3, 2.5, 0, -3)
+
 [node name="Gate" type="StaticBody3D"]
 
 [node name="Portcullis_Wood" type="MeshInstance3D" parent="."]
@@ -102,3 +105,8 @@ shape = SubResource("BoxShape3D_p8rvl")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2.00386, 0.413095)
 mesh = SubResource("PlaneMesh_f23vg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_2e6f3")

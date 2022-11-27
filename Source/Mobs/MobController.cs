@@ -20,7 +20,6 @@ public partial class MobController : Node
 
     public void OfferIntent(IIntent intent)
     {
-        GD.Print(intent);
         if (intent == null)
         {
             throw new ArgumentException("cannot offer null intent");
@@ -34,7 +33,6 @@ public partial class MobController : Node
 
     public void ClearIntent(int upToPriotity = int.MaxValue)
     {
-        GD.Print("ClearIntent");
         if (Intent != null
             && Intent.Priority <= upToPriotity)
         {

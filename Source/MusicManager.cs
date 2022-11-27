@@ -7,12 +7,6 @@ public partial class MusicManager : Node
 
 	public override void _Ready()
 	{
-		GD.Print("Playing music");
-		foreach (var child in GetChildren())
-		{
-			GD.Print(child.GetPath());
-		}
-
 		_animationPlayer = GetNode<AnimationPlayer>("./AnimationPlayer");
 		_animationPlayer.AnimationFinished += _animationPlayer_AnimationFinished;
 

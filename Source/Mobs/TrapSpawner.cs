@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Threading.Tasks;
 
-public partial class MinotaurSpawner : Node3D
+public partial class TrapSpawner : Node3D
 {
 	private static readonly Random Random = new Random();
 	private PackedScene _spawnScene;
@@ -11,7 +11,7 @@ public partial class MinotaurSpawner : Node3D
 
 	public override void _Ready()
     {
-        _spawnScene = ResourceLoader.Load<PackedScene>("res://Scenes/Mobs/Minotaur.tscn");
+        _spawnScene = ResourceLoader.Load<PackedScene>("res://Scenes/Level/Trap.tscn");
 		CallDeferred("Spawn");
     }
 
@@ -31,6 +31,9 @@ public partial class MinotaurSpawner : Node3D
 
 	public void Initialise(Node3D node)
 	{
-        node.GlobalPosition = this.GlobalPosition;
+		Task.Delay(100).ContinueWith(t =>
+		{
+			node.GlobalPosition = this.GlobalPosition;
+		});
     }
 }

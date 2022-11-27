@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 public partial class AttackBehaviour : Behaviour
 {
 	private bool _cooldown = false;
-	[Export] public float Damage { get; set; } = 50f;
+	[Export] public float Damage { get; set; } = 85f;
 	[Export] public float Range {get; set; } = 1.5f;
 
 	public override void _Process(double delta)
