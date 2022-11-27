@@ -29,7 +29,8 @@ public partial class VisionManager : Node3D
 		var forward = -GlobalTransform.basis.z;
 		var thisPos = GlobalTransform.origin;
 		var directionToPoint = target.Transform.origin - thisPos;
-		return directionToPoint.AngleTo(forward) <= Mathf.DegToRad(ConeArc / 2);
+
+        return directionToPoint.AngleTo(forward) <= Mathf.DegToRad(ConeArc / 2);
 	}
 
 	private bool HasLineOfSight(Node3D target)
@@ -41,6 +42,6 @@ public partial class VisionManager : Node3D
 			To = target.GlobalPosition
 		});
 		var collider = result["collider"];
-		return collider.Obj == target;
+        return collider.Obj == target;
 	}
 }

@@ -1,0 +1,54 @@
+[gd_scene load_steps=11 format=3 uid="uid://b5clht3vf8bna"]
+
+[ext_resource type="PackedScene" uid="uid://dayo5j2yyndlg" path="res://Scenes/Player/player.tscn" id="1_eisjc"]
+[ext_resource type="PackedScene" uid="uid://ch8s7x5lyb86m" path="res://Scenes/Sections/jackgJ.tscn" id="2_44xh7"]
+[ext_resource type="PackedScene" uid="uid://bahiym17rfq1y" path="res://Scenes/Level/AudioTriggerArea.tscn" id="8_5jhni"]
+[ext_resource type="AudioStream" uid="uid://ut35i7vgrj4t" path="res://Sounds/339671__inspectorj__piano-string-glissando-low-a.wav" id="9_6tfy4"]
+[ext_resource type="PackedScene" uid="uid://bjv6vksm670lk" path="res://Scenes/Level/Stairs.tscn" id="9_opfem"]
+[ext_resource type="AudioStream" uid="uid://bb7fc72abpqbu" path="res://Sounds/398908__quadraslayer__monster-roar-2.wav" id="10_8bqb0"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6g5uc"]
+
+[sub_resource type="Sky" id="Sky_ivwug"]
+sky_material = SubResource("ProceduralSkyMaterial_6g5uc")
+
+[sub_resource type="Environment" id="Environment_l5pxq"]
+background_mode = 2
+background_color = Color(0.2139, 0.570975, 0.69, 1)
+sky = SubResource("Sky_ivwug")
+ambient_light_sky_contribution = 0.03
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_gd2qs"]
+vertices = PackedVector3Array(27.5645, 6.5, 9.25, 28.3145, 6.5, 9.25, 28.3145, 6.5, 2, 27.5645, 6.5, 0.75, 28.8145, 6.5, 1.5, 36.3145, 6.5, 1.5, 36.3145, 6.5, 0.75, 27.5645, 6.5, 0.75, 27.5645, 6.5, 0.75, 28.3145, 6.5, 2, 28.8145, 6.5, 1.5, 37.8145, 0.5, 21.75, 37.8145, 0.5, 23.25, 40.0645, 0.5, 23.25, 40.0645, 0.5, 21.75, 40.5645, 0.5, 21.25, 48.0645, 0.5, 21.25, 48.0645, 0.5, 13.75, 48.5645, 0.5, 13.25, 50.0645, 0.5, 13.25, 50.0645, 0.5, 11, 48.5645, 0.5, 11, 29.8145, 0.5, 13.75, 29.8145, 0.5, 21.25, 37.3145, 0.5, 21.25, 40.0645, 0.5, 0.75, 37.8145, 0.5, 0.75, 37.8145, 0.5, 2.25, 40.0645, 0.5, 2.5, 37.0645, 0.5, 3, 29.8145, 0.5, 3, 29.8145, 0.5, 10.25, 29.0645, 0.5, 11, 27.5645, 0.5, 11, 27.5645, 0.5, 13.25, 29.3145, 0.5, 13.25, 40.5645, 0.5, 3, 37.0645, 0.5, 3, 29.8145, 0.5, 10.25, 37.3145, 0.5, 21.25, 37.8145, 0.5, 21.75, 40.0645, 0.5, 21.75, 40.5645, 0.5, 21.25, 48.0645, 0.5, 13.75, 48.5645, 0.5, 13.25, 48.5645, 0.5, 11, 40.5645, 0.5, 3, 40.0645, 0.5, 2.5, 37.8145, 0.5, 2.25, 37.0645, 0.5, 3, 29.0645, 0.5, 11, 29.3145, 0.5, 13.25, 29.8145, 0.5, 13.75, 29.8145, 0.5, 10.25, 48.0645, 0.5, 10.5, 48.0645, 0.5, 3, 40.5645, 0.5, 3, 48.0645, 0.5, 13.75, 48.5645, 0.5, 11, 48.0645, 0.5, 10.5, 40.5645, 0.5, 21.25, 29.8145, 0.5, 13.75, 37.3145, 0.5, 21.25, 40.5645, 0.5, 21.25, 48.0645, 0.5, 10.5, 40.5645, 0.5, 3, 29.8145, 0.5, 10.25, 49.5645, 6.5, 2, 49.5645, 6.5, 9.5, 50.0645, 6.5, 9.5, 50.0645, 6.5, 0.75, 41.5645, 6.5, 0.75, 41.5645, 6.5, 1.5, 49.0645, 6.5, 1.5, 50.0645, 6.5, 0.75, 49.0645, 6.5, 1.5, 49.5645, 6.5, 2, 50.0645, 6.5, 0.75, 36.3145, 6.5, 23.25, 36.3145, 6.5, 22.75, 28.8145, 6.5, 22.75, 27.5645, 6.5, 23.25, 27.5645, 6.5, 14.75, 27.5645, 6.5, 23.25, 28.3145, 6.5, 22.25, 28.3145, 6.5, 14.75, 27.5645, 6.5, 23.25, 28.8145, 6.5, 22.75, 28.3145, 6.5, 22.25, 50.0645, 6.5, 14.75, 49.5645, 6.5, 14.75, 49.5645, 6.5, 22.25, 50.0645, 6.5, 23.25, 49.0645, 6.5, 22.75, 41.5645, 6.5, 22.75, 41.5645, 6.5, 23.25, 50.0645, 6.5, 23.25, 50.0645, 6.5, 23.25, 49.5645, 6.5, 22.25, 49.0645, 6.5, 22.75)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 7), PackedInt32Array(10, 9, 8), PackedInt32Array(14, 13, 11), PackedInt32Array(11, 13, 12), PackedInt32Array(17, 16, 15), PackedInt32Array(21, 20, 18), PackedInt32Array(18, 20, 19), PackedInt32Array(24, 23, 22), PackedInt32Array(26, 25, 27), PackedInt32Array(27, 25, 28), PackedInt32Array(31, 30, 29), PackedInt32Array(33, 32, 34), PackedInt32Array(34, 32, 35), PackedInt32Array(38, 37, 36), PackedInt32Array(40, 39, 41), PackedInt32Array(41, 39, 42), PackedInt32Array(45, 44, 43), PackedInt32Array(47, 46, 48), PackedInt32Array(48, 46, 49), PackedInt32Array(51, 50, 52), PackedInt32Array(52, 50, 53), PackedInt32Array(56, 55, 54), PackedInt32Array(58, 57, 59), PackedInt32Array(59, 57, 60), PackedInt32Array(62, 61, 63), PackedInt32Array(63, 61, 66), PackedInt32Array(63, 66, 65), PackedInt32Array(63, 65, 64), PackedInt32Array(68, 67, 69), PackedInt32Array(69, 67, 70), PackedInt32Array(72, 71, 73), PackedInt32Array(73, 71, 74), PackedInt32Array(77, 76, 75), PackedInt32Array(79, 78, 80), PackedInt32Array(80, 78, 81), PackedInt32Array(85, 84, 82), PackedInt32Array(82, 84, 83), PackedInt32Array(86, 88, 87), PackedInt32Array(90, 89, 91), PackedInt32Array(91, 89, 92), PackedInt32Array(94, 93, 95), PackedInt32Array(95, 93, 96), PackedInt32Array(99, 98, 97)]
+agent_height = 3.0
+agent_radius = 0.6
+
+[node name="Level" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_l5pxq")
+
+[node name="Player" parent="." instance=ExtResource("1_eisjc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.7323, 5.65669, 15.3355)
+
+[node name="AudioTriggerArea" parent="." instance=ExtResource("8_5jhni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.143, -0.515187, 13.4879)
+Sound = ExtResource("9_6tfy4")
+
+[node name="AudioTriggerArea2" parent="." instance=ExtResource("8_5jhni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2942, 2.05929, 21.2802)
+Sound = ExtResource("10_8bqb0")
+
+[node name="Stairs" parent="." instance=ExtResource("9_opfem")]
+transform = Transform3D(-0.863008, 0, 0.50519, 0, 1, 0, -0.50519, 0, -0.863008, 30.578, -0.399295, 35.4287)
+NextLevelPath = "res://Scenes/Stages/Phase1/Stage1.tscn"
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navmesh = SubResource("NavigationMesh_gd2qs")
+
+[node name="Sections" type="Node3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.8145, 0, 0)
+
+[node name="Floor1Entrance" parent="NavigationRegion3D/Sections" instance=ExtResource("2_44xh7")]

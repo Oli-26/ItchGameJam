@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dwwfe0pufdtdg"]
+[gd_scene load_steps=26 format=3 uid="uid://dwwfe0pufdtdg"]
 
 [ext_resource type="PackedScene" uid="uid://dayo5j2yyndlg" path="res://Scenes/Player/player.tscn" id="1_1pamn"]
 [ext_resource type="PackedScene" uid="uid://bp5lu2b0l5nlq" path="res://Scenes/Mobs/Minotaur.tscn" id="2_ehm15"]
@@ -6,11 +6,20 @@
 [ext_resource type="PackedScene" uid="uid://cgsys6xef3jrr" path="res://Scenes/Sections/Phase1/Start.tscn" id="4_ulcmt"]
 [ext_resource type="PackedScene" uid="uid://pjjdsdjs2pnf" path="res://Scenes/Sections/Phase1/Finale.tscn" id="7_3vky0"]
 [ext_resource type="PackedScene" uid="uid://cdgsr1p7bm5rf" path="res://Scenes/Sections/Phase1/FinalEnd.tscn" id="7_083v0"]
-[ext_resource type="PackedScene" uid="uid://bj16llsldmtpv" path="res://Scenes/Sections/LavaA1-1.tscn" id="8_iuwhi"]
+[ext_resource type="Script" path="res://Source/MazeGenerator/MazeGenerator.gd" id="8_gdihr"]
+[ext_resource type="PackedScene" uid="uid://bbbwhoh14krqw" path="res://Scenes/Sections/jackgA.tscn" id="9_srs61"]
 [ext_resource type="PackedScene" uid="uid://bahiym17rfq1y" path="res://Scenes/Level/AudioTriggerArea.tscn" id="9_t4wte"]
 [ext_resource type="AudioStream" uid="uid://bb7fc72abpqbu" path="res://Sounds/398908__quadraslayer__monster-roar-2.wav" id="10_aq2k1"]
+[ext_resource type="PackedScene" uid="uid://bp6kd0vnjfd3w" path="res://Scenes/Sections/jackgB.tscn" id="10_sk0s2"]
 [ext_resource type="PackedScene" uid="uid://bjv6vksm670lk" path="res://Scenes/Level/Stairs.tscn" id="11_5xuel"]
+[ext_resource type="PackedScene" uid="uid://dyv5ch17wsdfi" path="res://Scenes/Sections/jackgC.tscn" id="11_fhux1"]
 [ext_resource type="PackedScene" uid="uid://dupc2dxoefygh" path="res://Scenes/Level/Waypoint.tscn" id="12_5fwk6"]
+[ext_resource type="PackedScene" uid="uid://do5luiirg7gqq" path="res://Scenes/Sections/jackgE.tscn" id="12_yeqql"]
+[ext_resource type="PackedScene" uid="uid://b3lamk8ln8pa7" path="res://Scenes/Sections/jackgG.tscn" id="13_jruka"]
+[ext_resource type="PackedScene" uid="uid://bq2sbhny31bwf" path="res://Scenes/Sections/jackgH.tscn" id="14_07qnh"]
+[ext_resource type="PackedScene" uid="uid://chr0sl2jm282c" path="res://Scenes/Sections/jackgK.tscn" id="15_ejkuv"]
+[ext_resource type="PackedScene" uid="uid://cejat051j7xf6" path="res://Scenes/Sections/jackgO.tscn" id="16_yvlck"]
+[ext_resource type="PackedScene" uid="uid://bx28cgwahsuwq" path="res://Scenes/Sections/jackgP.tscn" id="17_ayn1g"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6g5uc"]
 
@@ -30,13 +39,15 @@ volumetric_fog_temporal_reprojection_amount = 0.99
 agent_height = 3.0
 agent_radius = 0.6
 
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_3gqvb"]
+
 [node name="Level" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_l5pxq")
 
 [node name="Player" parent="." instance=ExtResource("1_1pamn")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.83879, 0, 9.70097)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 153.528, 0, 170.127)
 
 [node name="Minotaur" parent="." instance=ExtResource("2_ehm15")]
 transform = Transform3D(-0.0488668, 0, 0.998805, 0, 1, 0, -0.998805, 0, -0.0488668, 257.2, -0.819398, 24.543)
@@ -50,19 +61,36 @@ navmesh = SubResource("NavigationMesh_b8pia")
 [node name="Sections" type="Node3D" parent="NavigationRegion3D"]
 
 [node name="Start" parent="NavigationRegion3D/Sections" instance=ExtResource("4_ulcmt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
 [node name="Stairs" parent="NavigationRegion3D/Sections" instance=ExtResource("11_5xuel")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.8197, -1, 173.374)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -125.82, 10, 342.478)
 NextLevelPath = "res://Scenes/Stages/Phase1/Stage0.tscn"
 
 [node name="Finale" parent="NavigationRegion3D/Sections" instance=ExtResource("7_3vky0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 203.161, 3.06694, 10.3778)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 136.161, 14.0669, 179.482)
 
 [node name="End2" parent="NavigationRegion3D/Sections" instance=ExtResource("7_083v0")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 208.553, -11.1775, 123.494)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 141.553, -0.1775, 292.598)
 
-[node name="LavaA1-1" parent="NavigationRegion3D/Sections" instance=ExtResource("8_iuwhi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, -1.90852, 2.44051)
+[node name="MazeGen" type="Node3D" parent="NavigationRegion3D/Sections"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9947, -1.0206, -0.0122986)
+script = ExtResource("8_gdihr")
+scenes = [ExtResource("9_srs61"), ExtResource("10_sk0s2"), ExtResource("11_fhux1"), ExtResource("12_yeqql"), ExtResource("13_jruka"), ExtResource("14_07qnh"), ExtResource("15_ejkuv"), ExtResource("16_yvlck"), ExtResource("17_ayn1g")]
+directionBias = 5.0
+randomness = 0.0
+minLengthRun = 1
+maxLengthRun = 1
+numberOfExtraPoints = 0
+mazeSize = 6
+
+[node name="EnterancePlaceholder" type="CollisionShape3D" parent="NavigationRegion3D/Sections/MazeGen"]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 12, 0, 12)
+shape = SubResource("WorldBoundaryShape3D_3gqvb")
+
+[node name="ExitPlaceholder" type="CollisionShape3D" parent="NavigationRegion3D/Sections/MazeGen"]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 132, 0, 132)
+shape = SubResource("WorldBoundaryShape3D_3gqvb")
 
 [node name="AudioTriggerArea2" parent="." instance=ExtResource("9_t4wte")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2942, 2.05929, 12.71)

@@ -90,13 +90,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 276.749, -0.325432, 8.68305)
 [node name="Stairs" parent="." instance=ExtResource("9_opfem")]
 transform = Transform3D(-0.863008, 0, 0.50519, 0, 1, 0, -0.50519, 0, -0.863008, 315.415, -0.568259, 6.29763)
 NextLevelPath = "res://Scenes/Stages/Phase1/Stage2.tscn"
-
-[node name="Minotaur" parent="." instance=ExtResource("5_vdmbx")]
-transform = Transform3D(-0.0488668, 0, 0.998805, 0, 1, 0, -0.998805, 0, -0.0488668, 13.534, -0.819398, 24.543)
-
-[node name="WaypointPathBehaviour" type="Node" parent="Minotaur" node_paths=PackedStringArray("WaypointA", "WaypointB", "WaypointC", "WaypointD")]
-script = ExtResource("3_vie62")
-WaypointA = NodePath("../../WaypointA")
-WaypointB = NodePath("../../WaypointB")
-WaypointC = NodePath("../../WaypointC")
-WaypointD = NodePath("../../WaypointD")

@@ -25,13 +25,13 @@
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6g5uc"]
 
-[sub_resource type="Sky" id="Sky_jhr6c"]
+[sub_resource type="Sky" id="Sky_arkdg"]
 sky_material = SubResource("ProceduralSkyMaterial_6g5uc")
 
 [sub_resource type="Environment" id="Environment_l5pxq"]
 background_mode = 2
 background_color = Color(0.2139, 0.570975, 0.69, 1)
-sky = SubResource("Sky_jhr6c")
+sky = SubResource("Sky_arkdg")
 ambient_light_sky_contribution = 0.03
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.02
@@ -51,7 +51,7 @@ agent_radius = 0.6
 environment = SubResource("Environment_l5pxq")
 
 [node name="Player" parent="." instance=ExtResource("1_eisjc")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 42.5584, 0.44457, 57.4416)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.5584, 0.44457, 10.4416)
 
 [node name="Minotaur" parent="." instance=ExtResource("5_vdmbx")]
 transform = Transform3D(-0.0488668, 0, 0.998805, 0, 1, 0, -0.998805, 0, -0.0488668, 54.6934, -0.693603, -43.2651)

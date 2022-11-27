@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 public partial class GravityBehaviour : Behaviour
 {
-    [Export] public float Gravity { get; set; } = 9.81f;
+    [Export] public float Gravity { get; set; } = 9.81f * 10;
 
     public override void _Ready()
     {
@@ -17,14 +17,17 @@ public partial class GravityBehaviour : Behaviour
 
     public override void _Process(double delta)
     {
+        var velocity = Mob.Velocity;
         if (!Mob.IsOnFloor())
         {
+            velocity.y -= Gravity * (float)delta;
             Mob.Velocity += Vector3.Down * Gravity * (float)delta;
         } 
         else
         {
-            Mob.Velocity -= new Vector3(0, Mob.Velocity.y, 0);
+            velocity.y = 0;
         }
+        Mob.Velocity = velocity;
     }
 
 }
