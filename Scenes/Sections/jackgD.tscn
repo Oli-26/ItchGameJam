@@ -15,43 +15,59 @@ metadata/_editor_floor_ = Vector3(0, 7, 0)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.3398, 4.96362, 9)
+light_color = Color(1, 0.741176, 0, 1)
 shadow_enabled = true
 omni_range = 7.04935
+omni_attenuation = 1.1487
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5969, 4.96362, 9)
+light_color = Color(1, 0.741176, 0, 1)
 shadow_enabled = true
 omni_range = 7.04935
+omni_attenuation = 1.1487
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71746, 4.96362, 23.7203)
+light_color = Color(1, 0.741176, 0, 1)
 shadow_enabled = true
 omni_range = 7.04935
+omni_attenuation = 1.1487
 
 [node name="OmniLight3D7" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.6863, 4.96362, 45.4503)
+light_color = Color(1, 0.741176, 0, 1)
 shadow_enabled = true
 omni_range = 6.77665
+omni_attenuation = 1.1487
 
 [node name="OmniLight3D8" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.3529, 4.96362, 45.4503)
+light_color = Color(1, 0.741176, 0, 1)
 shadow_enabled = true
 omni_range = 6.77665
+omni_attenuation = 1.1487
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.3523, 4.96362, 29.1997)
+light_color = Color(1, 0.741176, 0, 1)
 shadow_enabled = true
 omni_range = 7.04935
+omni_attenuation = 1.1487
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0146, 5.27938, 37.0241)
+light_color = Color(1, 0.741176, 0, 1)
 shadow_enabled = true
 omni_range = 7.842
+omni_attenuation = 1.1487
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9532, 4.85217, 27.4104)
+light_color = Color(1, 0.741176, 0, 1)
 shadow_enabled = true
 omni_range = 7.04935
+omni_attenuation = 1.1487
 
 [node name="MinotaurSpawner" parent="." instance=ExtResource("3_2ru4p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5177, -17.2106, 26.3427)

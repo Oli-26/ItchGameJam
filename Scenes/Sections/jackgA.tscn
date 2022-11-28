@@ -25,3 +25,45 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9329, 0, 16.8599)
 
 [node name="TrapSpawner3" parent="." instance=ExtResource("4_d88nb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8402, -1.19209e-07, 22.335)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.33214, 3.43004, 3.0556)
+light_color = Color(1, 0.74902, 0, 1)
+shadow_enabled = true
+omni_range = 7.66
+omni_attenuation = 1.23114
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.33214, 3.43004, 20.3832)
+light_color = Color(1, 0.74902, 0, 1)
+shadow_enabled = true
+omni_range = 7.66
+omni_attenuation = 1.23114
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.7822, 3.43004, 20.6339)
+light_color = Color(1, 0.74902, 0, 1)
+shadow_enabled = true
+omni_range = 7.66
+omni_attenuation = 1.23114
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6651, 3.43004, 14.0043)
+light_color = Color(1, 0.74902, 0, 1)
+shadow_enabled = true
+omni_range = 7.66
+omni_attenuation = 1.23114
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.7822, 3.43004, 3.20606)
+light_color = Color(1, 0.74902, 0, 1)
+shadow_enabled = true
+omni_range = 7.66
+omni_attenuation = 1.23114
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.39908, 3.43004, 11.1671)
+light_color = Color(1, 0.74902, 0, 1)
+shadow_enabled = true
+omni_range = 7.66
+omni_attenuation = 1.23114
