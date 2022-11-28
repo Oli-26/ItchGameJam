@@ -10,10 +10,10 @@ public partial class TrapSpawner : Node3D
 	[Export] public float InitialSpawnChance { get; set; } = 1.0f;
 
 	public override void _Ready()
-    {
-        _spawnScene = ResourceLoader.Load<PackedScene>("res://Scenes/Level/Trap.tscn");
+	{
+		_spawnScene = ResourceLoader.Load<PackedScene>("res://Scenes/Level/Trap.tscn");
 		CallDeferred("Spawn");
-    }
+	}
 
 	public void Spawn()
 	{
@@ -27,7 +27,7 @@ public partial class TrapSpawner : Node3D
 			.GetNode("Level")
 			.AddChild(node);
 		CallDeferred("Initialise", node);
-    }
+	}
 
 	public void Initialise(Node3D node)
 	{
@@ -35,5 +35,5 @@ public partial class TrapSpawner : Node3D
 		{
 			node.GlobalPosition = this.GlobalPosition;
 		});
-    }
+	}
 }

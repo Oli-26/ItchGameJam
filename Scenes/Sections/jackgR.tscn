@@ -1,0 +1,436 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgo3w4wfw8fns"]
+
+[ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
+[ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
+[ext_resource type="PackedScene" uid="uid://nrqv46gs0urs" path="res://Scenes/Mobs/MinotaurSpawner.tscn" id="3_lth15"]
+[ext_resource type="Script" path="res://Source/Mobs/TrapSpawner.cs" id="4_lloep"]
+[ext_resource type="PackedScene" uid="uid://d4l6tyvsel34r" path="res://Scenes/Mobs/TrapSpawner.tscn" id="4_oank2"]
+
+[node name="Floor1Entrance" type="Node3D"]
+script = ExtResource("1_gdq7v")
+
+[node name="GridMap" parent="." instance=ExtResource("1_cydnl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0700731, -0.0386229, 0.06989)
+data = {
+"cells": PackedInt32Array(-65536, 0, 22, -65536, 3, 22, -65536, 4, 14, -65536, 8, 14, -65536, 9, 14, -65536, 10, 14, -65536, 11, 14, -65535, 11, 14, -65534, 11, 14, -65533, 11, 14, -65532, 11, 14, -65529, 11, 22, -65528, 11, 22, -65526, 11, 22, -65527, 11, 22, -65525, 11, 22, -65525, 10, 22, -65525, 9, 22, -65525, 8, 22, -65525, 7, 14, -65525, 4, 22, -65525, 3, 22, -65525, 2, 22, -65525, 1, 14, -65525, 0, 22, -65535, 0, 14, -65534, 0, 22, -65533, 0, 22, -65532, 0, 131079, -65528, 0, 14, 0, 0, 28, 1, 0, 28, 2, 0, 28, 3, 0, 28, 11, 0, 28, 10, 0, 28, 9, 0, 28, 8, 0, 28, 7, 0, 28, 11, 1, 28, 11, 2, 28, 11, 3, 28, 11, 4, 28, 65540, 0, 28, 65539, 0, 28, 65538, 0, 28, 65537, 0, 28, 65536, 0, 28, 65536, 11, 28, 65547, 4, 28, 65547, 3, 28, 65547, 2, 28, 65547, 1, 28, 65547, 0, 28, 65546, 0, 28, 65544, 0, 28, 65545, 0, 28, 65543, 0, 28, 131076, 11, 28, 131075, 11, 28, 131074, 11, 28, 131079, 11, 28, 131081, 11, 28, 131080, 11, 28, 131082, 11, 28, 131083, 11, 28, 131083, 10, 28, 131083, 9, 28, 131083, 8, 28, 131083, 7, 28, 131083, 4, 28, 131083, 3, 28, 131083, 2, 28, 131083, 1, 28, 131083, 0, 28, 131082, 0, 28, 131081, 0, 28, 131080, 0, 28, 131079, 0, 28, 131076, 0, 28, 131075, 0, 28, 131074, 0, 28, 131073, 0, 28, 131072, 0, 28, -65536, 7, 14, -65536, 6, 131079, -65536, 5, 131079, -65536, 2, 22, -65536, 1, 22, 0, 3, 28, 0, 2, 28, 0, 1, 28, 0, 4, 28, 65536, 10, 28, 65536, 9, 28, 65536, 4, 28, 65536, 3, 28, 65536, 2, 28, 65536, 1, 28, 131072, 3, 28, 131072, 4, 28, 131072, 7, 28, 131072, 8, 28, 131072, 10, 28, 131072, 1, 28, 131072, 2, 28, 4, 0, 28, -65527, 0, 22, -65526, 0, 22, -65529, 0, 14, 65547, 7, 28, 65547, 8, 28, 65547, 9, 28, 65547, 10, 28, 65547, 11, 28, 65546, 11, 28, 65545, 11, 28, 65544, 11, 28, 65543, 11, 28, 7, 11, 28, 8, 11, 28, 9, 11, 28, 10, 11, 28, 11, 11, 28, 11, 10, 28, 11, 9, 28, 11, 8, 28, 11, 7, 28, 0, 11, 28, 1, 11, 28, 2, 11, 28, 3, 11, 28, 4, 11, 28, 0, 10, 28, 0, 9, 28, 0, 8, 28, 0, 7, 28, 131073, 11, 28, 131072, 11, 28, 131072, 9, 28, 65536, 8, 28, 65536, 7, 28, 65537, 11, 28, 65538, 11, 28, 65539, 11, 28, 65540, 11, 28, -65535, 7, 14, -65535, 6, 131079, -65535, 10, 14, -65535, 9, 14, -65535, 8, 14, -65535, 5, 131079, -65535, 4, 14, -65535, 3, 14, -65535, 2, 14, -65534, 10, 14, -65534, 9, 14, -65534, 8, 14, -65534, 7, 14, -65534, 6, 131079, -65534, 5, 131079, -65534, 4, 14, -65534, 3, 14, -65534, 2, 14, -65533, 10, 14, -65533, 9, 14, -65533, 8, 14, -65533, 7, 14, -65533, 6, 131079, -65533, 5, 131079, -65532, 4, 131079, -65532, 3, 14, -65532, 2, 14, -65532, 5, 131079, -65532, 6, 131079, -65532, 7, 131079, -65532, 8, 14, -65532, 9, 14, -65532, 10, 14, -65531, 10, 131079, -65531, 11, 131079, -65530, 10, 131079, -65530, 11, 131079, -65529, 10, 14, -65529, 9, 14, -65529, 8, 14, -65530, 8, 131079, -65530, 9, 131079, -65531, 8, 131079, -65531, 7, 131079, -65531, 9, 131079, -65530, 7, 131079, -65530, 6, 131079, -65531, 6, 131079, -65531, 5, 131079, -65531, 4, 131079, -65531, 3, 131079, -65530, 2, 131079, -65530, 3, 131079, -65530, 4, 131079, -65530, 5, 131079, -65529, 6, 131079, -65529, 7, 131079, -65529, 5, 131079, -65529, 4, 131079, -65529, 3, 131079, -65529, 2, 131079, -65529, 1, 131079, -65528, 1, 14, -65528, 2, 14, -65528, 3, 14, -65528, 4, 131079, -65528, 5, 131079, -65528, 6, 131079, -65528, 7, 14, -65528, 8, 14, -65528, 9, 14, -65528, 10, 14, -65527, 5, 131079, -65527, 4, 14, -65527, 3, 14, -65527, 2, 14, -65527, 1, 14, -65527, 6, 131079, -65527, 7, 14, -65527, 8, 14, -65527, 9, 14, -65527, 10, 14, -65526, 10, 14, -65525, 6, 131079, -65525, 5, 131079, -65526, 3, 14, -65526, 2, 14, -65526, 1, 14, -65526, 4, 14, -65526, 5, 131079, -65526, 6, 131079, -65526, 7, 14, -65526, 8, 14, -65526, 9, 14, -65530, 0, 131079, -65531, 0, 131079, -65532, 1, 131079, -65531, 1, 131079, -65530, 1, 131079, -65531, 2, 131079, -65533, 3, 14, -65533, 4, 14, -65533, 2, 14, -65533, 1, 14, -65534, 1, 14, -65535, 1, 14, 7, 10, 41, 7, 9, 41, 7, 8, 41, 10, 7, 983081, 9, 7, 983081, 8, 7, 983081, 10, 4, 458793, 9, 4, 458793, 8, 4, 458793, 7, 3, 41, 7, 2, 41, 7, 1, 41, 4, 3, 196649, 4, 1, 196649, 4, 2, 196649, 3, 4, 458793, 2, 4, 458793, 1, 4, 458793, 1, 7, 983081, 2, 7, 983081, 3, 7, 983081, 4, 8, 196649, 4, 9, 196649, 4, 10, 196649, 4, 7, 917545, 7, 7, 1507369, 4, 4, 1245225, 7, 4, 262185, 65540, 4, 1245225, 65543, 4, 262185, 65543, 7, 1507369, 65540, 7, 917545, 131076, 7, 917545, 131076, 4, 1245225, 131079, 4, 262185, 131079, 7, 1507369, 65544, 3, 1507335, 65544, 2, 1507335, 65544, 1, 1507335, 65546, 3, 1507335, 65545, 3, 1507335, 65546, 8, 1507335, 65545, 8, 1507335, 65544, 8, 1507335, 65544, 10, 1507335, 65544, 9, 1507335, 65539, 10, 1507335, 65539, 9, 1507335, 65539, 8, 1507335, 65538, 8, 1507335, 65537, 8, 1507335, 65537, 3, 1507335, 65538, 3, 1507335, 65538, 2, 1507335, 65539, 2, 1507335, 65539, 3, 1507335, 65539, 1, 1507335, 131079, 10, 524329, 131079, 8, 524329, 131079, 9, 524329, 131082, 7, 1310761, 131081, 7, 1310761, 131080, 7, 1310761, 131076, 10, 131113, 131076, 9, 131113, 131076, 8, 131113, 131075, 7, 1310761, 131074, 7, 1310761, 131073, 7, 1310761, 131082, 4, 1179689, 131081, 4, 1179689, 131080, 4, 1179689, 131079, 3, 524329, 131079, 2, 524329, 131079, 1, 524329, 131075, 4, 1179689, 131074, 4, 1179689, 131073, 4, 1179689, 131076, 3, 131113, 131076, 2, 131113, 131076, 1, 131113, 196618, 10, 131079, 196618, 9, 131079, 196618, 8, 131079, 196617, 8, 131079, 196617, 7, 131079, 196618, 7, 131079, 196618, 6, 131079, 196618, 5, 131079, 196619, 5, 131079, 196619, 6, 131079, 196617, 5, 131079, 196616, 5, 131079, 196615, 5, 131079, 196615, 6, 131079, 196616, 7, 131079, 196615, 7, 131079, 196616, 6, 131079, 196617, 6, 131079, 196615, 8, 131079, 196616, 8, 131079, 196616, 9, 131079, 196617, 9, 131079, 196617, 10, 131079, 196616, 10, 131079, 196615, 10, 131079, 196614, 10, 131079, 196614, 11, 131079, 196613, 11, 131079, 196613, 10, 131079, 196613, 9, 131079, 196615, 9, 131079, 196614, 9, 131079, 196613, 8, 131079, 196614, 8, 131079, 196614, 7, 131079, 196613, 7, 131079, 196612, 8, 131079, 196612, 9, 131079, 196611, 9, 131079, 196610, 9, 131079, 196610, 10, 131079, 196609, 10, 131079, 196611, 10, 131079, 196612, 10, 131079, 196611, 8, 131079, 196610, 8, 131079, 196610, 7, 131079, 196609, 8, 131079, 196609, 7, 131079, 196609, 6, 131079, 196609, 5, 131079, 196608, 5, 131079, 196608, 6, 131079, 196609, 4, 131079, 196610, 4, 131079, 196610, 5, 131079, 196610, 6, 131079, 196611, 7, 131079, 196612, 6, 131079, 196612, 7, 131079, 196613, 6, 131079, 196612, 5, 131079, 196614, 6, 131079, 196614, 5, 131079, 196613, 4, 131079, 196612, 4, 131079, 196611, 5, 131079, 196611, 6, 131079, 196611, 4, 131079, 196610, 3, 131079, 196609, 3, 131079, 196611, 3, 131079, 196612, 3, 131079, 196613, 3, 131079, 196614, 3, 131079, 196615, 3, 131079, 196616, 3, 131079, 196616, 4, 131079, 196615, 4, 131079, 196614, 4, 131079, 196613, 5, 131079, 196617, 4, 131079, 196617, 3, 131079, 196618, 3, 131079, 196618, 4, 131079, 196617, 2, 131079, 196617, 1, 131079, 196618, 1, 131079, 196618, 2, 131079, 196616, 2, 131079, 196616, 1, 131079, 196615, 1, 131079, 196614, 2, 131079, 196613, 2, 131079, 196612, 2, 131079, 196611, 2, 131079, 196611, 1, 131079, 196612, 1, 131079, 196613, 1, 131079, 196614, 1, 131079, 196614, 0, 131079, 196613, 0, 131079, 196615, 2, 131079, 196610, 2, 131079, 196609, 2, 131079, 196610, 1, 131079, 196609, 1, 131079, 196609, 9, 131079)
+}
+metadata/_editor_floor_ = Vector3(0, -1, 0)
+
+[node name="MinotaurSpawner" parent="." instance=ExtResource("3_lth15")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1961, 2.10651, 11.1654)
+InitialSpawnChance = 0.15
+
+[node name="TrapSpawner" parent="." instance=ExtResource("4_oank2")]
+
+[node name="TrapSpawner2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9066, 0, 1.45464)
+
+[node name="TrapSpawner3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8953, 0, 10.9987)
+script = ExtResource("4_lloep")
+InitialSpawnChance = 0.2
+
+[node name="TrapSpawner4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5092, 0, 22.7885)
+script = ExtResource("4_lloep")
+InitialSpawnChance = 0.2
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.300666, 3)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D20" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0.300666, 3)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D21" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0.300666, 5)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D22" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0.300666, 7)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D23" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0.300666, 17)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D24" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0.300666, 19)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D25" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0.300666, 21)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.300666, 7)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.300666, 10)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.300666, 10)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.300666, 10)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.300666, 14)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.300666, 14)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.300666, 14)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0.300666, 14)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0.300666, 14)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0.300666, 14)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0.300666, 10)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D17" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0.300666, 10)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D18" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0.300666, 10)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.300666, 17)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.300666, 19)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.300666, 21)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D19" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0.300666, 12)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.300666, 5)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D26" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5.58013, 3)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D27" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 5.58013, 3)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D28" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 5.58013, 5)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D29" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 5.58013, 7)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D30" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 5.58013, 17)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D31" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 5.58013, 19)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D32" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 5.58013, 21)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D33" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5.58013, 7)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D34" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 5.58013, 10)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D35" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5.58013, 10)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D36" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 5.58013, 10)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D37" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 5.58013, 14)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D38" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5.58013, 14)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D39" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 5.58013, 14)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D40" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 5.58013, 14)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D41" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 5.58013, 14)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D42" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 5.58013, 14)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D43" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 5.58013, 10)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D44" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 5.58013, 10)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D45" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 5.58013, 10)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D46" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5.58013, 17)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D47" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5.58013, 19)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D48" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5.58013, 21)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D49" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 5.58013, 12)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
+
+[node name="OmniLight3D50" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5.58013, 5)
+light_color = Color(0.345098, 0.584314, 0, 1)
+light_energy = 0.556
+shadow_enabled = true
+omni_range = 3.15
+omni_attenuation = 1.31951
