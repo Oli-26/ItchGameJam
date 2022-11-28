@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bp5lu2b0l5nlq"]
+[gd_scene load_steps=22 format=3 uid="uid://bp5lu2b0l5nlq"]
 
 [ext_resource type="Script" path="res://Source/Mobs/Mob.cs" id="1_qpub3"]
 [ext_resource type="AnimationLibrary" uid="uid://bessp12qoayxa" path="res://Animations/Movement.res" id="2_22kxy"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Source/Behaviour/CharacterPerceptionBehaviour.cs" id="4_4nlm1"]
 [ext_resource type="Script" path="res://Source/Mobs/MobController.cs" id="4_jmmc3"]
 [ext_resource type="Script" path="res://Source/Behaviour/DisengagementBehaviour.cs" id="6_nxk1l"]
+[ext_resource type="AudioStream" uid="uid://eq760rbx0bmp" path="res://Sounds/SFX/Minotaur/Minotaur Roar 2.mp3" id="7_2mr2v"]
 [ext_resource type="Script" path="res://Source/Behaviour/NavigationBehaviour.cs" id="7_4mnad"]
 [ext_resource type="PackedScene" uid="uid://c27rq7gwj8g48" path="res://Scenes/Mobs/VisionManager.tscn" id="8_w7pjv"]
 [ext_resource type="Script" path="res://Source/Behaviour/AttackBehaviour.cs" id="9_gy2iy"]
@@ -58,6 +59,7 @@ script = ExtResource("4_jmmc3")
 
 [node name="CharacterPerceptionBehaviour" type="Node" parent="."]
 script = ExtResource("4_4nlm1")
+AggroSound = ExtResource("7_2mr2v")
 
 [node name="DisengagementBehaviour" type="Node" parent="."]
 script = ExtResource("6_nxk1l")

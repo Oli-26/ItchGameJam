@@ -7,6 +7,8 @@ public partial class PlayerHealth : Node
     private DeathHandler _deathHandler;
     private TextureRect _damageEffect;
 
+    [Export] public AudioStream GaspSound { get; set; }
+
     public float Health { get; private set; } = 100f;
 
     public override void _Ready()
@@ -24,7 +26,14 @@ public partial class PlayerHealth : Node
 
         Health -= damage;
         Health = Math.Max(Health, 0f);
-        if (Health == 0f)
+        if (Health > 0f)
+        {
+            if (GaspSound != null)
+            {
+                (this.GetParent() as Node3D).PlaySound(GaspSound);
+            }
+        }
+        else
         {
             _deathHandler.Die();
         }

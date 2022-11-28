@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://fmxg06naoayh"]
+[gd_scene load_steps=5 format=3 uid="uid://fmxg06naoayh"]
 
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Scenes/Sections/Room1-1.gd" id="1_h50dm"]
 [ext_resource type="PackedScene" uid="uid://nrqv46gs0urs" path="res://Scenes/Mobs/MinotaurSpawner.tscn" id="3_l0iqs"]
+[ext_resource type="Texture2D" uid="uid://b86lbg6eoy001" path="res://AssetPacks/Stains And Damage/Stains And Damage 3.png" id="4_3feo8"]
 
 [node name="Floor1Entrance" type="Node3D"]
 script = ExtResource("1_h50dm")
@@ -113,3 +114,35 @@ omni_attenuation = 1.62451
 
 [node name="MinotaurSpawner" parent="." instance=ExtResource("3_l0iqs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.7706, -2.38419e-07, 27.9736)
+
+[node name="DirtDecal3" type="Decal" parent="."]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 37.5287, -0.0609348, 11.598)
+extents = Vector3(10, 0.1, 10)
+texture_albedo = ExtResource("4_3feo8")
+emission_energy = 5.59
+distance_fade_begin = 0.0
+distance_fade_length = 20.0
+
+[node name="DirtDecal4" type="Decal" parent="."]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 13.5287, -0.0609348, 11.598)
+extents = Vector3(10, 0.1, 10)
+texture_albedo = ExtResource("4_3feo8")
+emission_energy = 5.59
+distance_fade_begin = 0.0
+distance_fade_length = 20.0
+
+[node name="DirtDecal5" type="Decal" parent="."]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 37.5287, -0.0609348, 34.059)
+extents = Vector3(10, 0.1, 10)
+texture_albedo = ExtResource("4_3feo8")
+emission_energy = 5.59
+distance_fade_begin = 0.0
+distance_fade_length = 20.0
+
+[node name="DirtDecal6" type="Decal" parent="."]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 13.5287, -0.0609348, 34.059)
+extents = Vector3(10, 0.1, 10)
+texture_albedo = ExtResource("4_3feo8")
+emission_energy = 5.59
+distance_fade_begin = 0.0
+distance_fade_length = 20.0

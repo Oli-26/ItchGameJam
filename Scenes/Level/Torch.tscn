@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4kbls8n5m73r"]
+
+[ext_resource type="PackedScene" uid="uid://cnwxqpgtqrms" path="res://AssetPacks/fbxdungeonassetpack/individuals files/torch.fbx" id="1_b3sbd"]
+[ext_resource type="PackedScene" uid="uid://c2yrre1vt2hk6" path="res://AssetPacks/fbxdungeonassetpack/individuals files/torchholder.fbx" id="2_bf8rq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mtxnj"]
+albedo_color = Color(1, 0.47451, 0.223529, 1)
+emission_enabled = true
+emission = Color(0.752941, 0.392157, 0.101961, 1)
+
+[node name="Torch" instance=ExtResource("1_b3sbd")]
+
+[node name="RootNode" parent="." index="0"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 32.8952, 0, 0)
+
+[node name="torch001" parent="RootNode" index="0"]
+surface_material_override/2 = SubResource("StandardMaterial3D_mtxnj")
+
+[node name="torchholder" parent="." index="1" instance=ExtResource("2_bf8rq")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 32.3075, 0, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.888071, -0.332508)
+light_color = Color(1, 0.470588, 0.266667, 1)

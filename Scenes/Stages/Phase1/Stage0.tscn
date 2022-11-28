@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://0l47ftleabm7"]
+[gd_scene load_steps=17 format=3 uid="uid://0l47ftleabm7"]
 
 [ext_resource type="PackedScene" uid="uid://d1fldsep8obki" path="res://Scenes/Level/WorldEnvironment.tscn" id="1_eab4o"]
 [ext_resource type="PackedScene" uid="uid://dayo5j2yyndlg" path="res://Scenes/Player/player.tscn" id="1_eisjc"]
@@ -9,6 +9,15 @@
 [ext_resource type="AudioStream" uid="uid://ut35i7vgrj4t" path="res://Sounds/339671__inspectorj__piano-string-glissando-low-a.wav" id="9_6tfy4"]
 [ext_resource type="PackedScene" uid="uid://bjv6vksm670lk" path="res://Scenes/Level/Stairs.tscn" id="9_opfem"]
 [ext_resource type="AudioStream" uid="uid://bb7fc72abpqbu" path="res://Sounds/398908__quadraslayer__monster-roar-2.wav" id="10_8bqb0"]
+[ext_resource type="Script" path="res://Source/Level/PromptArea.cs" id="10_b0led"]
+[ext_resource type="Theme" uid="uid://dk66skm3gyc7t" path="res://UI/menu.tres" id="11_a33xv"]
+[ext_resource type="LabelSettings" uid="uid://cg7x8t7icajb4" path="res://UI/hintLabelSettings.tres" id="12_yv71q"]
+[ext_resource type="Texture2D" uid="uid://d4m2mhi3228fi" path="res://Images/wasd.png" id="13_lcer5"]
+[ext_resource type="Texture2D" uid="uid://bn22suxt4ai1g" path="res://Images/button_e.png" id="14_wom2v"]
+[ext_resource type="Texture2D" uid="uid://b6a8lxdad2fqa" path="res://Images/mouse.png" id="15_2jk4u"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2o73g"]
+size = Vector3(5, 3, 5)
 
 [node name="Level" type="Node3D"]
 
@@ -38,3 +47,156 @@ Sound = ExtResource("10_8bqb0")
 [node name="Stairs" parent="." instance=ExtResource("9_opfem")]
 transform = Transform3D(-0.863008, 0, 0.50519, 0, 1, 0, -0.50519, 0, -0.863008, 30.578, -0.399295, 35.4287)
 NextLevelPath = "res://Scenes/Stages/Phase1/Stage1.tscn"
+
+[node name="Tutorial" type="Node3D" parent="."]
+
+[node name="PromptArea" type="Area3D" parent="Tutorial"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2639, 0, 13.4843)
+script = ExtResource("10_b0led")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tutorial/PromptArea"]
+shape = SubResource("BoxShape3D_2o73g")
+
+[node name="Content" type="CanvasLayer" parent="Tutorial/PromptArea"]
+visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/PromptArea/Content"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -234.0
+offset_right = 125.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Tutorial/PromptArea/Content/VBoxContainer"]
+self_modulate = Color(1, 0.980392, 0.964706, 1)
+offset_left = 83.0
+offset_right = 167.0
+offset_bottom = 26.0
+size_flags_horizontal = 4
+theme = ExtResource("11_a33xv")
+text = "Walk using"
+label_settings = ExtResource("12_yv71q")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Tutorial/PromptArea/Content/VBoxContainer"]
+offset_top = 30.0
+offset_right = 250.0
+offset_bottom = 194.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("13_lcer5")
+
+[node name="PromptArea2" type="Area3D" parent="Tutorial"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.3113, 0, 11.987)
+script = ExtResource("10_b0led")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tutorial/PromptArea2"]
+shape = SubResource("BoxShape3D_2o73g")
+
+[node name="Content" type="CanvasLayer" parent="Tutorial/PromptArea2"]
+visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/PromptArea2/Content"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -59.0
+offset_top = -152.0
+offset_right = 59.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Tutorial/PromptArea2/Content/VBoxContainer"]
+self_modulate = Color(1, 0.980392, 0.964706, 1)
+offset_right = 118.0
+offset_bottom = 26.0
+size_flags_horizontal = 4
+theme = ExtResource("11_a33xv")
+text = "Use lever using"
+label_settings = ExtResource("12_yv71q")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Tutorial/PromptArea2/Content/VBoxContainer"]
+offset_top = 30.0
+offset_right = 118.0
+offset_bottom = 111.0
+texture = ExtResource("14_wom2v")
+stretch_mode = 3
+
+[node name="PromptArea3" type="Area3D" parent="Tutorial"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.6788, 0, 13.1863)
+script = ExtResource("10_b0led")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tutorial/PromptArea3"]
+shape = SubResource("BoxShape3D_2o73g")
+
+[node name="Content" type="CanvasLayer" parent="Tutorial/PromptArea3"]
+visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/PromptArea3/Content"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -208.0
+offset_right = 128.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Tutorial/PromptArea3/Content/VBoxContainer"]
+self_modulate = Color(1, 0.980392, 0.964706, 1)
+offset_left = 72.0
+offset_right = 183.0
+offset_bottom = 26.0
+size_flags_horizontal = 4
+theme = ExtResource("11_a33xv")
+text = "Toggle lantern"
+label_settings = ExtResource("12_yv71q")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Tutorial/PromptArea3/Content/VBoxContainer"]
+offset_top = 30.0
+offset_right = 256.0
+offset_bottom = 180.0
+texture = ExtResource("15_2jk4u")
+stretch_mode = 3
+
+[node name="PromptArea4" type="Area3D" parent="Tutorial"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.3115, 0, 27.6929)
+script = ExtResource("10_b0led")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tutorial/PromptArea4"]
+shape = SubResource("BoxShape3D_2o73g")
+
+[node name="Content" type="CanvasLayer" parent="Tutorial/PromptArea4"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/PromptArea4/Content"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -76.0
+offset_right = 128.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Tutorial/PromptArea4/Content/VBoxContainer"]
+self_modulate = Color(1, 0.980392, 0.964706, 1)
+offset_right = 342.0
+offset_bottom = 26.0
+size_flags_horizontal = 4
+theme = ExtResource("11_a33xv")
+text = "Climb the stairs to progress to the next level"
+label_settings = ExtResource("12_yv71q")
+horizontal_alignment = 1

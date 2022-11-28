@@ -31,12 +31,12 @@ public static class GameHelpers
     }
 
 
-    public static void PlaySound(this Node3D node, AudioStream stream)
+    public static void PlaySound(this Node3D node, AudioStream stream, float volumeDb = -15)
     {
         var audioStreamPlayer3D = new AudioStreamPlayer3D()
         {
             Stream = stream,
-            VolumeDb = -15
+            VolumeDb = volumeDb
         };
         node.AddChild(audioStreamPlayer3D);
         audioStreamPlayer3D.Play();

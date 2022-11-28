@@ -59,10 +59,10 @@ transform = Transform3D(0.344496, 0, 0.938788, 0, 1, 0, -0.938788, 0, 0.344496, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.1117, -0.1016, 42.2878)
 
 [node name="Barrel" parent="Props" instance=ExtResource("6_y5pb5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6154, -0.941887, 6.06306)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6154, -0.941887, 4.28402)
 
 [node name="Barrel2" parent="Props" instance=ExtResource("6_y5pb5")]
-transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 15.3666, -0.941887, 5.69526)
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 15.3666, -0.941887, 3.91622)
 
 [node name="LowTable2" parent="Props" instance=ExtResource("4_ygicm")]
 transform = Transform3D(0.939692, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939692, 6.05981, -0.974161, 4.70777)
@@ -134,7 +134,7 @@ omni_range = 20.0
 transform = Transform3D(-1.81402e-08, 0, 0.415, 0, 0.415, 0, -0.415, 0, -1.81402e-08, 19.8456, -0.685766, 14.1587)
 
 [node name="Lever" parent="." node_paths=PackedStringArray("Target") instance=ExtResource("11_tt4f5")]
-transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 20.7951, 1.24671, 3.08994)
+transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 18.418, 1.24671, 9.63752)
 Target = NodePath("../Gateway")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]

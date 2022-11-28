@@ -10,6 +10,7 @@ public partial class CharacterPerceptionBehaviour : Behaviour
 	private VisionManager _visionManager;
 
 	[Export] public float ViewRange { get; set; } = 18f;
+	[Export] public AudioStream AggroSound { get; set; }
 
 	public override void _Ready()
 	{
@@ -27,11 +28,20 @@ public partial class CharacterPerceptionBehaviour : Behaviour
 		{
 			return;
 		}
+		if (MobController.Intent is ChasePlayerIntent)
+		{
+			return;
+		}
+
 		foreach (var player in Mob.GetNearbyPlayers(ViewRange))
         {
             if (_visionManager.CanDetect(player))
 			{
 				MobController.OfferIntent(new ChasePlayerIntent(player));
+				if (AggroSound != null)
+                {
+                    Mob.PlaySound(AggroSound, 40);
+                }
             }
 		}
 	}

@@ -42,4 +42,4 @@ libraries = {
 
 [node name="DefaultPlayer" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource("2_lwtje")
-volume_db = -20.0
+volume_db = -30.0

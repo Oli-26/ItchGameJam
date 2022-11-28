@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dayo5j2yyndlg"]
+[gd_scene load_steps=34 format=3 uid="uid://dayo5j2yyndlg"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_1w47b"]
 [ext_resource type="PackedScene" uid="uid://dbduds4bsaaby" path="res://Scenes/Bullet/Bullet.tscn" id="2_je25s"]
@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://b40mlbjf7fy8b" path="res://Scenes/Player/LaternModel.tscn" id="4_edkmw"]
 [ext_resource type="Script" path="res://Source/Player/PlayerHealth.cs" id="4_lmp8o"]
 [ext_resource type="Script" path="res://Source/Player/DeathHandler.cs" id="5_p7eg0"]
+[ext_resource type="AudioStream" uid="uid://d1hbnuqudwsbv" path="res://Sounds/SFX/Player/Player Male Scream 3.mp3" id="6_imd0u"]
 [ext_resource type="Script" path="res://Source/Mobs/Footsteps.cs" id="7_dw777"]
+[ext_resource type="AudioStream" uid="uid://dfpwebvnrwseo" path="res://Sounds/wilhelm.wav" id="8_ax8m4"]
 [ext_resource type="AudioStream" uid="uid://cjwam75codkuh" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_1.mp3" id="8_uhwt3"]
 [ext_resource type="AudioStream" uid="uid://1dvp1ihtvk70" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_2.mp3" id="9_co7b7"]
 [ext_resource type="AudioStream" uid="uid://de30un84sqjww" path="res://Sounds/SFX/Player/Footsteps/Walk/Player Footsteps Walk_3.mp3" id="10_6l0xx"]
@@ -115,6 +117,8 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_c42do")
 
+[node name="Overlay" type="CanvasLayer" parent="Head/Camera3d"]
+
 [node name="HingeJoint3d" type="HingeJoint3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.300697, 0.645826, -1.13493)
 node_a = NodePath("../lanternHolder")
@@ -144,9 +148,11 @@ omni_range = 0.245
 
 [node name="PlayerHealth" type="Node" parent="."]
 script = ExtResource("4_lmp8o")
+GaspSound = ExtResource("6_imd0u")
 
 [node name="DeathHandler" type="Node" parent="."]
 script = ExtResource("5_p7eg0")
+ScreamSound = ExtResource("8_ax8m4")
 
 [node name="Footsteps" type="Node3D" parent="."]
 script = ExtResource("7_dw777")

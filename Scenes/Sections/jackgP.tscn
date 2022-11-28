@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bx28cgwahsuwq"]
+[gd_scene load_steps=5 format=3 uid="uid://bx28cgwahsuwq"]
 
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
 [ext_resource type="PackedScene" uid="uid://nrqv46gs0urs" path="res://Scenes/Mobs/MinotaurSpawner.tscn" id="3_yujet"]
+[ext_resource type="Texture2D" uid="uid://b86lbg6eoy001" path="res://AssetPacks/Stains And Damage/Stains And Damage 3.png" id="4_0l6ix"]
 
 [node name="Floor1Entrance" type="Node3D"]
 script = ExtResource("1_gdq7v")
@@ -18,3 +19,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6263, 2.86783, 0)
 
 [node name="MinotaurSpawner" parent="." instance=ExtResource("3_yujet")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.4796, -32.3545, -17.3694)
+
+[node name="DirtDecal4" type="Decal" parent="."]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 13.5287, -0.0609348, 11.598)
+extents = Vector3(10, 0.1, 10)
+texture_albedo = ExtResource("4_0l6ix")
+emission_energy = 5.59
+distance_fade_begin = 0.0
+distance_fade_length = 20.0

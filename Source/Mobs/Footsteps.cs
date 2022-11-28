@@ -47,11 +47,11 @@ public partial class Footsteps : Node3D
             case WalkState.Idle:
                 break;
             case WalkState.Running:
-                this.PlaySound(RunFootstepSounds[_random.Next(RunFootstepSounds.Length)]);
+                this.PlaySound(RunFootstepSounds[_random.Next(RunFootstepSounds.Length)], -20);
                 delay = DelayRun;
                 break;
             case WalkState.Walking:
-                this.PlaySound(WalkFootstepSounds[_random.Next(WalkFootstepSounds.Length)]);
+                this.PlaySound(WalkFootstepSounds[_random.Next(WalkFootstepSounds.Length)], -20);
                 break;
         }
         _timer += delay;
