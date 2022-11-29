@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://cbobc00ao7dg7"]
 
 [ext_resource type="Script" path="res://Source/Level/Gateway.cs" id="1_lxold"]
-[ext_resource type="AudioStream" uid="uid://u8q7k6ofdcnq" path="res://Sounds/336888__omnisis__gate-heavy-openclose-wav.wav" id="2_tbsud"]
+[ext_resource type="AudioStream" uid="uid://d0h6866hb2j8f" path="res://Sounds/336888__omnisis__gate-heavy-openclose-wav.wav" id="2_tbsud"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_llfyl"]
 resource_name = "Stone"
@@ -240,6 +240,8 @@ mesh = SubResource("ArrayMesh_ufgpg")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube"]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_22vhw")
@@ -250,6 +252,8 @@ mesh = SubResource("ArrayMesh_g5pb5")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Verticals"]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Verticals/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_1xrgd")

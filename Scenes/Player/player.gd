@@ -22,7 +22,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 func _ready():
 	#Captures mouse and stops rgun from hitting yourself
 	gunRay.add_exception(self)
-	lantern = $lantern2
+	lantern = $Head/Camera3d/lantern
 	lantern.visible = false;
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	

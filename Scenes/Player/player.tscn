@@ -71,6 +71,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody3D"]
+collision_mask = 3
 script = ExtResource("1_1w47b")
 _bullet_scene = ExtResource("2_je25s")
 
@@ -119,32 +120,40 @@ texture = ExtResource("3_c42do")
 
 [node name="Overlay" type="CanvasLayer" parent="Head/Camera3d"]
 
-[node name="HingeJoint3d" type="HingeJoint3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.300697, 0.645826, -1.13493)
+[node name="HingeJoint3d" type="HingeJoint3D" parent="Head/Camera3d"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.300697, 0.177347, -0.671906)
 node_a = NodePath("../lanternHolder")
-node_b = NodePath("../lantern2")
+node_b = NodePath("../lantern")
 angular_limit/enable = true
 angular_limit/upper = 0.523599
 angular_limit/lower = -0.523599
 angular_limit/bias = 0.19
 angular_limit/softness = 2.0
 
-[node name="lanternHolder" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.298013, 0.724544, -1.18827)
+[node name="lanternHolder" type="StaticBody3D" parent="Head/Camera3d"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.298013, 0.256065, -0.725246)
 
-[node name="lantern2" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.224153, 0.4121, -1.18827)
+[node name="lantern" type="RigidBody3D" parent="Head/Camera3d"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.224153, -0.056379, -0.725246)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="lantern2"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Head/Camera3d/lantern"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.225801, -0.256012, 1.26088)
 
-[node name="LanternModel" parent="lantern2" instance=ExtResource("4_edkmw")]
+[node name="LanternModel" parent="Head/Camera3d/lantern" instance=ExtResource("4_edkmw")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.274101, -0.162087, -0.260068)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="lantern2/LanternModel"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Head/Camera3d/lantern/LanternModel"]
 light_color = Color(1, 0.964706, 0, 1)
 light_energy = 4.2
 omni_range = 0.245
+
+[node name="ForwardLight" type="SpotLight3D" parent="Head/Camera3d/lantern/LanternModel"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -2.16549)
+light_color = Color(1, 0.964706, 0.623529, 1)
+light_energy = 1.551
+distance_fade_enabled = true
+spot_range = 50.0839
+spot_angle = 18.12
 
 [node name="PlayerHealth" type="Node" parent="."]
 script = ExtResource("4_lmp8o")
