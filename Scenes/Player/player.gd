@@ -95,8 +95,12 @@ func _input(event):
 func use():
 	if not gunRay.is_colliding():
 		return
-	var collider = gunRay.get_collider().get_parent()
-	if collider.is_in_group("useable"):
-		collider.Use(self)
-	else:
-		print('not useable')
+	var collider = gunRay.get_collider()
+	useRecurse(collider)
+
+func useRecurse(node):
+	if node.is_in_group("useable"):
+		node.Use(self)
+	if node.get_parent() == null:
+		return
+	useRecurse(node.get_parent())
