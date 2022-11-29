@@ -14,5 +14,5 @@ func _ready():
 	_mesh.get_surface_override_material(0).set("albedo_texture", texture as Texture)
 
 
-func _process(delta):
+func _process(_delta):
 	pass
