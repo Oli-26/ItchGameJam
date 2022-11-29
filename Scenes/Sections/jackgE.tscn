@@ -17,24 +17,38 @@ metadata/_editor_floor_ = Vector3(0, 2, 0)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.65889, 3.64105, 21.49)
+light_color = Color(1, 0.835294, 0, 1)
 shadow_enabled = true
+omni_range = 5.221
+omni_attenuation = 1.10957
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2948, 3.64105, 2.30573)
+light_color = Color(1, 0.835294, 0, 1)
 shadow_enabled = true
+omni_range = 5.221
+omni_attenuation = 1.10957
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5532, 3.64105, 2.30573)
+light_color = Color(1, 0.835294, 0, 1)
 shadow_enabled = true
+omni_range = 5.221
+omni_attenuation = 1.10957
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5532, 3.64105, 21.3062)
+light_color = Color(1, 0.835294, 0, 1)
 shadow_enabled = true
+omni_range = 5.221
+omni_attenuation = 1.10957
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8437, 3.70413, 11.8173)
+light_color = Color(1, 0.835294, 0, 1)
 shadow_enabled = true
-omni_range = 4.69282
+omni_range = 5.221
+omni_attenuation = 1.10957
 
 [node name="MinotaurSpawner" parent="." instance=ExtResource("3_e13nt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4103, -36.4417, 4.51063)
