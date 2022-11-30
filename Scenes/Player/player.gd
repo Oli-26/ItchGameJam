@@ -5,7 +5,6 @@ extends CharacterBody3D
 @onready var playerHealth = $PlayerHealth
 @onready var footsteps = $Footsteps
 @onready var collisionShape3d = $CollisionShape3d
-@export var _bullet_scene : PackedScene
 
 var gravityToggle = true;
 var lightToggle = false;
@@ -43,7 +42,7 @@ func _physics_process(delta):
 		use()
 		
 	if Input.is_action_pressed ("Sprint") and not Input.is_action_pressed ("Crouch"):
-		spritingMultiplier = 1.7;
+		spritingMultiplier = 1.5;
 		
 	if !Input.is_action_pressed ("Crouch"):
 		collisionShape3d.shape.height = 2.0

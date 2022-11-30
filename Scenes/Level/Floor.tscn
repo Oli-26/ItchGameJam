@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0xnag4qp4w7t"]
+[gd_scene load_steps=6 format=3 uid="uid://b0xnag4qp4w7t"]
 
 [ext_resource type="Texture2D" uid="uid://dfq7mo8n407l" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Tile/Tile_04-512x512.png" id="1_2nysk"]
+[ext_resource type="Texture2D" uid="uid://bgy0d5pxmdld5" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Stains/Stains8.png" id="2_q1mbo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gs07b"]
 albedo_texture = ExtResource("1_2nysk")
+normal_enabled = true
+normal_texture = ExtResource("2_q1mbo")
 uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="BoxMesh" id="BoxMesh_u8w4b"]

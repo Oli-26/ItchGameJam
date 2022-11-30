@@ -1,8 +1,12 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://m0un77qmagig"]
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://m0un77qmagig"]
 
 [ext_resource type="Texture2D" uid="uid://m1kvvkpgdqkd" path="res://Scenes/Floor/MedievalTiles/MedievalTiles[Red]-B.png" id="1_wyljh"]
+[ext_resource type="Texture2D" uid="uid://bgy0d5pxmdld5" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Stains/Stains8.png" id="2_nxi5t"]
 
 [resource]
 albedo_texture = ExtResource("1_wyljh")
+normal_enabled = true
+normal_scale = 2.33
+normal_texture = ExtResource("2_nxi5t")
 uv1_scale = Vector3(3, 3, 3)
 uv1_offset = Vector3(0.25, 0.25, 0.25)

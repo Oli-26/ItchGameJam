@@ -1,6 +1,13 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://mfswp3nbkjwn"]
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://mfswp3nbkjwn"]
 
-[ext_resource type="Texture2D" uid="uid://bmig42m1vp8ol" path="res://Scenes/Wall/BrickWall/BrickWall[Blue]-B.png" id="1_u8myd"]
+[ext_resource type="Texture2D" uid="uid://mlvk15fa1kx4" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Metal/Metal_06-512x512.png" id="1_aclyc"]
+[ext_resource type="Texture2D" uid="uid://cw7d4pwnifc16" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Skin/Skin38.png" id="2_1hfcu"]
 
 [resource]
-albedo_texture = ExtResource("1_u8myd")
+albedo_texture = ExtResource("1_aclyc")
+metallic = 1.0
+normal_enabled = true
+normal_scale = 0.6
+normal_texture = ExtResource("2_1hfcu")
+uv1_scale = Vector3(0.15, 0.15, 0.15)
+uv1_triplanar = true

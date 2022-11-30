@@ -1,8 +1,11 @@
-[gd_scene load_steps=97 format=3 uid="uid://d0bqkpu8ksdx5"]
+[gd_scene load_steps=102 format=3 uid="uid://d0bqkpu8ksdx5"]
 
 [ext_resource type="Texture2D" uid="uid://bn41wuyh4q2cd" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_02-512x512.png" id="1_tw21s"]
+[ext_resource type="Texture2D" uid="uid://ihdjy86oghw3" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Stone/Stone261.png" id="2_jxhlu"]
+[ext_resource type="Texture2D" uid="uid://bhragkolhxv17" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Stone/Stone84.png" id="2_tmtic"]
 [ext_resource type="Texture2D" uid="uid://ctk8ytu4yvoko" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_03-512x512.png" id="3_jkbui"]
 [ext_resource type="Texture2D" uid="uid://b171adaxcwhnt" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_04-512x512.png" id="4_2lt0u"]
+[ext_resource type="Texture2D" uid="uid://c6je7wqtusllk" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Stone/Stone395.png" id="4_wk3op"]
 [ext_resource type="Texture2D" uid="uid://dkk8ira2cb1hx" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_05-512x512.png" id="5_1m6nd"]
 [ext_resource type="Texture2D" uid="uid://xn0vscpreae4" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_11-512x512.png" id="6_00fbm"]
 [ext_resource type="Texture2D" uid="uid://bt5jc4lard8tw" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_19-512x512.png" id="6_4rpng"]
@@ -19,7 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://ce8dbq5alhldw" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_16-512x512.png" id="6_my1wl"]
 [ext_resource type="Texture2D" uid="uid://dhhnrcypiuuq1" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_08-512x512.png" id="6_wnsmp"]
 [ext_resource type="Texture2D" uid="uid://cp44ko5xuyc6u" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_07-512x512.png" id="7_eiumo"]
+[ext_resource type="Texture2D" uid="uid://hd5yhg21a44j" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Stone/Stone529.png" id="10_07ae8"]
 [ext_resource type="Texture2D" uid="uid://dl226kfit5yy0" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_06-512x512.png" id="11_iiacp"]
+[ext_resource type="Texture2D" uid="uid://ddwg6xbtivvil" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Stone/Stone57.png" id="17_g1lc1"]
 [ext_resource type="Texture2D" uid="uid://dbk3ucl7ex5ns" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Brick/Brick_01-512x512.png" id="21_3fw6g"]
 [ext_resource type="Texture2D" uid="uid://bxnmvhqmprdav" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Brick/Brick_02-512x512.png" id="22_slf6q"]
 [ext_resource type="Texture2D" uid="uid://bmd17e74gjscs" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Brick/Brick_03-512x512.png" id="23_k8pjg"]
@@ -48,6 +53,9 @@ size = Vector3(2, 2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qev47"]
 albedo_texture = ExtResource("6_mkuyg")
+normal_enabled = true
+normal_scale = 1.04
+normal_texture = ExtResource("2_jxhlu")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_m7hsr"]
@@ -55,160 +63,246 @@ data = PackedVector3Array(-1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_py8lw"]
 albedo_texture = ExtResource("1_tw21s")
+normal_enabled = true
+normal_texture = ExtResource("4_wk3op")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ba0m3"]
 albedo_texture = ExtResource("3_jkbui")
+normal_enabled = true
+normal_scale = 0.9
+normal_texture = ExtResource("2_tmtic")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eudig"]
 albedo_texture = ExtResource("4_2lt0u")
+normal_enabled = true
+normal_texture = ExtResource("2_jxhlu")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_02cpv"]
 albedo_texture = ExtResource("5_1m6nd")
+emission_texture = ExtResource("4_wk3op")
+normal_enabled = true
+normal_scale = 0.8
+normal_texture = ExtResource("4_wk3op")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r2qyw"]
 albedo_texture = ExtResource("11_iiacp")
+normal_enabled = true
+normal_scale = 1.5
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vup41"]
 albedo_texture = ExtResource("7_eiumo")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cb64d"]
 albedo_texture = ExtResource("6_wnsmp")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wg673"]
 albedo_texture = ExtResource("6_30pnb")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f3ks3"]
 albedo_texture = ExtResource("6_fta2t")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f52c2"]
 albedo_texture = ExtResource("6_00fbm")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ftvix"]
 albedo_texture = ExtResource("6_cr4vv")
+normal_enabled = true
+normal_texture = ExtResource("17_g1lc1")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4uxe8"]
 albedo_texture = ExtResource("6_c45qp")
+normal_enabled = true
+normal_texture = ExtResource("2_tmtic")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8exvh"]
 albedo_texture = ExtResource("6_hpljp")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uirte"]
 albedo_texture = ExtResource("6_l4sbm")
+normal_enabled = true
+normal_scale = 0.7
+normal_texture = ExtResource("2_tmtic")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c8eae"]
 albedo_texture = ExtResource("6_my1wl")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f2mke"]
 albedo_texture = ExtResource("6_7imwj")
+normal_enabled = true
+normal_texture = ExtResource("17_g1lc1")
 uv1_scale = Vector3(5, 5, 5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kqrot"]
 albedo_texture = ExtResource("6_jiioh")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(5, 5, 5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b1fsf"]
 albedo_texture = ExtResource("6_4rpng")
+normal_enabled = true
+normal_texture = ExtResource("4_wk3op")
 uv1_scale = Vector3(5, 5, 5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vqh6l"]
 albedo_texture = ExtResource("6_m7k8x")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(5, 5, 5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4hwt"]
 albedo_texture = ExtResource("21_3fw6g")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(5, 5, 5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ly0ki"]
 albedo_texture = ExtResource("22_slf6q")
+normal_enabled = true
+normal_texture = ExtResource("17_g1lc1")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vjbv1"]
 albedo_texture = ExtResource("23_k8pjg")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mgscw"]
 albedo_texture = ExtResource("24_mo6i3")
+normal_enabled = true
+normal_texture = ExtResource("17_g1lc1")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bycax"]
 albedo_texture = ExtResource("25_tafw3")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oct8m"]
 albedo_texture = ExtResource("24_wuece")
+normal_enabled = true
+normal_texture = ExtResource("17_g1lc1")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iv0qp"]
 albedo_texture = ExtResource("24_iai8w")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kwxov"]
 albedo_texture = ExtResource("24_a635a")
+normal_enabled = true
+normal_texture = ExtResource("17_g1lc1")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lj5qv"]
 albedo_texture = ExtResource("25_metla")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0p415"]
 albedo_texture = ExtResource("24_ffbdp")
+normal_enabled = true
+normal_texture = ExtResource("17_g1lc1")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_12cl2"]
 albedo_texture = ExtResource("24_yguen")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_owl8p"]
 albedo_texture = ExtResource("24_53qem")
+normal_enabled = true
+normal_texture = ExtResource("17_g1lc1")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6c7ld"]
 albedo_texture = ExtResource("24_cyyej")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b6jjg"]
 albedo_texture = ExtResource("24_s8vnn")
+normal_enabled = true
+normal_texture = ExtResource("17_g1lc1")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sw3yu"]
 albedo_texture = ExtResource("24_mkrnh")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_glxrm"]
 albedo_texture = ExtResource("24_17a6v")
+normal_enabled = true
+normal_texture = ExtResource("17_g1lc1")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c5jb1"]
 albedo_texture = ExtResource("25_awvv2")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ie6ko"]
 albedo_texture = ExtResource("24_37h53")
+normal_enabled = true
+normal_texture = ExtResource("17_g1lc1")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_elhos"]
 albedo_texture = ExtResource("24_exp7q")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_brfff"]
 albedo_texture = ExtResource("24_i0n3t")
+normal_enabled = true
+normal_texture = ExtResource("17_g1lc1")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w7can"]
+normal_enabled = true
+normal_scale = 0.2
+normal_texture = ExtResource("17_g1lc1")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_hmyvi"]
 _surfaces = [{
@@ -245,6 +339,8 @@ points = PackedVector3Array(-1, -1, 0, -0.924041, -1, 0.382537, -0.801292, 9, 0,
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ah7v4"]
 albedo_texture = ExtResource("7_eiumo")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rbb2o"]
@@ -252,6 +348,8 @@ data = PackedVector3Array(-1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oyqp5"]
 albedo_texture = ExtResource("6_00fbm")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_om464"]
@@ -259,6 +357,8 @@ data = PackedVector3Array(-1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obun5"]
 albedo_texture = ExtResource("7_eiumo")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7bv1o"]
@@ -266,6 +366,8 @@ data = PackedVector3Array(-3, -1, -1, -3, -1, 1, 3, -1, -1, 3, -1, -1, -3, -1, 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7gfh"]
 albedo_texture = ExtResource("6_00fbm")
+normal_enabled = true
+normal_texture = ExtResource("10_07ae8")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vt1ob"]
@@ -275,6 +377,7 @@ data = PackedVector3Array(-3, -1, -1, -3, -1, 1, 3, -1, -1, 3, -1, -1, -3, -1, 1
 
 [node name="Stone_01" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_qev47")
 
@@ -285,6 +388,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_02" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_py8lw")
 
@@ -295,6 +399,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_03" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_ba0m3")
 
@@ -305,6 +410,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_04" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_eudig")
 
@@ -315,6 +421,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_05" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_02cpv")
 
@@ -325,6 +432,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_06" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_r2qyw")
 
@@ -335,6 +443,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_07" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_vup41")
 
@@ -345,6 +454,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_08" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_cb64d")
 
@@ -355,6 +465,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_09" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_wg673")
 
@@ -365,6 +476,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_10" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_f3ks3")
 
@@ -375,6 +487,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_11" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_f52c2")
 
@@ -385,6 +498,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_12" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_ftvix")
 
@@ -395,6 +509,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_13" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_4uxe8")
 
@@ -405,6 +520,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_14" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_8exvh")
 
@@ -415,6 +531,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_15" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_uirte")
 
@@ -425,6 +542,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_16" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_c8eae")
 
@@ -435,6 +553,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_17" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_f2mke")
 
@@ -445,6 +564,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_18" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_kqrot")
 
@@ -455,6 +575,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_19" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_b1fsf")
 
@@ -465,6 +586,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Stone_20" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_vqh6l")
 
@@ -475,6 +597,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_01" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_v4hwt")
 
@@ -485,6 +608,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_02" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_ly0ki")
 
@@ -495,6 +619,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_03" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00458407, 1.00649, 0.00830078)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_vjbv1")
 
@@ -505,6 +630,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_04" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00490427, 1.00667, -0.000463486)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_mgscw")
 
@@ -515,6 +641,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_05" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_bycax")
 
@@ -525,6 +652,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_06" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_oct8m")
 
@@ -535,6 +663,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_07" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_iv0qp")
 
@@ -545,6 +674,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_08" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_kwxov")
 
@@ -555,6 +685,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_09" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_lj5qv")
 
@@ -565,6 +696,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_10" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_0p415")
 
@@ -575,6 +707,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_11" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_12cl2")
 
@@ -585,6 +718,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_12" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_owl8p")
 
@@ -595,6 +729,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_13" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_6c7ld")
 
@@ -605,6 +740,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_14" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_b6jjg")
 
@@ -615,6 +751,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_15" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_sw3yu")
 
@@ -625,6 +762,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_16" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_glxrm")
 
@@ -635,6 +773,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_17" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_c5jb1")
 
@@ -645,6 +784,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_18" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_ie6ko")
 
@@ -655,6 +795,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_19" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_elhos")
 
@@ -665,6 +806,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Brick_20" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_iqcoe")
 surface_material_override/0 = SubResource("StandardMaterial3D_brfff")
 
@@ -675,6 +817,7 @@ shape = SubResource("ConcavePolygonShape3D_m7hsr")
 
 [node name="Column" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("ArrayMesh_1gv5q")
 skeleton = NodePath("")
 
@@ -685,6 +828,7 @@ shape = SubResource("ConvexPolygonShape3D_w3rqo")
 
 [node name="Wedge1A" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = ExtResource("41_inv2o")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_ah7v4")
@@ -696,6 +840,7 @@ shape = SubResource("ConcavePolygonShape3D_rbb2o")
 
 [node name="Wedge1B" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = ExtResource("41_inv2o")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_oyqp5")
@@ -707,6 +852,7 @@ shape = SubResource("ConcavePolygonShape3D_om464")
 
 [node name="Wedge2A" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0)
+visible = false
 mesh = ExtResource("42_lm57e")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_obun5")

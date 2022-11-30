@@ -1,4 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqepst65jsloy"]
+[gd_scene load_steps=8 format=3 uid="uid://dqepst65jsloy"]
+
+[ext_resource type="Texture2D" uid="uid://bke3hxjndhiww" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Wood/Wood_12-512x512.png" id="1_wxgvo"]
+[ext_resource type="Texture2D" uid="uid://dc5mk45y4kqmh" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Wood/Wood4.png" id="2_srxhe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d1n5b"]
 resource_name = "Wood_Basic"
@@ -37,6 +40,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4bllv")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6n101"]
+albedo_texture = ExtResource("1_wxgvo")
+normal_enabled = true
+normal_texture = ExtResource("2_srxhe")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_4mx5m"]
 size = Vector3(3.97537, 0.948978, 1.9329)
 
@@ -46,6 +56,7 @@ size = Vector3(3.97537, 0.948978, 1.9329)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00246, 0, -0.0660729)
 mesh = SubResource("ArrayMesh_ic8fy")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_6n101")
 
 [node name="CollisionShape3d" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.378778, -0.0843539)

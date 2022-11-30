@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://br8nrawabcio6"]
+
+[ext_resource type="Texture2D" uid="uid://bgy0d5pxmdld5" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Stains/Stains8.png" id="1_km5wu"]
+
+[resource]
+resource_name = "MetalBars"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.526659, 0.526659, 0.526659, 1)
+metallic = 1.0
+roughness = 0.547244
+normal_enabled = true
+normal_scale = 0.1
+normal_texture = ExtResource("1_km5wu")

@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://d1fldsep8obki" path="res://Scenes/Level/WorldEnvironment.tscn" id="1_eab4o"]
 [ext_resource type="PackedScene" uid="uid://dayo5j2yyndlg" path="res://Scenes/Player/player.tscn" id="1_eisjc"]
-[ext_resource type="PackedScene" uid="uid://catsnedejtp38" path="res://Scenes/Sections/Phase1/Intro.tscn" id="4_0y20t"]
+[ext_resource type="PackedScene" uid="uid://cukaknlnvjqvv" path="res://Scenes/Sections/Phase1/Intro.tscn" id="4_0y20t"]
 [ext_resource type="PackedScene" uid="uid://bkt55i0i0fdpb" path="res://Scenes/Sections/Phase1/Corridor.tscn" id="4_7y306"]
-[ext_resource type="PackedScene" uid="uid://cas8h37r18eup" path="res://Scenes/Sections/Phase1/End.tscn" id="5_kmn3u"]
+[ext_resource type="PackedScene" path="res://Scenes/Sections/Phase1/End.tscn" id="5_kmn3u"]
 [ext_resource type="PackedScene" uid="uid://bahiym17rfq1y" path="res://Scenes/Level/AudioTriggerArea.tscn" id="8_5jhni"]
 [ext_resource type="AudioStream" uid="uid://ut35i7vgrj4t" path="res://Sounds/339671__inspectorj__piano-string-glissando-low-a.wav" id="9_6tfy4"]
 [ext_resource type="PackedScene" uid="uid://bjv6vksm670lk" path="res://Scenes/Level/Stairs.tscn" id="9_opfem"]

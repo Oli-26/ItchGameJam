@@ -1,12 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://v1jlk2amc23f"]
+[gd_scene load_steps=15 format=3 uid="uid://v1jlk2amc23f"]
 
 [ext_resource type="PackedScene" uid="uid://d4ci6ifjx7jk3" path="res://Models/Level/Lever.blend" id="1_vgxi7"]
 [ext_resource type="Script" path="res://Source/Level/Lever.cs" id="2_sqgar"]
 [ext_resource type="Texture2D" uid="uid://cixgeep42ikqn" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Metal/Metal_04-512x512.png" id="2_tc4b8"]
 [ext_resource type="Texture2D" uid="uid://dcl2gn76lbdul" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Wood/Wood_05-512x512.png" id="3_ndqiw"]
+[ext_resource type="Texture2D" uid="uid://bgy0d5pxmdld5" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Stains/Stains8.png" id="4_61oly"]
+[ext_resource type="Texture2D" uid="uid://dc5mk45y4kqmh" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Wood/Wood4.png" id="5_kwk6d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_erj6b"]
 albedo_texture = ExtResource("2_tc4b8")
+normal_enabled = true
+normal_texture = ExtResource("4_61oly")
 uv1_scale = Vector3(5, 5, 5)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8jlo4"]
@@ -14,6 +18,9 @@ uv1_scale = Vector3(5, 5, 5)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_puluy"]
 next_pass = SubResource("ShaderMaterial_8jlo4")
 albedo_texture = ExtResource("3_ndqiw")
+normal_enabled = true
+normal_scale = 1.89
+normal_texture = ExtResource("5_kwk6d")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_crsl4"]
 radius = 3.0

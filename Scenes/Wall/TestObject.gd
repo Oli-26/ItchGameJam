@@ -6,7 +6,7 @@ class_name TestObject
 @onready var _mesh : MeshInstance3D = $Mesh
 
 func _ready():
-	var full_texture_path = 'res://Scenes/TestObject/TestObject.gd'
+	var full_texture_path = 'res://Scenes/Wall/TestObject.gd'
 	var texture : Resource = load(full_texture_path)
 	if not (texture is Texture):
 		return
