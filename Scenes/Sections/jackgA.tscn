@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
 [ext_resource type="PackedScene" uid="uid://nrqv46gs0urs" path="res://Scenes/Mobs/MinotaurSpawner.tscn" id="3_dxgjl"]
 [ext_resource type="PackedScene" uid="uid://d4l6tyvsel34r" path="res://Scenes/Mobs/TrapSpawner.tscn" id="4_d88nb"]
-[ext_resource type="Texture2D" uid="uid://b30t028m3rg2x" path="res://Images/hunt.png" id="5_d2s73"]
-[ext_resource type="Texture2D" uid="uid://bahre7hcicsoq" path="res://Images/minotaur_caveart.png" id="6_um2os"]
+[ext_resource type="Texture2D" uid="uid://cci4q0ka8oyex" path="res://Images/hunt.png" id="5_d2s73"]
+[ext_resource type="Texture2D" uid="uid://d40y2n5m103s" path="res://Images/minotaur_caveart.png" id="6_um2os"]
 [ext_resource type="PackedScene" uid="uid://6km11c7ey8wh" path="res://Scenes/SceneProps/vase.tscn" id="7_7la11"]
 [ext_resource type="PackedScene" uid="uid://dtq06wwvb14xn" path="res://Scenes/SceneProps/barrel.tscn" id="8_5yqpv"]
 
