@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ceay6w0u4ql78"]
+
+[ext_resource type="Texture2D" uid="uid://dmv8faqwcwtma" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Metal/Metal_12-512x512.png" id="1_ddr30"]
+[ext_resource type="Texture2D" uid="uid://bgy0d5pxmdld5" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Stains/Stains8.png" id="2_evvo3"]
+
+[resource]
+albedo_color = Color(0.380392, 0.380392, 0.380392, 1)
+albedo_texture = ExtResource("1_ddr30")
+normal_enabled = true
+normal_scale = 0.6
+normal_texture = ExtResource("2_evvo3")

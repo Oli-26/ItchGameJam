@@ -1,13 +1,3 @@
 [gd_scene format=3 uid="uid://cyd3hrl8osrfy"]
 
-[ext_resource type="PackedScene" uid="uid://in328vnsfqnc" path="res://Models/lantern.obj" id="1_ay01x"]
-[ext_resource type="Texture2D" uid="uid://bxc7v36o8bkym" path="res://Models/lantern.png" id="2_ecfrl"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_426ei"]
-albedo_texture = ExtResource("2_ecfrl")
-
 [node name="Lantern" type="Node3D"]
-
-[node name="ImporterMeshInstance3D" parent="." index="0"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.0952278, -0.392979, 0.131977)
-surface_material_override/0 = SubResource("StandardMaterial3D_426ei")

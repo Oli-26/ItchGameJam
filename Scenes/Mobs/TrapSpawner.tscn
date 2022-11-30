@@ -5,4 +5,4 @@
 [node name="TrapSpawner" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.62304, 0, 11.57)
 script = ExtResource("1_rrmio")
-InitialSpawnChance = 0.2
+InitialSpawnChance = 0.3

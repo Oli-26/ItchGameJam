@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3]
+[gd_scene load_steps=25 format=3 uid="uid://bb1s1i1vcg5by"]
 
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_oup3v"]
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="2_51ar1"]
@@ -9,15 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://df0iwql3inhbu" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Dirt/Dirt_01-512x512.png" id="7_1hicn"]
 [ext_resource type="Texture2D" uid="uid://b40gyjkkm31je" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Brick/Brick_07-512x512.png" id="8_paijt"]
 [ext_resource type="PackedScene" uid="uid://dqepst65jsloy" path="res://Scenes/SceneProps/low_table.tscn" id="9_knid0"]
-[ext_resource type="Texture2D" uid="uid://cscy42jsv2xyf" path="res://Harry_Gadsby_greek_hercules_horror_c525a285-0868-4261-a6df-f5b7d2309bac.png" id="10_vat71"]
-[ext_resource type="Texture2D" uid="uid://df6xqs6a5wwmg" path="res://Harry_Gadsby_three_fates_mythology_182e6473-30c9-409d-b6a2-95a064110de3.png" id="11_v73yk"]
+[ext_resource type="Texture2D" uid="uid://dkv2kxhl4srbl" path="res://Harry_Gadsby_greek_hercules_horror_c525a285-0868-4261-a6df-f5b7d2309bac.png" id="10_vat71"]
+[ext_resource type="Texture2D" uid="uid://kutgyj0nit6f" path="res://Harry_Gadsby_three_fates_mythology_182e6473-30c9-409d-b6a2-95a064110de3.png" id="11_v73yk"]
 [ext_resource type="PackedScene" uid="uid://cbobc00ao7dg7" path="res://Scenes/Level/Gateway.tscn" id="12_uibmm"]
-[ext_resource type="PackedScene" uid="uid://v1jlk2amc23f" path="res://Source/Level/Lever.tscn" id="13_03eot"]
-[ext_resource type="Texture2D" uid="uid://db8hwrhokbokb" path="res://AssetPacks/Stains And Damage/Stains And Damage 3.png" id="14_t1k51"]
+[ext_resource type="PackedScene" uid="uid://v1jlk2amc23f" path="res://Scenes/Level/Lever.tscn" id="13_03eot"]
+[ext_resource type="Texture2D" uid="uid://b86lbg6eoy001" path="res://AssetPacks/Stains And Damage/Stains And Damage 3.png" id="14_t1k51"]
 [ext_resource type="PackedScene" uid="uid://cln7jgafqlbwh" path="res://Scenes/Level/Rubble.tscn" id="15_6wpr6"]
 [ext_resource type="PackedScene" uid="uid://vtmoyt2t5t6u" path="res://Scenes/Level/InstantDeathArea.tscn" id="16_lb210"]
 [ext_resource type="PackedScene" uid="uid://c4kbls8n5m73r" path="res://Scenes/Level/Torch.tscn" id="17_5cvka"]
-
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cg45f"]
 albedo_texture = ExtResource("5_4yqui")
@@ -397,12 +396,12 @@ skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_wk27p")
 
 [node name="Wall5" parent="Props" instance=ExtResource("4_4hcol")]
-transform = Transform3D(0.00427601, -0.999991, 4.3711e-08, 0, -4.37114e-08, -1, 0.999991, 0.00427601, -1.8691e-10, 23.4647, -13.09, 34.6097)
+transform = Transform3D(0.00427601, -0.999991, 4.3711e-08, 0, -4.37114e-08, -1, 0.999991, 0.00427601, -1.8691e-10, 22.5839, -13.07, 34.6098)
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_wk27p")
 
 [node name="Wall6" parent="Props" instance=ExtResource("4_4hcol")]
-transform = Transform3D(0.00427601, -0.999991, 4.3711e-08, 0, -4.37114e-08, -1, 0.999991, 0.00427601, -1.8691e-10, 23.4647, -13.09, 10.5796)
+transform = Transform3D(0.00427601, -0.999991, 4.3711e-08, 0, -4.37114e-08, -1, 0.999991, 0.00427601, -1.8691e-10, 22.6651, -13.07, 10.5797)
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_wk27p")
 
@@ -415,12 +414,12 @@ transform = Transform3D(-0.999382, 0, -0.0351612, 0, 1, 0, 0.0351612, 0, -0.9993
 skeleton = NodePath("../..")
 
 [node name="Wall45" parent="Props" instance=ExtResource("4_4hcol")]
-transform = Transform3D(-0.0394343, 0.999222, -4.36774e-08, 0, -4.37114e-08, -1, -0.999222, -0.0394343, 1.72373e-09, 139.874, -13.09, 11.2809)
+transform = Transform3D(-0.0394343, 0.999222, -4.36774e-08, 0, -4.37114e-08, -1, -0.999222, -0.0394343, 1.72373e-09, 140.72, -13.09, 11.2808)
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_wk27p")
 
 [node name="Wall46" parent="Props" instance=ExtResource("4_4hcol")]
-transform = Transform3D(-0.0394343, 0.999222, -4.36774e-08, 0, -4.37114e-08, -1, -0.999222, -0.0394343, 1.72373e-09, 140.719, -13.09, 35.2963)
+transform = Transform3D(-0.0394343, 0.999222, -4.36774e-08, 0, -4.37114e-08, -1, -0.999222, -0.0394343, 1.72373e-09, 141.66, -13.09, 35.2962)
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_wk27p")
 

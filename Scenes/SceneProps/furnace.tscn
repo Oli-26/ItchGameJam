@@ -1,4 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://boliu0lwv4ev5"]
+[gd_scene load_steps=11 format=3 uid="uid://boliu0lwv4ev5"]
+
+[ext_resource type="Texture2D" uid="uid://hd5yhg21a44j" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Stone/Stone529.png" id="1_e4uid"]
+[ext_resource type="Texture2D" uid="uid://dkk8ira2cb1hx" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Stone/Stone_05-512x512.png" id="1_tlnbd"]
+[ext_resource type="Texture2D" uid="uid://bke3hxjndhiww" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Wood/Wood_12-512x512.png" id="3_wakc0"]
+[ext_resource type="Texture2D" uid="uid://dc5mk45y4kqmh" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Wood/Wood4.png" id="4_5il3d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ks0vs"]
 resource_name = "Metal_Rusty"
@@ -13,14 +18,22 @@ resource_name = "Stone_Wall"
 cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.74902, 0.694118, 0.768627, 1)
+albedo_texture = ExtResource("1_tlnbd")
 metallic = 1.0
+normal_enabled = true
+normal_texture = ExtResource("1_e4uid")
+uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xax5h"]
 resource_name = "Wood_Basic"
 cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_color = Color(1, 0.737255, 0.6, 1)
+albedo_texture = ExtResource("3_wakc0")
 metallic = 1.0
+normal_enabled = true
+normal_texture = ExtResource("4_5il3d")
+uv1_triplanar = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_kp4us"]
 _surfaces = [{

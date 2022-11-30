@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cdgsr1p7bm5rf"]
+[gd_scene load_steps=19 format=3 uid="uid://mi43kxvrskki"]
 
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_1vtvn"]
 [ext_resource type="PackedScene" uid="uid://b0xnag4qp4w7t" path="res://Scenes/Level/Floor.tscn" id="2_0c5bm"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://tvq6lw0v7jfm" path="res://AssetPacks/Stains And Damage/Stains And Damage 4.png" id="5_y867v"]
 [ext_resource type="Texture2D" uid="uid://4qaxqjkvcgyn" path="res://AssetPacks/Stains And Damage/Stains And Damage 6.png" id="6_hvyu8"]
 [ext_resource type="PackedScene" uid="uid://cd5g7ncjh2703" path="res://Scenes/Level/Lava.tscn" id="8_jodhi"]
+[ext_resource type="Texture2D" uid="uid://j83khifc8m8f" path="res://Images/daedalus.png" id="10_8338c"]
 [ext_resource type="Texture2D" uid="uid://ddqwjxrvg1f57" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Elements/Elements_07-512x512.png" id="10_mlq8i"]
 [ext_resource type="PackedScene" uid="uid://cyh50clspyn8h" path="res://Scenes/SceneProps/SmallCandle1.tscn" id="11_ps6bs"]
 
@@ -163,7 +164,6 @@ gi_lightmap_scale = 3
 amount = 100
 speed_scale = 7.23
 trail_enabled = true
-trail_lifetime = 10.0
 process_material = SubResource("ParticleProcessMaterial_2wkll")
 draw_pass_1 = SubResource("SphereMesh_6oxmb")
 
@@ -291,3 +291,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.51884, 0.00985026, 13.2908)
 extents = Vector3(4, 1, 4)
 shape = 1
 material = SubResource("FogMaterial_dbx23")
+
+[node name="Decal" type="Decal" parent="."]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -62.9885, -0.0455408, 17.0696)
+extents = Vector3(1, 0.05, 1)
+texture_albedo = ExtResource("10_8338c")
+texture_emission = ExtResource("10_8338c")
+
+[node name="Decal2" type="Decal" parent="."]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -62.9885, -0.0455408, 7.06963)
+extents = Vector3(1, 0.05, 1)
+texture_albedo = ExtResource("10_8338c")
+texture_emission = ExtResource("10_8338c")

@@ -1,4 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtq06wwvb14xn"]
+[gd_scene load_steps=12 format=3 uid="uid://dtq06wwvb14xn"]
+
+[ext_resource type="Texture2D" uid="uid://bke3hxjndhiww" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Wood/Wood_12-512x512.png" id="1_dnx0c"]
+[ext_resource type="Texture2D" uid="uid://dc5mk45y4kqmh" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Wood/Wood4.png" id="2_bysa3"]
+[ext_resource type="Texture2D" uid="uid://pothwk1be1tl" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Metal/Metal_11-512x512.png" id="3_ewhub"]
+[ext_resource type="Texture2D" uid="uid://ddwg6xbtivvil" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Stone/Stone57.png" id="4_n7mgk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vsvtw"]
 resource_name = "Wood_Basic"
@@ -68,6 +73,20 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vybob")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xcsrh"]
+albedo_texture = ExtResource("1_dnx0c")
+normal_enabled = true
+normal_texture = ExtResource("2_bysa3")
+uv1_scale = Vector3(0.4, 0.4, 0.4)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fh17c"]
+albedo_texture = ExtResource("3_ewhub")
+metallic = 0.8
+metallic_specular = 0.64
+normal_enabled = true
+normal_texture = ExtResource("4_n7mgk")
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_g50uc"]
 size = Vector3(2.17313, 2.5049, 2.15499)
 
@@ -77,6 +96,8 @@ size = Vector3(2.17313, 2.5049, 2.15499)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0827194, 0, 0.0118246)
 mesh = SubResource("ArrayMesh_ga66d")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_xcsrh")
+surface_material_override/1 = SubResource("StandardMaterial3D_fh17c")
 
 [node name="CollisionShape3d" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0703486, 1.47379, 0)

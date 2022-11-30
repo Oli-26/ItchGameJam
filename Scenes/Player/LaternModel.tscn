@@ -1,12 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://b40mlbjf7fy8b"]
+[gd_scene load_steps=5 format=3 uid="uid://b40mlbjf7fy8b"]
 
 [ext_resource type="PackedScene" uid="uid://bq7uel8p5urec" path="res://Models/Latern.blend" id="1_5o5a6"]
+[ext_resource type="Material" uid="uid://ceay6w0u4ql78" path="res://Materials/LanternFrame.tres" id="2_gcarh"]
+[ext_resource type="Texture2D" uid="uid://hd5yhg21a44j" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Stone/Stone529.png" id="3_0wbn7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vp7ai"]
 transparency = 1
 albedo_color = Color(1, 0.701961, 0.54902, 0.423529)
+normal_enabled = true
+normal_texture = ExtResource("3_0wbn7")
 
 [node name="Latern" instance=ExtResource("1_5o5a6")]
 
 [node name="Frame" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_gcarh")
 surface_material_override/1 = SubResource("StandardMaterial3D_vp7ai")
+
+[node name="Base" parent="." index="2"]
+surface_material_override/0 = ExtResource("2_gcarh")
+
+[node name="Top" parent="." index="3"]
+surface_material_override/0 = ExtResource("2_gcarh")
