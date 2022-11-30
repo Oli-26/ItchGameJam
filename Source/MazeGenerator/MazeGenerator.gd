@@ -138,15 +138,14 @@ func _ready():
 	var groupings = groupGridNumbers(maze.grid);
 	var groupedGrid = groupings.groupedGrid;
 	var doorGrid = groupings.doorGrid;
-	#var playerInst = player.instantiate()
-	#playerInst.position = Vector3(24*maze.startPosition.x + 12, 3, 24*maze.startPosition.y + 12);	
-	#self.add_child(playerInst);
 	for x in range(width):
 		for y in range(height):
 			if(maze.grid[y][x] == 1 && filledGrid[y][x] == 0):
 				spawnFloorSection(x, y, groupedGrid[y][x], filledGrid, doorGrid);
+	call_deferred('remesh');
 	
-	get_tree().root.get_node("./Level/NavigationRegion3D").bake_navigation_mesh()
+func remesh():
+	get_tree().root.get_node("./Level/NavigationRegion3D").bake_navigation_mesh(false)
 
 
 

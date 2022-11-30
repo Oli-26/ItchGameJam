@@ -19,6 +19,8 @@ public partial class NavigationBehaviour : Behaviour
 	private NavigationAgent3D _navigationAgent3D;
 	private Footsteps _footsteps;
 
+	private double _jumpCooldown = 0.0;
+
 	public override void _Ready()
 	{
 		base._Ready();
@@ -39,9 +41,13 @@ public partial class NavigationBehaviour : Behaviour
 
 	public override void _Process(double delta)
 	{
+		if (_jumpCooldown > 0)
+		{
+			_jumpCooldown -= delta;
+        }
 		if (MobController.Intent == null)
 		{
-			Mob.Velocity = Vector3.Zero;
+			Mob.Velocity = new Vector3(0, Mob.Velocity.y, 0);
             _animationPlayer?.Play(AnimationNames.Idle);
             _footsteps.WalkState = WalkState.Idle;
             return;
@@ -53,6 +59,7 @@ public partial class NavigationBehaviour : Behaviour
 		}
 
         _navigationAgent3D.SetTargetLocation(MobController.Intent.Position);
+
 		var nextLocation = _navigationAgent3D.GetNextLocation();
 
 		var targetDirection = (nextLocation - Mob.Position);
@@ -76,9 +83,12 @@ public partial class NavigationBehaviour : Behaviour
             _footsteps.WalkState = WalkState.Walking;
         }
 		var targetVelocity = moveDirection * speed;
-		Mob.Velocity = MathHelpers.Lerp(Mob.Velocity, targetVelocity, 0.01f);
+		var yComponent = Mob.Velocity.y;
+        Mob.Velocity = MathHelpers.Lerp(Mob.Velocity, targetVelocity, 0.01f);
+		Mob.Velocity = new Vector3(Mob.Velocity.x, yComponent, Mob.Velocity.z);
 
-		var targetRotation = Mob.Transform.LookingAt(Mob.Position + moveDirection, Vector3.Up).basis.GetRotationQuaternion();
+		var targetPositionWithoutHeight = new Vector3(MobController.Intent.Position.x, 0, MobController.Intent.Position.z);
+        var targetRotation = Mob.Transform.LookingAt(targetPositionWithoutHeight, Vector3.Up).basis.GetRotationQuaternion();
 		var turnAmount = _turnFactor;
 		Mob.Quaternion = (turnAmount * targetRotation + (1 - turnAmount) * Mob.Quaternion).Normalized();
 	}

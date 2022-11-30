@@ -54,6 +54,7 @@ spot_range = 3.0
 [node name="VisionManager" parent="." instance=ExtResource("8_w7pjv")]
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_max_distance = 30.0
 
 [node name="MobController" type="Node" parent="."]
 script = ExtResource("4_jmmc3")
@@ -78,3 +79,7 @@ script = ExtResource("10_w8xt2")
 script = ExtResource("10_vnaft")
 WalkFootstepSounds = [ExtResource("11_v1ucn"), ExtResource("12_ybvn6"), ExtResource("13_am463")]
 RunFootstepSounds = [ExtResource("14_gps7a"), ExtResource("15_j56hn"), ExtResource("16_1oee6"), ExtResource("17_j2ly5"), ExtResource("18_132e6")]
+
+[node name="Camera3d" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.99611, 1.66585)
+near = 0.001

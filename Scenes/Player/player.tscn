@@ -1,7 +1,6 @@
-[gd_scene load_steps=34 format=3 uid="uid://dayo5j2yyndlg"]
+[gd_scene load_steps=33 format=3 uid="uid://dayo5j2yyndlg"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_1w47b"]
-[ext_resource type="PackedScene" uid="uid://dbduds4bsaaby" path="res://Scenes/Bullet/Bullet.tscn" id="2_je25s"]
 [ext_resource type="Texture2D" uid="uid://jkj5y3jxnxek" path="res://Images/debris2 Blood Overlay V2.png" id="3_c42do"]
 [ext_resource type="PackedScene" uid="uid://b40mlbjf7fy8b" path="res://Scenes/Player/LaternModel.tscn" id="4_edkmw"]
 [ext_resource type="Script" path="res://Source/Player/PlayerHealth.cs" id="4_lmp8o"]
@@ -73,7 +72,6 @@ _data = {
 [node name="Player" type="CharacterBody3D"]
 collision_mask = 3
 script = ExtResource("1_1w47b")
-_bullet_scene = ExtResource("2_je25s")
 
 [node name="CollisionShape3d" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_emkox")

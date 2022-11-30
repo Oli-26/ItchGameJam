@@ -18,7 +18,6 @@ public partial class MinotaurSpawner : Node3D
 	public void Spawn()
 	{
         var r = Random.NextDouble();
-        GD.Print($"{r} > {InitialSpawnChance} : {(r > InitialSpawnChance)}");
         if (r > InitialSpawnChance)
         {
             return;

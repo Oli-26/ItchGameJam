@@ -8,24 +8,26 @@ using System.Threading.Tasks;
 
 public partial class GravityBehaviour : Behaviour
 {
-    [Export] public float Gravity { get; set; } = 9.81f * 10;
+    [Export] public float Gravity { get; set; } = 9.81f;
 
     public override void _Ready()
     {
         base._Ready();
     }
 
-    public override void _Process(double delta)
+    public override void _PhysicsProcess(double delta)
     {
         var velocity = Mob.Velocity;
         if (!Mob.IsOnFloor())
         {
-            velocity.y -= Gravity * (float)delta;
-            Mob.Velocity += Vector3.Down * Gravity * (float)delta;
-        } 
+            velocity += Vector3.Down * Gravity * (float)delta;
+        }
         else
         {
-            velocity.y = 0;
+            if (velocity.y > 0)
+            {
+                velocity.y = 0;
+            }
         }
         Mob.Velocity = velocity;
     }
