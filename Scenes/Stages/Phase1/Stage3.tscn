@@ -1,6 +1,9 @@
-[gd_scene load_steps=30 format=3 uid="uid://dwwfe0pufdtdg"]
+[gd_scene load_steps=33 format=3 uid="uid://dwwfe0pufdtdg"]
 
+[ext_resource type="PackedScene" uid="uid://dayo5j2yyndlg" path="res://Scenes/Player/player.tscn" id="1_1pamn"]
 [ext_resource type="PackedScene" uid="uid://d1fldsep8obki" path="res://Scenes/Level/WorldEnvironment.tscn" id="1_l50j8"]
+[ext_resource type="PackedScene" uid="uid://bp5lu2b0l5nlq" path="res://Scenes/Mobs/Minotaur.tscn" id="2_ehm15"]
+[ext_resource type="Script" path="res://Source/Behaviour/WaypointPathBehaviour.cs" id="3_gt06w"]
 [ext_resource type="PackedScene" path="res://Scenes/Sections/Phase1/Start.tscn" id="4_ulcmt"]
 [ext_resource type="PackedScene" uid="uid://pjjdsdjs2pnf" path="res://Scenes/Sections/Phase1/Finale.tscn" id="7_3vky0"]
 [ext_resource type="PackedScene" uid="uid://mi43kxvrskki" path="res://Scenes/Sections/Phase1/FinalEnd.tscn" id="7_083v0"]
@@ -42,6 +45,46 @@ agent_max_climb = 0.1
 [node name="Level" type="Node3D"]
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("1_l50j8")]
+
+[node name="Player" parent="." instance=ExtResource("1_1pamn")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 44.3463, 0, -14.8276)
+
+[node name="Minotaur" parent="." instance=ExtResource("2_ehm15")]
+transform = Transform3D(-0.840557, 0, -0.541723, 0, 1, 0, 0.541723, 0, -0.840557, 184.2, -0.819398, 180.543)
+
+[node name="WaypointPathBehaviour" type="Node" parent="Minotaur" node_paths=PackedStringArray("WaypointA", "WaypointB", "WaypointC")]
+script = ExtResource("3_gt06w")
+WaypointA = NodePath("../../WaypointA")
+WaypointB = NodePath("../../WaypointB")
+WaypointC = NodePath("../../WaypointC")
+
+[node name="Minotaur2" parent="." instance=ExtResource("2_ehm15")]
+transform = Transform3D(0.211308, 0, 0.977419, 0, 1, 0, -0.977419, 0, 0.211308, 184.2, -0.819398, 203.543)
+
+[node name="WaypointPathBehaviour" type="Node" parent="Minotaur2" node_paths=PackedStringArray("WaypointA", "WaypointB", "WaypointC")]
+script = ExtResource("3_gt06w")
+WaypointA = NodePath("../../WaypointA")
+WaypointB = NodePath("../../WaypointD")
+WaypointC = NodePath("../../WaypointE")
+
+[node name="Minotaur3" parent="." instance=ExtResource("2_ehm15")]
+transform = Transform3D(0.92984, 0, -0.367963, 0, 1, 0, 0.367963, 0, 0.92984, 128.903, -0.819398, 180.543)
+
+[node name="WaypointPathBehaviour" type="Node" parent="Minotaur3" node_paths=PackedStringArray("WaypointA", "WaypointB", "WaypointC")]
+script = ExtResource("3_gt06w")
+WaypointA = NodePath("../../WaypointA")
+WaypointB = NodePath("../../WaypointD")
+WaypointC = NodePath("../../WaypointE")
+
+[node name="Minotaur4" parent="." instance=ExtResource("2_ehm15")]
+transform = Transform3D(-0.89654, 0, -0.442961, 0, 1, 0, 0.442961, 0, -0.89654, 128.903, -0.819398, 203.543)
+
+[node name="WaypointPathBehaviour" type="Node" parent="Minotaur4" node_paths=PackedStringArray("WaypointA", "WaypointB", "WaypointC", "WaypointD")]
+script = ExtResource("3_gt06w")
+WaypointA = NodePath("../../WaypointF")
+WaypointB = NodePath("../../WaypointG")
+WaypointC = NodePath("../../WaypointH")
+WaypointD = NodePath("../../WaypointA")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navmesh = SubResource("NavigationMesh_3le86")
