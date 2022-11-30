@@ -12,8 +12,8 @@ public partial class TrapSpawner : Node3D
 	public override void _Ready()
 	{
 		_spawnScene = ResourceLoader.Load<PackedScene>("res://Scenes/Level/Trap.tscn");
-        Task.Delay(100).ContinueWith(t => CallDeferred("Spawn"));
-    }
+		Task.Delay(100).ContinueWith(t => CallDeferred("Spawn"));
+	}
 
 	public void Spawn()
 	{
