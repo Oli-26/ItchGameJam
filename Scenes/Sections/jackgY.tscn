@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://nrqv46gs0urs" path="res://Scenes/Mobs/MinotaurSpawner.tscn" id="3_lth15"]
 [ext_resource type="Script" path="res://Source/Mobs/TrapSpawner.cs" id="4_lloep"]
 [ext_resource type="PackedScene" uid="uid://d4l6tyvsel34r" path="res://Scenes/Mobs/TrapSpawner.tscn" id="4_oank2"]
-[ext_resource type="Texture2D" uid="uid://da8pwi83vam5l" path="res://Images/hell3.png" id="6_hq2c7"]
-[ext_resource type="Texture2D" uid="uid://ccu17di1wxesd" path="res://Images/hell2.png" id="7_dtriq"]
+[ext_resource type="Texture2D" uid="uid://dc7am1nfdni2x" path="res://Images/hell3.png" id="6_hq2c7"]
+[ext_resource type="Texture2D" uid="uid://t7epdhocre7j" path="res://Images/hell2.png" id="7_dtriq"]
 
 [node name="Floor1Entrance" type="Node3D"]
 script = ExtResource("1_gdq7v")
@@ -18,8 +18,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 3, 0)
 
 [node name="MinotaurSpawner" parent="." instance=ExtResource("3_lth15")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1961, 2.10651, 11.1654)
-InitialSpawnChance = 0.3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1961, 0.10651, 11.1654)
 
 [node name="TrapSpawner" parent="." instance=ExtResource("4_oank2")]
 

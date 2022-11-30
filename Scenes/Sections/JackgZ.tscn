@@ -1,18 +1,19 @@
-[gd_scene load_steps=14 format=3 uid="uid://biuu3lawux015"]
+[gd_scene load_steps=15 format=3 uid="uid://biuu3lawux015"]
 
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
-[ext_resource type="Texture2D" uid="uid://b4s7dfwk5t6dk" path="res://Images/abstract8-900x900.jpg" id="3_8l6l2"]
-[ext_resource type="Texture2D" uid="uid://b30t028m3rg2x" path="res://Images/hunt.png" id="4_8spwn"]
-[ext_resource type="Texture2D" uid="uid://dwfrjm0ijccg1" path="res://Images/hell1.png" id="5_lg45n"]
-[ext_resource type="Texture2D" uid="uid://bxo6mcc26mrx" path="res://Images/chimera.png" id="6_hw7tr"]
-[ext_resource type="Texture2D" uid="uid://bj0wultiq1nra" path="res://AssetPacks/Stains And Damage/Stains And Damage 11.png" id="7_6b42r"]
-[ext_resource type="Texture2D" uid="uid://c0yolqmxyaoa3" path="res://Images/minotaur.png" id="8_1yy7s"]
-[ext_resource type="Texture2D" uid="uid://nmwcvx6ss2ra" path="res://Images/justice.png" id="8_20qkw"]
-[ext_resource type="Texture2D" uid="uid://cnw4lci3h6upt" path="res://AssetPacks/Stains And Damage/Stains And Damage 6.png" id="9_h51se"]
+[ext_resource type="Texture2D" uid="uid://cl36uhnyc4b2o" path="res://Images/abstract8-900x900.jpg" id="3_8l6l2"]
+[ext_resource type="Texture2D" uid="uid://cci4q0ka8oyex" path="res://Images/hunt.png" id="4_8spwn"]
+[ext_resource type="Texture2D" uid="uid://c7hr8svcd0qbw" path="res://Images/hell1.png" id="5_lg45n"]
+[ext_resource type="Texture2D" uid="uid://csy3viq2kt20g" path="res://Images/chimera.png" id="6_hw7tr"]
+[ext_resource type="Texture2D" uid="uid://bnbpxr3my0yav" path="res://AssetPacks/Stains And Damage/Stains And Damage 11.png" id="7_6b42r"]
+[ext_resource type="Texture2D" uid="uid://cylv423vjaomy" path="res://Images/minotaur.png" id="8_1yy7s"]
+[ext_resource type="Texture2D" uid="uid://cnc86eene3u4f" path="res://Images/justice.png" id="8_20qkw"]
+[ext_resource type="Texture2D" uid="uid://4qaxqjkvcgyn" path="res://AssetPacks/Stains And Damage/Stains And Damage 6.png" id="9_h51se"]
 [ext_resource type="PackedScene" uid="uid://6km11c7ey8wh" path="res://Scenes/SceneProps/vase.tscn" id="10_agcmc"]
 [ext_resource type="PackedScene" uid="uid://dqepst65jsloy" path="res://Scenes/SceneProps/low_table.tscn" id="12_d5n20"]
 [ext_resource type="PackedScene" uid="uid://cyh50clspyn8h" path="res://Scenes/SceneProps/SmallCandle1.tscn" id="13_km3mq"]
+[ext_resource type="PackedScene" uid="uid://nrqv46gs0urs" path="res://Scenes/Mobs/MinotaurSpawner.tscn" id="14_2i71c"]
 
 [node name="Floor1Entrance" type="Node3D"]
 script = ExtResource("1_gdq7v")
@@ -879,3 +880,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.042, 0.853267, 30.8888)
 
 [node name="SmallCandle3" parent="." instance=ExtResource("13_km3mq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.8198, 0.853267, 30.8689)
+
+[node name="MinotaurSpawner" parent="." instance=ExtResource("14_2i71c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.4257, 0.173599, 6.00814)

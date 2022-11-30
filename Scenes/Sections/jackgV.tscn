@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
 [ext_resource type="PackedScene" uid="uid://6km11c7ey8wh" path="res://Scenes/SceneProps/vase.tscn" id="3_q1g5d"]
 [ext_resource type="PackedScene" uid="uid://dtq06wwvb14xn" path="res://Scenes/SceneProps/barrel.tscn" id="4_lgqrf"]
-[ext_resource type="Texture2D" uid="uid://cbx3kyhyqam78" path="res://Images/wine.png" id="5_8bhc6"]
+[ext_resource type="Texture2D" uid="uid://cboqq8vxlti5e" path="res://Images/wine.png" id="5_8bhc6"]
 
 [node name="Floor1Entrance" type="Node3D"]
 script = ExtResource("1_gdq7v")

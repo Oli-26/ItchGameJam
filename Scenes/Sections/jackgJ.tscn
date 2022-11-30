@@ -17,7 +17,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 3, 0)
 
 [node name="MinotaurSpawner" parent="." instance=ExtResource("3_lth15")]
-InitialSpawnChance = 0.3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 12)
 
 [node name="TrapSpawner" parent="." instance=ExtResource("4_oank2")]
 

@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://2l4ag4tsbaaq"]
+[gd_scene load_steps=8 format=3 uid="uid://cfo024r6o1h7d"]
 
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
 [ext_resource type="PackedScene" uid="uid://nrqv46gs0urs" path="res://Scenes/Mobs/MinotaurSpawner.tscn" id="3_u6hb7"]
-[ext_resource type="Texture2D" uid="uid://176bc18sqgwb" path="res://AssetPacks/Stains And Damage/Stains And Damage 3.png" id="4_u40ie"]
-[ext_resource type="Texture2D" uid="uid://dg1eid0xvo8p7" path="res://Images/storm.png" id="5_wpxam"]
+[ext_resource type="Texture2D" uid="uid://b86lbg6eoy001" path="res://AssetPacks/Stains And Damage/Stains And Damage 3.png" id="4_u40ie"]
+[ext_resource type="Texture2D" uid="uid://rji4onvrc7v2" path="res://Images/storm.png" id="5_wpxam"]
 [ext_resource type="PackedScene" uid="uid://dtq06wwvb14xn" path="res://Scenes/SceneProps/barrel.tscn" id="6_w4wiv"]
 [ext_resource type="PackedScene" uid="uid://6km11c7ey8wh" path="res://Scenes/SceneProps/vase.tscn" id="7_vx80g"]
 
@@ -97,10 +97,10 @@ omni_range = 7.937
 omni_attenuation = 1.23114
 
 [node name="MinotaurSpawner" parent="." instance=ExtResource("3_u6hb7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.0837, -24.6276, 51.7177)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8763, 0, 10.851)
 
 [node name="MinotaurSpawner2" parent="." instance=ExtResource("3_u6hb7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5092, -22.7189, -23.6589)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8763, 0, 34.851)
 
 [node name="DirtDecal3" type="Decal" parent="."]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 37.5287, -0.0609348, 11.598)
