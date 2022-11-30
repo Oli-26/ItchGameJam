@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bx28cgwahsuwq"]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
 [ext_resource type="PackedScene" uid="uid://nrqv46gs0urs" path="res://Scenes/Mobs/MinotaurSpawner.tscn" id="3_yujet"]
 [ext_resource type="Texture2D" uid="uid://b86lbg6eoy001" path="res://AssetPacks/Stains And Damage/Stains And Damage 3.png" id="4_0l6ix"]
+
 
 [node name="Floor1Entrance" type="Node3D"]
 script = ExtResource("1_gdq7v")

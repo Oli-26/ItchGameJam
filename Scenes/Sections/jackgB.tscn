@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bp6kd0vnjfd3w"]
+[gd_scene load_steps=7 format=3 uid="uid://b7ybjo2747e8"]
 
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
@@ -35,9 +35,6 @@ transform = Transform3D(0.74, 0, 0, 0, 0.74, 0, 0, 0, 0.74, 7, 0, 9)
 [node name="Wall3" parent="." instance=ExtResource("3_75cpp")]
 transform = Transform3D(0.74, 0, 0, 0, 0.74, 0, 0, 0, 0.74, 19, 0, 15)
 
-[node name="MinotaurSpawner" parent="." instance=ExtResource("4_7tg6n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.42182, -39.6441, 3.87842)
-
 [node name="TrapSpawner" parent="." instance=ExtResource("5_nmhf7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.724826, -38.478, -17.7764)
 
@@ -51,3 +48,6 @@ texture_albedo = ExtResource("6_p7f0e")
 emission_energy = 5.59
 distance_fade_begin = 0.0
 distance_fade_length = 20.0
+
+[node name="MinotaurSpawner" parent="." instance=ExtResource("4_7tg6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1452, 0.0685323, 12.2386)

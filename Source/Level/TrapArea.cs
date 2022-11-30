@@ -13,7 +13,7 @@ public partial class TrapArea : Area3D
         if (body.Name.ToString().StartsWith("player", StringComparison.InvariantCultureIgnoreCase))
         {
             body.GetNode<PlayerHealth>("./PlayerHealth")
-                .Damage(35);
+                .Damage(45);
             ((CharacterBody3D)body).Velocity = Vector3.Up * 5;
         }
     }

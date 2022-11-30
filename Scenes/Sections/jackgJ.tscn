@@ -17,25 +17,24 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 3, 0)
 
 [node name="MinotaurSpawner" parent="." instance=ExtResource("3_lth15")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1961, 2.10651, 11.1654)
-InitialSpawnChance = 0.15
+InitialSpawnChance = 0.3
 
 [node name="TrapSpawner" parent="." instance=ExtResource("4_oank2")]
 
 [node name="TrapSpawner2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9066, 0, 1.45464)
 script = ExtResource("4_lloep")
-InitialSpawnChance = 0.2
+InitialSpawnChance = 0.3
 
 [node name="TrapSpawner3" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8953, 0, 10.9987)
 script = ExtResource("4_lloep")
-InitialSpawnChance = 0.2
+InitialSpawnChance = 0.3
 
 [node name="TrapSpawner4" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5092, 0, 22.7885)
 script = ExtResource("4_lloep")
-InitialSpawnChance = 0.2
+InitialSpawnChance = 0.3
 
 [node name="Vase" parent="." instance=ExtResource("6_4kg6y")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.35369, 0, 20.9936)

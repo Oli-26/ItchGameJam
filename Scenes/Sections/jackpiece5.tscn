@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d2hn2buq8j6m"]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_nl3r0"]
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_t1mue"]

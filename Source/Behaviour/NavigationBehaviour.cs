@@ -11,7 +11,7 @@ public partial class NavigationBehaviour : Behaviour
 	private static Random Random = new Random();
 
 	[Export] public float WalkSpeed { get; set; } = 2f;
-    [Export] public float ChaseSpeed { get; set; } = 7f;
+    [Export] public float ChaseSpeed { get; set; } = 8f;
 
 	private static readonly float _turnFactor = 0.1f;
 
@@ -84,7 +84,7 @@ public partial class NavigationBehaviour : Behaviour
         }
 		var targetVelocity = moveDirection * speed;
 		var yComponent = Mob.Velocity.y;
-        Mob.Velocity = MathHelpers.Lerp(Mob.Velocity, targetVelocity, 0.01f);
+        Mob.Velocity = MathHelpers.Lerp(Mob.Velocity, targetVelocity, 0.02f);
 		Mob.Velocity = new Vector3(Mob.Velocity.x, yComponent, Mob.Velocity.z);
 
 		var targetPositionWithoutHeight = new Vector3(MobController.Intent.Position.x, 0, MobController.Intent.Position.z);

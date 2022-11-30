@@ -38,7 +38,6 @@ public partial class PlayerHealth : Node
             _deathHandler.Die();
         }
         UpdateOverlay();
-        GD.Print(Health);
     }
 
     public override void _Process(double delta)
