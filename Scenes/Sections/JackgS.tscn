@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://b131b62f80jlb"]
+[gd_scene load_steps=10 format=3 uid="uid://b131b62f80jlb"]
 
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
 [ext_resource type="PackedScene" uid="uid://dtq06wwvb14xn" path="res://Scenes/SceneProps/barrel.tscn" id="3_e4fxe"]
 [ext_resource type="PackedScene" uid="uid://boliu0lwv4ev5" path="res://Scenes/SceneProps/furnace.tscn" id="4_4reuf"]
-[ext_resource type="Texture2D" uid="uid://djh6chcng14s5" path="res://Images/debris2 Blood Overlay V2.png" id="5_v6qv0"]
-[ext_resource type="Texture2D" uid="uid://ch1ihoyy2voyi" path="res://Images/brown-fur-texture-900x900.jpg" id="6_sqvhn"]
+[ext_resource type="Texture2D" uid="uid://jkj5y3jxnxek" path="res://Images/debris2 Blood Overlay V2.png" id="5_v6qv0"]
+[ext_resource type="Texture2D" uid="uid://bh6mjbt0qqkdt" path="res://Images/brown-fur-texture-900x900.jpg" id="6_sqvhn"]
 [ext_resource type="PackedScene" uid="uid://dqepst65jsloy" path="res://Scenes/SceneProps/low_table.tscn" id="7_70a2h"]
 [ext_resource type="PackedScene" uid="uid://cyh50clspyn8h" path="res://Scenes/SceneProps/SmallCandle1.tscn" id="8_ynx2i"]
+[ext_resource type="PackedScene" uid="uid://nrqv46gs0urs" path="res://Scenes/Mobs/MinotaurSpawner.tscn" id="9_0kj62"]
 
 [node name="Floor1Entrance" type="Node3D"]
 script = ExtResource("1_gdq7v")
@@ -344,3 +345,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.8256, 1, 24)
 
 [node name="SmallCandle4" parent="." instance=ExtResource("8_ynx2i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.771, 1, 22)
+
+[node name="MinotaurSpawner" parent="." instance=ExtResource("9_0kj62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 30)
+
+[node name="MinotaurSpawner2" parent="." instance=ExtResource("9_0kj62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 1, 19)
+
+[node name="MinotaurSpawner3" parent="." instance=ExtResource("9_0kj62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 0, 29)

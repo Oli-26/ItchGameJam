@@ -1,12 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://cn5fdds3y7ym8"]
+[gd_scene load_steps=10 format=3 uid="uid://fmxg06naoayh"]
 
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Scenes/Sections/Room1-1.gd" id="1_h50dm"]
 [ext_resource type="PackedScene" uid="uid://nrqv46gs0urs" path="res://Scenes/Mobs/MinotaurSpawner.tscn" id="3_l0iqs"]
-[ext_resource type="Texture2D" uid="uid://b86lbg6eoy001" path="res://AssetPacks/Stains And Damage/Stains And Damage 3.png" id="4_3feo8"]
-[ext_resource type="Texture2D" uid="uid://cditee8u6quuj" path="res://AssetPacks/Stains And Damage/Stains And Damage 7.png" id="5_ai7jd"]
-[ext_resource type="Texture2D" uid="uid://xgkke3dy2uws" path="res://Images/icarus.png" id="6_1jr51"]
-[ext_resource type="Texture2D" uid="uid://blm4uxix7yora" path="res://Images/hydra2.png" id="7_70qet"]
+[ext_resource type="Texture2D" uid="uid://176bc18sqgwb" path="res://AssetPacks/Stains And Damage/Stains And Damage 3.png" id="4_3feo8"]
+[ext_resource type="Texture2D" uid="uid://dbx20tvqk5pue" path="res://AssetPacks/Stains And Damage/Stains And Damage 7.png" id="5_ai7jd"]
+[ext_resource type="Texture2D" uid="uid://bwycg4twfqadh" path="res://Images/icarus.png" id="6_1jr51"]
+[ext_resource type="Texture2D" uid="uid://x0cn34erhfm3" path="res://Images/hydra2.png" id="7_70qet"]
 [ext_resource type="PackedScene" uid="uid://6km11c7ey8wh" path="res://Scenes/SceneProps/vase.tscn" id="8_ftlni"]
 [ext_resource type="PackedScene" uid="uid://dtq06wwvb14xn" path="res://Scenes/SceneProps/barrel.tscn" id="9_ijuvs"]
 

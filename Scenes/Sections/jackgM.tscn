@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://cyh50clspyn8h" path="res://Scenes/SceneProps/SmallCandle1.tscn" id="5_3guvk"]
 [ext_resource type="PackedScene" uid="uid://6km11c7ey8wh" path="res://Scenes/SceneProps/vase.tscn" id="6_jpowi"]
 [ext_resource type="PackedScene" uid="uid://dtq06wwvb14xn" path="res://Scenes/SceneProps/barrel.tscn" id="7_civ13"]
-[ext_resource type="Texture2D" uid="uid://djf1h54v4dpom" path="res://Images/labrinth.png" id="8_ygjm8"]
-[ext_resource type="Texture2D" uid="uid://b41u2cycn8sov" path="res://AssetPacks/Stains And Damage/Stains And Damage 9.png" id="9_2u7yy"]
-[ext_resource type="Texture2D" uid="uid://c1n38pb60mw7v" path="res://AssetPacks/Stains And Damage/Stains And Damage 2.png" id="10_fdl7y"]
+[ext_resource type="Texture2D" uid="uid://lmmtx1m5yapy" path="res://Images/labrinth.png" id="8_ygjm8"]
+[ext_resource type="Texture2D" uid="uid://b2nhws7d1cp4o" path="res://AssetPacks/Stains And Damage/Stains And Damage 9.png" id="9_2u7yy"]
+[ext_resource type="Texture2D" uid="uid://ddaxlkywybu65" path="res://AssetPacks/Stains And Damage/Stains And Damage 2.png" id="10_fdl7y"]
 
 [node name="Floor1Entrance" type="Node3D"]
 script = ExtResource("1_l11b8")
@@ -99,7 +99,7 @@ omni_range = 7.66
 omni_attenuation = 1.18921
 
 [node name="MinotaurSpawner" parent="." instance=ExtResource("3_b0y60")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.7696, -25.3111, -21.8752)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.1985, 0, 8)
 
 [node name="TrapSpawner" parent="." instance=ExtResource("4_6kq8o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.3456, -29.5453, 16.7098)

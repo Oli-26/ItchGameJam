@@ -97,10 +97,10 @@ omni_range = 7.937
 omni_attenuation = 1.23114
 
 [node name="MinotaurSpawner" parent="." instance=ExtResource("3_u6hb7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8763, 0, 10.851)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 19)
 
 [node name="MinotaurSpawner2" parent="." instance=ExtResource("3_u6hb7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8763, 0, 34.851)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 32)
 
 [node name="DirtDecal3" type="Decal" parent="."]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 37.5287, -0.0609348, 11.598)

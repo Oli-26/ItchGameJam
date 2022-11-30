@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c5lthw4xdet8m"]
+[gd_scene load_steps=7 format=3 uid="uid://c5lthw4xdet8m"]
 
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
-[ext_resource type="Texture2D" uid="uid://dinmbdwyk13gb" path="res://Images/tilesp1-900x900.jpg" id="3_pef6h"]
-[ext_resource type="Texture2D" uid="uid://cc8cec705ao5y" path="res://Images/zeus1.png" id="4_grkk2"]
+[ext_resource type="Texture2D" uid="uid://djkbbo868a14" path="res://Images/tilesp1-900x900.jpg" id="3_pef6h"]
+[ext_resource type="Texture2D" uid="uid://dfkkdrjvligwp" path="res://Images/zeus1.png" id="4_grkk2"]
 [ext_resource type="PackedScene" uid="uid://dqepst65jsloy" path="res://Scenes/SceneProps/low_table.tscn" id="5_y87du"]
 [ext_resource type="PackedScene" uid="uid://cyh50clspyn8h" path="res://Scenes/SceneProps/SmallCandle1.tscn" id="6_vux1q"]
-[ext_resource type="PackedScene" uid="uid://nrqv46gs0urs" path="res://Scenes/Mobs/MinotaurSpawner.tscn" id="7_m551h"]
 
 [node name="Floor1Entrance" type="Node3D"]
 script = ExtResource("1_gdq7v")
@@ -118,15 +117,3 @@ shadow_transmittance_bias = 0.089
 spot_range = 14.983
 spot_attenuation = 0.353553
 spot_angle = 44.7678
-
-[node name="MinotaurSpawner" parent="." instance=ExtResource("7_m551h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 1, 25)
-InitialSpawnChance = 0.7
-
-[node name="MinotaurSpawner2" parent="." instance=ExtResource("7_m551h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 1, 24)
-InitialSpawnChance = 0.7
-
-[node name="MinotaurSpawner3" parent="." instance=ExtResource("7_m551h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1, 24)
-InitialSpawnChance = 0.7
