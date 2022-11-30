@@ -1,9 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://bq2sbhny31bwf"]
+[gd_scene load_steps=11 format=3 uid="uid://bq2sbhny31bwf"]
 
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
 [ext_resource type="PackedScene" uid="uid://nrqv46gs0urs" path="res://Scenes/Mobs/MinotaurSpawner.tscn" id="3_t8423"]
-[ext_resource type="Texture2D" uid="uid://b86lbg6eoy001" path="res://AssetPacks/Stains And Damage/Stains And Damage 3.png" id="4_iu816"]
+[ext_resource type="Texture2D" uid="uid://176bc18sqgwb" path="res://AssetPacks/Stains And Damage/Stains And Damage 3.png" id="4_iu816"]
+[ext_resource type="Texture2D" uid="uid://qcmytd63lssv" path="res://AssetPacks/Stains And Damage/Stains And Damage 10.png" id="5_mr65w"]
+[ext_resource type="Texture2D" uid="uid://djf1h54v4dpom" path="res://Images/labrinth.png" id="6_cstbx"]
+[ext_resource type="Texture2D" uid="uid://6mc2o5d48sru" path="res://AssetPacks/Stains And Damage/Stains And Damage 13.png" id="7_fbuqp"]
+[ext_resource type="PackedScene" uid="uid://dqepst65jsloy" path="res://Scenes/SceneProps/low_table.tscn" id="8_vep3u"]
+[ext_resource type="PackedScene" uid="uid://cyh50clspyn8h" path="res://Scenes/SceneProps/SmallCandle1.tscn" id="9_pjrw4"]
+[ext_resource type="PackedScene" uid="uid://dtq06wwvb14xn" path="res://Scenes/SceneProps/barrel.tscn" id="10_6e3r4"]
 
 [node name="Floor1Entrance" type="Node3D"]
 script = ExtResource("1_gdq7v")
@@ -66,3 +72,30 @@ texture_albedo = ExtResource("4_iu816")
 emission_energy = 5.59
 distance_fade_begin = 0.0
 distance_fade_length = 20.0
+
+[node name="Decal" type="Decal" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9735, 1.03066, 8.76705)
+texture_albedo = ExtResource("5_mr65w")
+modulate = Color(1, 0, 0, 1)
+
+[node name="Decal2" type="Decal" parent="."]
+transform = Transform3D(1.91069e-15, 1, 1.58933e-08, 1.31134e-07, 1.58933e-08, -1, -1, 3.99483e-15, -1.31134e-07, 18, 3, 9)
+extents = Vector3(2.98291, 1, 1.88925)
+texture_albedo = ExtResource("6_cstbx")
+
+[node name="Decal3" type="Decal" parent="."]
+transform = Transform3D(1.91069e-15, 1, 1.58933e-08, 1.31134e-07, 1.58933e-08, -1, -1, 3.99483e-15, -1.31134e-07, 19.8268, 3, 9)
+extents = Vector3(2.98291, 1, 1.88925)
+texture_albedo = ExtResource("7_fbuqp")
+
+[node name="LowTable" parent="." instance=ExtResource("8_vep3u")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.0297, 0, 8.80093)
+
+[node name="SmallCandle1" parent="." instance=ExtResource("9_pjrw4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0156, 0.853267, 7.38737)
+
+[node name="SmallCandle2" parent="." instance=ExtResource("9_pjrw4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9231, 0.853267, 10.0538)
+
+[node name="Barrel" parent="." instance=ExtResource("10_6e3r4")]
+transform = Transform3D(-4.37114e-08, 1, 6.55671e-08, 0, -4.37114e-08, 1.5, 1, 4.37114e-08, 2.86603e-15, 5.78278, 1.53241, 20.7883)

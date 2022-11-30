@@ -1,9 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://eebkr8hjk8of"]
+[gd_scene load_steps=11 format=3 uid="uid://eebkr8hjk8of"]
 
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Scenes/Sections/Room1-2.gd" id="1_l11b8"]
 [ext_resource type="PackedScene" uid="uid://nrqv46gs0urs" path="res://Scenes/Mobs/MinotaurSpawner.tscn" id="3_b0y60"]
 [ext_resource type="PackedScene" uid="uid://d4l6tyvsel34r" path="res://Scenes/Mobs/TrapSpawner.tscn" id="4_6kq8o"]
+[ext_resource type="PackedScene" uid="uid://cyh50clspyn8h" path="res://Scenes/SceneProps/SmallCandle1.tscn" id="5_3guvk"]
+[ext_resource type="PackedScene" uid="uid://6km11c7ey8wh" path="res://Scenes/SceneProps/vase.tscn" id="6_jpowi"]
+[ext_resource type="PackedScene" uid="uid://dtq06wwvb14xn" path="res://Scenes/SceneProps/barrel.tscn" id="7_civ13"]
+[ext_resource type="Texture2D" uid="uid://djf1h54v4dpom" path="res://Images/labrinth.png" id="8_ygjm8"]
+[ext_resource type="Texture2D" uid="uid://b41u2cycn8sov" path="res://AssetPacks/Stains And Damage/Stains And Damage 9.png" id="9_2u7yy"]
+[ext_resource type="Texture2D" uid="uid://c1n38pb60mw7v" path="res://AssetPacks/Stains And Damage/Stains And Damage 2.png" id="10_fdl7y"]
 
 [node name="Floor1Entrance" type="Node3D"]
 script = ExtResource("1_l11b8")
@@ -106,3 +112,32 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.0756, -40.4758, 0.923517)
 
 [node name="TrapSpawner4" parent="." instance=ExtResource("4_6kq8o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.44287, -23.7479, -22.8685)
+
+[node name="SmallCandle1" parent="." instance=ExtResource("5_3guvk")]
+transform = Transform3D(0.99988, 0, 0.015463, 0, 1, 0, -0.015463, 0, 0.99988, 3.07402, 0.623316, 2.93079)
+
+[node name="Vase" parent="." instance=ExtResource("6_jpowi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.08544, 2.38419e-07, 2.97366)
+
+[node name="Vase2" parent="." instance=ExtResource("6_jpowi")]
+transform = Transform3D(2, 0, 0, 0, 1.5, 0, 0, 0, 2, 27.3474, 0, 15.1556)
+
+[node name="Barrel" parent="." instance=ExtResource("7_civ13")]
+transform = Transform3D(-3.49691e-08, -0.899, -5.47704e-08, 0, -3.92965e-08, 1.253, -0.8, 3.92965e-08, -2.05746e-15, 46.5518, 1.11031, 7.95451)
+
+[node name="Decal" type="Decal" parent="Barrel"]
+transform = Transform3D(-0.999999, 7.77955e-08, -8.74227e-08, 7.77954e-08, 0.999999, 1.21847e-07, 8.74227e-08, 1.21847e-07, -1, 4.72683, 22.8616, 1.25377)
+extents = Vector3(2, 1, 1)
+texture_albedo = ExtResource("8_ygjm8")
+
+[node name="Decal2" type="Decal" parent="Barrel"]
+transform = Transform3D(-0.999999, 7.77955e-08, -8.74227e-08, 7.77954e-08, 0.999999, 1.21847e-07, 8.74227e-08, 1.21847e-07, -1, 4.72683, 22.7304, 1.25377)
+extents = Vector3(2, 0.39887, 1)
+texture_albedo = ExtResource("9_2u7yy")
+modulate = Color(0, 1, 0.87451, 1)
+
+[node name="Decal3" type="Decal" parent="Barrel"]
+transform = Transform3D(-0.999999, 7.77955e-08, -8.74227e-08, 7.77954e-08, 0.999999, 1.21847e-07, 8.74227e-08, 1.21847e-07, -1, 4.72683, 22.7304, 1.25377)
+extents = Vector3(2, 0.39887, 1)
+texture_albedo = ExtResource("10_fdl7y")
+modulate = Color(0, 1, 0.87451, 1)
