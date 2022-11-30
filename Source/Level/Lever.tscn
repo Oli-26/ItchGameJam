@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://v1jlk2amc23f"]
+[gd_scene load_steps=13 format=3]
 
 [ext_resource type="PackedScene" uid="uid://d4ci6ifjx7jk3" path="res://Models/Level/Lever.blend" id="1_vgxi7"]
-[ext_resource type="Script" path="res://Source/Level/Lever.cs" id="2_sqgar"]
+[ext_resource type="Script" path="res://Lever.cs" id="2_sqgar"]
 [ext_resource type="Texture2D" uid="uid://cixgeep42ikqn" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Metal/Metal_04-512x512.png" id="2_tc4b8"]
 [ext_resource type="Texture2D" uid="uid://dcl2gn76lbdul" path="res://AssetPacks/SBS - Tiny Texture Pack 2 - 512x512/512x512/Wood/Wood_05-512x512.png" id="3_ndqiw"]
+
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_erj6b"]
 albedo_texture = ExtResource("2_tc4b8")

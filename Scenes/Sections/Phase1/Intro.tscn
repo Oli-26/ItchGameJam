@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://catsnedejtp38"]
+[gd_scene load_steps=18 format=3]
 
 [ext_resource type="PackedScene" uid="uid://bjdt38l633huk" path="res://Scenes/Level/GridMap.tscn" id="1_cydnl"]
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
@@ -7,13 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://cyh50clspyn8h" path="res://Scenes/SceneProps/SmallCandle1.tscn" id="5_bysth"]
 [ext_resource type="PackedScene" uid="uid://dtq06wwvb14xn" path="res://Scenes/SceneProps/barrel.tscn" id="6_y5pb5"]
 [ext_resource type="PackedScene" uid="uid://cln7jgafqlbwh" path="res://Scenes/Level/Rubble.tscn" id="8_il0b5"]
-[ext_resource type="Texture2D" uid="uid://dbjkq1b6hvfpq" path="res://Images/minotaur_army.png" id="9_i1jbv"]
-[ext_resource type="Texture2D" uid="uid://tvq6lw0v7jfm" path="res://AssetPacks/Stains And Damage/Stains And Damage 4.png" id="9_idwm4"]
-[ext_resource type="Texture2D" uid="uid://4qaxqjkvcgyn" path="res://AssetPacks/Stains And Damage/Stains And Damage 6.png" id="10_idwfa"]
-[ext_resource type="Texture2D" uid="uid://lmmtx1m5yapy" path="res://Images/labrinth.png" id="10_o1frb"]
+[ext_resource type="Texture2D" uid="uid://cw5uwmkx0r3vj" path="res://Images/minotaur_army.png" id="9_i1jbv"]
+[ext_resource type="Texture2D" uid="uid://bek5snxu1r7sq" path="res://AssetPacks/Stains And Damage/Stains And Damage 4.png" id="9_idwm4"]
+[ext_resource type="Texture2D" uid="uid://df6lwv6cm5pap" path="res://AssetPacks/Stains And Damage/Stains And Damage 6.png" id="10_idwfa"]
+[ext_resource type="Texture2D" uid="uid://bdhtu24xpld0e" path="res://Images/labrinth.png" id="10_o1frb"]
 [ext_resource type="PackedScene" uid="uid://cbobc00ao7dg7" path="res://Scenes/Level/Gateway.tscn" id="11_7l0bh"]
-[ext_resource type="PackedScene" uid="uid://v1jlk2amc23f" path="res://Scenes/Level/Lever.tscn" id="11_tt4f5"]
-[ext_resource type="Texture2D" uid="uid://cts8ysmr4r5hr" path="res://Images/dust.png" id="14_o43ae"]
+[ext_resource type="PackedScene" uid="uid://v1jlk2amc23f" path="res://Source/Level/Lever.tscn" id="11_tt4f5"]
+[ext_resource type="Texture2D" uid="uid://cxhs78iwolig7" path="res://Images/dust.png" id="14_o43ae"]
+
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8sopa"]
 emission_shape = 1
