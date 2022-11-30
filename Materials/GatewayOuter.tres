@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ch8eem7que8fm"]
+
+[ext_resource type="Texture2D" uid="uid://bgy0d5pxmdld5" path="res://AssetPacks/20 Free Detail Normal Maps by KoromoWorks/Normal Map & Render/Stains/Stains8.png" id="1_4huxf"]
+
+[resource]
+resource_name = "Stone"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.0466596, 0.0423188, 0.0423188, 1)
+normal_enabled = true
+normal_texture = ExtResource("1_4huxf")
