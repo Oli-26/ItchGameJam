@@ -6,7 +6,7 @@ public partial class AttackBehaviour : Behaviour
 {
 	private bool _cooldown = false;
 	[Export] public float Damage { get; set; } = 99f;
-	[Export] public float Range {get; set; } = 1.5f;
+	[Export] public float Range {get; set; } = 1.8f;
 
 	public override void _Process(double delta)
 	{
@@ -21,7 +21,6 @@ public partial class AttackBehaviour : Behaviour
 
         var intent = (ChasePlayerIntent)MobController.Intent;
         var targetDirection = (Mob.GlobalPosition - intent.Position);
-		targetDirection.y = 0;
 
 		if (targetDirection.Length() < Range)
 		{
