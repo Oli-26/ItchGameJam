@@ -49,10 +49,6 @@ func _physics_process(delta):
 	else:
 		collisionShape3d.shape.height = 1.0
 	
-	if Input.is_action_just_pressed("ToggleGravity"):
-		#gravityToggle = !gravityToggle;
-			get_tree().root.get_node("./Level/NavigationRegion3D").bake_navigation_mesh(false)
-	
 	if Input.is_action_just_pressed("ToggleLight"):
 		lightToggle = !lightToggle;
 		print(lightToggle)

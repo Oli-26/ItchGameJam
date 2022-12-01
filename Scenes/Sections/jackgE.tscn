@@ -4,10 +4,10 @@
 [ext_resource type="Script" path="res://Source/MazeGenerator/Room.gd" id="1_gdq7v"]
 [ext_resource type="PackedScene" uid="uid://nrqv46gs0urs" path="res://Scenes/Mobs/MinotaurSpawner.tscn" id="3_e13nt"]
 [ext_resource type="PackedScene" uid="uid://d4l6tyvsel34r" path="res://Scenes/Mobs/TrapSpawner.tscn" id="4_t46bv"]
-[ext_resource type="Texture2D" uid="uid://176bc18sqgwb" path="res://AssetPacks/Stains And Damage/Stains And Damage 3.png" id="5_lwvl7"]
+[ext_resource type="Texture2D" uid="uid://b86lbg6eoy001" path="res://AssetPacks/Stains And Damage/Stains And Damage 3.png" id="5_lwvl7"]
 [ext_resource type="PackedScene" uid="uid://6km11c7ey8wh" path="res://Scenes/SceneProps/vase.tscn" id="6_aayjt"]
-[ext_resource type="Texture2D" uid="uid://c0yolqmxyaoa3" path="res://Images/minotaur.png" id="7_f8sia"]
-[ext_resource type="Texture2D" uid="uid://bahre7hcicsoq" path="res://Images/minotaur_caveart.png" id="8_df538"]
+[ext_resource type="Texture2D" uid="uid://cylv423vjaomy" path="res://Images/minotaur.png" id="7_f8sia"]
+[ext_resource type="Texture2D" uid="uid://d40y2n5m103s" path="res://Images/minotaur_caveart.png" id="8_df538"]
 [ext_resource type="PackedScene" uid="uid://dtq06wwvb14xn" path="res://Scenes/SceneProps/barrel.tscn" id="9_34oq3"]
 
 [node name="Floor1Entrance" type="Node3D"]

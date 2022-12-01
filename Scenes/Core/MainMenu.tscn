@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=3 uid="uid://cjb0djpjjw3ua"]
 
 [ext_resource type="Theme" uid="uid://dk66skm3gyc7t" path="res://UI/menu.tres" id="1_4ny67"]
-[ext_resource type="PackedScene" uid="uid://catsnedejtp38" path="res://Scenes/Sections/Phase1/Intro.tscn" id="1_h458q"]
-[ext_resource type="PackedScene" uid="uid://1mlyya5uwi76" path="res://Scenes/Sections/Phase1/Corridor2.tscn" id="1_mxjs5"]
+[ext_resource type="PackedScene" path="res://Scenes/Sections/Phase1/Intro.tscn" id="1_h458q"]
+[ext_resource type="PackedScene" path="res://Scenes/Sections/Phase1/Corridor2.tscn" id="1_mxjs5"]
 [ext_resource type="PackedScene" uid="uid://bp5lu2b0l5nlq" path="res://Scenes/Mobs/Minotaur.tscn" id="3_l5jd0"]
 [ext_resource type="Script" path="res://Source/UI/NewGameButton.cs" id="5_atra1"]
 [ext_resource type="Script" path="res://Source/UI/ExitButton.cs" id="5_dn4dq"]
@@ -34,6 +34,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -69,6 +70,7 @@ environment = SubResource("Environment_ewgwi")
 transform = Transform3D(-0.131115, 0, 0.991367, 0, 1, 0, -0.991367, 0, -0.131115, 47.7624, -1, 13.9228)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -79,6 +81,7 @@ offset_bottom = -156.0
 grow_vertical = 0
 
 [node name="NewGameButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
 offset_right = 368.0
 offset_bottom = 31.0
 theme = ExtResource("1_4ny67")
@@ -86,6 +89,8 @@ text = "New game"
 script = ExtResource("5_atra1")
 
 [node name="SettingsButton" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
 offset_top = 35.0
 offset_right = 368.0
 offset_bottom = 66.0
@@ -94,14 +99,17 @@ disabled = true
 text = "Settings"
 
 [node name="ExitButton" type="Button" parent="VBoxContainer"]
-offset_top = 70.0
+layout_mode = 2
+offset_top = 35.0
 offset_right = 368.0
-offset_bottom = 101.0
+offset_bottom = 66.0
 theme = ExtResource("1_4ny67")
 text = "Exit"
 script = ExtResource("5_dn4dq")
 
 [node name="Stage1" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
 offset_top = 105.0
 offset_right = 368.0
 offset_bottom = 136.0
@@ -110,6 +118,8 @@ text = "Stage 1"
 script = ExtResource("7_3s8yi")
 
 [node name="Stage2" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
 offset_top = 140.0
 offset_right = 368.0
 offset_bottom = 171.0
@@ -118,15 +128,17 @@ text = "Stage 2"
 script = ExtResource("8_nqsf3")
 
 [node name="Stage3" type="Button" parent="VBoxContainer"]
-offset_top = 175.0
+layout_mode = 2
+offset_top = 70.0
 offset_right = 368.0
-offset_bottom = 206.0
+offset_bottom = 101.0
 theme = ExtResource("1_4ny67")
 text = "Stage 3"
 script = ExtResource("9_8mx8d")
 
 [node name="Title" type="TextureRect" parent="."]
 layout_direction = 3
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
